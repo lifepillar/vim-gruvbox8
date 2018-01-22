@@ -9,6 +9,21 @@ documentation
 
 			@fullname colorscheme			*@shortname*
 
+@fullname is a popular colorscheme originally designed by morhetz. The Vim
+version comes in three variants:
+
+- @shortname: "medium" contrast;
+- @shortname_hard: "hard" contrast;
+- @shortname_soft: "soft" contrast.
+
+Each variant supports dark and light backgrounds, so you must set 'background'
+before loading the colorscheme. For example:
+>
+	set background=dark
+	colorscheme gruvbox8
+<
+@fullname requires at least 256 colors and supports "true color" terminals.
+
 ==============================================================================
 1. Colorscheme options					*@optionprefix-options*
 

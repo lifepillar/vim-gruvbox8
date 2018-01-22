@@ -6,6 +6,21 @@
 
 			Gruvbox 8 colorscheme			*gruvbox8*
 
+Gruvbox 8 is a popular colorscheme originally designed by morhetz. The Vim
+version comes in three variants:
+
+- gruvbox8: "medium" contrast;
+- gruvbox8_hard: "hard" contrast;
+- gruvbox8_soft: "soft" contrast.
+
+Each variant supports dark and light backgrounds, so you must set 'background'
+before loading the colorscheme. For example:
+>
+	set background=dark
+	colorscheme gruvbox8
+<
+Gruvbox 8 requires at least 256 colors and supports "true color" terminals.
+
 ==============================================================================
 1. Colorscheme options					*gruvbox-options*
 
