@@ -1,11 +1,9 @@
-g:gruvbox_filetype_hi_groups	gruvbox8.txt	/*g:gruvbox_filetype_hi_groups*
 g:gruvbox_improved_strings	gruvbox8.txt	/*g:gruvbox_improved_strings*
 g:gruvbox_improved_warnings	gruvbox8.txt	/*g:gruvbox_improved_warnings*
-g:gruvbox_invert_indent_guides	gruvbox8.txt	/*g:gruvbox_invert_indent_guides*
 g:gruvbox_invert_selection	gruvbox8.txt	/*g:gruvbox_invert_selection*
 g:gruvbox_italic	gruvbox8.txt	/*g:gruvbox_italic*
 g:gruvbox_italicize_strings	gruvbox8.txt	/*g:gruvbox_italicize_strings*
-g:gruvbox_plugin_hi_groups	gruvbox8.txt	/*g:gruvbox_plugin_hi_groups*
 g:gruvbox_transp_bg	gruvbox8.txt	/*g:gruvbox_transp_bg*
+gruvbox-options	gruvbox8.txt	/*gruvbox-options*
 gruvbox8	gruvbox8.txt	/*gruvbox8*
 gruvbox8.txt	gruvbox8.txt	/*gruvbox8.txt*

@@ -6,6 +6,9 @@
 
 			Gruvbox 8 colorscheme			*gruvbox8*
 
+==============================================================================
+1. Colorscheme options					*gruvbox-options*
+
 						*g:gruvbox_improved_strings*
 Set to 1 if you want strings with a lighter background.
 >
@@ -18,15 +21,6 @@ boldface rather than underlining.
 >
 	let g:gruvbox_improved_warnings = 0
 <
-						*g:gruvbox_invert_indent_guides*
-Set to 1 if you use the Indent Guides plugin and you want to invert the colors
-of the indentation lines.
->
-	let g:gruvbox_invert_indent_guides = 0
-<
-Note: for this to take effect, you also need to set
-|gruvbox_plugin_hi_groups|.
-
 							*g:gruvbox_italic*
 Set to 1 if you want to enable italics in the terminal. Note that the terminal
 must support italics.
@@ -39,31 +33,11 @@ Set to 1 if you want strings in italics.
 	let g:gruvbox_italicize_strings = 0
 <
 						*g:gruvbox_invert_selection*
-When set to 1 (which is the default), selected text in Visual mode has
-inverted colors. When set to 0, colors are not reversed.
+When set to 1, selected text in Visual mode has inverted colors. When set to
+0 (which is the default), colors are not reversed.
 >
-	let g:gruvbox_invert_selection = 1
+	let g:gruvbox_invert_selection = 0
 <
-						*g:gruvbox_plugin_hi_groups*
-Set to 1 to include syntax highlighting definitions for a number of popular
-plugins, including:
-
->
-	let g:gruvbox_plugin_hi_groups = 0
-<
-Note: setting this to 1 may leave "a wake of destruction when switching away"
-(T. Pope), that is, when you switch to a different colorscheme the
-highlighting may look wrong or disabled.
-
-						*g:gruvbox_filetype_hi_groups*
-Set to 1 to include syntax highlighting definitions for several filetypes.
->
-	let g:gruvbox_filetype_hi_groups = 0
-<
-Note: setting this to 1 may leave "a wake of destruction when switching away"
-(T. Pope), that is, when you switch to a different colorscheme the
-highlighting may look wrong or disabled.
-
 						*g:gruvbox_transp_bg*
 Set to 1 if you want a transparent background. Takes effect only in the
 terminal.

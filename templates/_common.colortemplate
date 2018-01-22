@@ -75,7 +75,7 @@ TabLineFill                      bg4    bg1
 TabLineSel                       green  bg1
 Title                            green  none    bold
 verbatim
-if get(g:, "@optionprefix_invert_selection", 1)
+if get(g:, "@optionprefix_invert_selection", 0)
 endverbatim
 Visual                           none   bg3     reverse
 verbatim
@@ -213,12 +213,12 @@ Warnings                         orange bg0     reverse
 Include: _neovim.colortemplate
 # }}}
 
-verbatim
-if !(get(g:, "@optionprefix_plugin_hi_groups", 0) || get(g:, "@optionprefix_filetype_hi_groups", 0))
-  finish
-endif
-endverbatim
+#verbatim
+#if !(get(g:, "@optionprefix_plugin_hi_groups", 0) || get(g:, "@optionprefix_filetype_hi_groups", 0))
+#  finish
+#endif
+#endverbatim
 
-Include: _plugins.colortemplate
-Include: _filetypes.colortemplate
+#Include: _plugins.colortemplate
+#Include: _filetypes.colortemplate
 
