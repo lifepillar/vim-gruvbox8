@@ -1,0 +1,224 @@
+# vim: ft=colortemplate fdm=marker
+
+# Default highlight groups {{{
+verbatim
+if !has('gui_running') && get(g:, '@optionprefix_transp_bg', 0)
+endverbatim
+    # Transparent background
+    Normal       fg1    none
+    CursorLineNr yellow none
+    FoldColumn   grey   none
+    SignColumn   none   none
+    VertSplit    bg3    none
+verbatim
+else
+endverbatim
+    # Opaque background
+    Normal       fg1    bg0
+    CursorLineNr yellow bg1
+    FoldColumn   grey   bg1
+    SignColumn   none   bg1
+    VertSplit    bg3    bg0
+verbatim
+endif
+endverbatim
+
+# Group              Foreground        Background        Attributes
+ColorColumn                      none   bg1
+Conceal                          blue   none
+Cursor                           none   none    reverse
+CursorColumn                  -> CursorLine
+CursorLine                       none   bg1
+DiffAdd                          green  bg0     reverse
+DiffChange                       aqua   bg0     reverse
+DiffDelete                       red    bg0     reverse
+DiffText                         yellow bg0     reverse
+Directory                        green  none    bold
+EndOfBuffer                      bg0    none
+Error                            red    bg0     bold,reverse
+ErrorMsg                         bg0    red     bold
+Folded                           grey   bg1     g=italic
+IncSearch                        orange bg0     reverse
+LineNr                           bg4    none
+MatchParen                       none   bg3     bold
+ModeMsg                          yellow none    bold
+MoreMsg                          yellow none    bold
+NonText                          bg2    none
+Pmenu                            fg1    bg2
+PmenuSbar                        none   bg2
+PmenuSel                         bg2    blue    bold
+PmenuThumb                       none   bg4
+Question                         orange none    bold
+QuickFixLine                  -> Search
+Search                           yellow bg0     reverse
+SpecialKey                       bg2    none
+SpellBad                         none   none    undercurl s=blue
+verbatim
+if get(g:, "@optionprefix_improved_warnings", 0)
+endverbatim
+SpellCap                         green  none    t=bold g=bold,italic
+verbatim
+else
+endverbatim
+SpellCap                         none   none    undercurl s=red
+verbatim
+endif
+endverbatim
+SpellLocal                       none   none    undercurl s=aqua
+SpellRare                        none   none    undercurl s=purple
+StatusLine                       bg2    fg1     reverse
+StatusLineNC                     bg1    fg4     reverse
+StatusLineTerm                -> StatusLine
+StatusLineTermNC              -> StatusLineNC
+TabLine                       -> TabLineFill
+TabLineFill                      bg4    bg1
+TabLineSel                       green  bg1
+Title                            green  none    bold
+verbatim
+if get(g:, "@optionprefix_invert_selection", 1)
+endverbatim
+Visual                           none   bg3     reverse
+verbatim
+else
+endverbatim
+Visual                           none   bg3
+verbatim
+endif
+endverbatim
+VisualNOS                     -> Visual
+WarningMsg                       red    none    bold
+WildMenu                         blue   bg2     bold
+# Other conventional group names (see `:help group-name`)
+Boolean                          purple none
+Character                        purple none
+Comment                          grey   none    g=italic
+Conditional                      red    none
+Constant                         purple none
+Define                           aqua   none
+Debug                            red    none
+Delimiter                        orange none
+Error                            red    bg0     bold,reverse
+Exception                        red    none
+Float                            purple none
+Function                         green  none    bold
+Identifier                       blue   none
+Ignore                           fg     none
+Include                          aqua   none
+Keyword                          red    none
+Label                            red    none
+Macro                            aqua   none
+Number                           purple none
+Operator                      -> Normal
+PreCondit                        aqua   none
+PreProc                          aqua   none
+Repeat                           red    none
+SpecialChar                      red    none
+SpecialComment                   red    none
+Statement                        red    none
+StorageClass                     orange none
+verbatim
+if get(g:, "@optionprefix_improved_strings", 0)
+endverbatim
+Special                          orange bg1
+String                           fg1    bg1
+verbatim
+else
+endverbatim
+Special                          orange none
+String                           green  none
+verbatim
+endif
+endverbatim
+Structure                        aqua   none
+Tag                           -> Special
+Todo                             fg     bg0     t=bold g=bold,italic
+Type                             yellow none
+Typedef                          yellow none
+Underlined                       blue   none    underline
+# Language mapping cursor
+lCursor                       -> Cursor
+# See `:help CursorIM`
+CursorIM                         none   none    reverse
+# See `:help window-toolbar`
+ToolbarLine          none              bg3
+ToolbarButton        fg0               bg3               bold
+# }}}
+
+# Italics {{{
+verbatim
+if get(g:, "@optionprefix_italic", 0)
+  hi Comment cterm=italic
+  hi Folded cterm=italic
+  hi SpellCap cterm=italic
+  hi Todo cterm=italic
+endif
+if get(g:, "@optionprefix_italicize_strings", 0)
+  hi Special cterm=italic gui=italic
+  hi String cterm=italic gui=italic
+endif
+endverbatim
+# }}}
+
+# Additional highlight groups {{{
+GruvboxFg0        fg0    none
+GruvboxFg1        fg1    none
+GruvboxFg2        fg2    none
+GruvboxFg3        fg3    none
+GruvboxFg4        fg4    none
+GruvboxGray       grey   none
+GruvboxBg0        bg0    none
+GruvboxBg1        bg1    none
+GruvboxBg2        bg2    none
+GruvboxBg3        bg3    none
+GruvboxBg4        bg4    none
+
+GruvboxRed        red    none
+GruvboxRedBold    red    none bold
+GruvboxGreen      green  none
+GruvboxGreenBold  green  none bold
+GruvboxYellow     yellow none
+GruvboxYellowBold yellow none bold
+GruvboxBlue       blue   none
+GruvboxBlueBold   blue   none bold
+GruvboxPurple     purple none
+GruvboxPurpleBold purple none bold
+GruvboxAqua       aqua   none
+GruvboxAquaBold   aqua   none bold
+GruvboxOrange     orange none
+GruvboxOrangeBold orange none bold
+
+# FIXME
+GruvboxRedSign    red    bg1
+GruvboxGreenSign  green  bg1
+GruvboxYellowSign yellow bg1
+GruvboxBlueSign   blue   bg1
+GruvboxPurpleSign purple bg1
+GruvboxAquaSign   aqua   bg1
+
+# Input mode cursor
+iCursor                       -> Cursor
+# Visual mode cursor, selection
+vCursor                       -> Cursor
+
+# Useful for custom status lines
+NormalMode                       fg4    bg0     reverse
+InsertMode                       blue   bg0     reverse
+ReplaceMode                      aqua   bg0     reverse
+VisualMode                       orange bg0     reverse
+CommandMode                      purple bg0     reverse
+Warnings                         orange bg0     reverse
+# }}}
+
+# NeoVim terminal colors {{{
+Include: _neovim.colortemplate
+# }}}
+
+verbatim
+if !(get(g:, "@optionprefix_plugin_hi_groups", 0) || get(g:, "@optionprefix_filetype_hi_groups", 0))
+  finish
+endif
+endverbatim
+
+Include: _plugins.colortemplate
+Include: _filetypes.colortemplate
+

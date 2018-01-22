@@ -1,0 +1,21 @@
+# vim: ft=colortemplate fdm=marker
+
+# Color palette for light background
+Color: bg3               rgb(189, 174, 147)    ~
+Color: bg4               rgb(168, 153, 132)    ~
+Color: fg0               rgb( 40,  40,  40)    ~
+Color: fg1               rgb( 60,  56,  54)    ~
+Color: fg2               rgb( 80,  56,  54)    ~
+Color: fg3               rgb(102,  92,  84)    ~
+Color: fg4               rgb(124, 111, 100)    ~
+Color: grey              rgb(146, 131, 116)    ~
+Color: red               rgb(157,   0,   6)    ~
+Color: green             rgb(121, 116,  14)    ~
+Color: yellow            rgb(181, 118,  20)    ~
+Color: blue              rgb(  7, 102, 120)    ~
+Color: purple            rgb(143,  63, 113)    ~
+Color: aqua              rgb( 66, 123,  88)    ~
+Color: orange            rgb(175,  58,   3)    ~
+
+Include: _common.colortemplate
+

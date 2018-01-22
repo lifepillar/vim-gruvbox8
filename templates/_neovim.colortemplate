@@ -1,0 +1,25 @@
+# vim: ft=colortemplate fdm=marker
+
+verbatim
+if has('nvim')
+  let g:terminal_color_0  = '@guibg0'
+  let g:terminal_color_8  = '@guigrey'
+  let g:terminal_color_1  = '@guineutralred'
+  let g:terminal_color_9  = '@guired'
+  let g:terminal_color_2  = '@guineutralgreen'
+  let g:terminal_color_10 = '@guigreen'
+  let g:terminal_color_3  = '@guineutralyellow'
+  let g:terminal_color_11 = '@guiyellow'
+  let g:terminal_color_4  = '@guineutralblue'
+  let g:terminal_color_12 = '@guiblue'
+  let g:terminal_color_5  = '@guineutralpurple'
+  let g:terminal_color_13 = '@guipurple'
+  let g:terminal_color_6  = '@guineutralaqua'
+  let g:terminal_color_14 = '@guiaqua'
+  let g:terminal_color_7  = '@guifg4'
+  let g:terminal_color_15 = '@guifg1'
+endif
+endverbatim
+TermCursor        -> Cursor
+TermCursorNC         bg1            fg1
+

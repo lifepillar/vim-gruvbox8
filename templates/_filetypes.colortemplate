@@ -1,0 +1,429 @@
+# vim: ft=colortemplate fdm=marker
+
+# Filetype specific groups
+verbatim
+if get(g:, "@optionprefix_filetype_hi_groups", 0)
+endverbatim
+# Diff {{{
+diffAdded                        green  none
+diffRemoved                      red    none
+diffChanged                      aqua   none
+
+diffFile                         orange none
+diffNewFile                      yellow none
+
+diffLine                         blue   none
+# }}}
+# HTML {{{
+htmlTag                          blue   none
+htmlEndTag                       blue   none
+
+htmlTagName                      aqua   none    bold
+htmlArg                          aqua   none
+
+htmlScriptTag                    purple none
+htmlTagN                         fg1    none
+htmlSpecialTagName               aqua   none    bold
+
+htmlLink                         fg4    none    underline
+
+htmlSpecialChar                  orange none
+
+htmlBold                         fg     bg0     bold
+htmlBoldUnderline                fg     bg0     bold,underline
+htmlBoldItalic                   fg     bg0     bold,italic
+htmlBoldUnderlineItalic          fg     bg0     bold,underline,italic
+
+htmlUnderline                    fg     bg0     underline
+htmlUnderlineItalic              fg     bg0     underline,italic
+htmlItalic                       fg     bg0     italic
+# }}}
+# XML {{{
+xmlTag                           blue   none
+xmlEndTag                        blue   none
+xmlTagName                       blue   none
+xmlEqual                         blue   none
+docbkKeyword                     aqua   none    bold
+
+xmlDocTypeDecl                   grey   none
+xmlDocTypeKeyword                purple none
+xmlCdataStart                    grey   none
+xmlCdataCdata                    purple none
+dtdFunction                      grey   none
+dtdTagName                       purple none
+
+xmlAttrib                        aqua   none
+xmlProcessingDelim               grey   none
+dtdParamEntityPunct              grey   none
+dtdParamEntityDPunct             grey   none
+xmlAttribPunct                   grey   none
+
+xmlEntity                        orange none
+xmlEntityPunct                   orange none
+# }}}
+# Vim {{{
+vimCommentTitle                  fg4    none    bold
+vimNotation                      orange none
+vimBracket                       orange none
+vimMapModKey                     orange none
+vimFuncSID                       fg3    none
+vimSetSep                        fg3    none
+vimSep                           fg3    none
+vimContinue                      fg3    none
+# }}}
+# Clojure {{{
+clojureKeyword                   blue   none
+clojureCond                      orange none
+clojureSpecial                   orange none
+clojureDefine                    orange none
+
+clojureFunc                      yellow none
+clojureRepeat                    yellow none
+clojureCharacter                 aqua   none
+clojureStringEscape              aqua   none
+clojureException                 red    none
+
+clojureRegexp                    aqua   none
+clojureRegexpEscape              aqua   none
+clojureRegexpCharClass           fg3    none    bold
+clojureRegexpMod              -> clojureRegexpCharClass
+clojureRegexpQuantifier       -> clojureRegexpCharClass
+
+clojureParen                     fg3    none
+clojureAnonArg                   yellow none
+clojureVariable                  blue   none
+clojureMacro                     orange none
+
+clojureMeta                      yellow none
+clojureDeref                     yellow none
+clojureQuote                     yellow none
+clojureUnquote                   yellow none
+# }}}
+# C {{{
+cOperator                        purple none
+cStructure                       orange none
+# }}}
+# Python {{{
+pythonBuiltin                    orange none
+pythonBuiltinObj                 orange none
+pythonBuiltinFunc                orange none
+pythonFunction                   aqua   none
+pythonDecorator                  red    none
+pythonInclude                    blue   none
+pythonImport                     blue   none
+pythonRun                        blue   none
+pythonCoding                     blue   none
+pythonOperator                   red    none
+pythonException                  red    none
+pythonExceptions                 purple none
+pythonBoolean                    purple none
+pythonDot                        fg3    none
+pythonConditional                red    none
+pythonRepeat                     red    none
+pythonDottedName                 green  none    bold
+# }}}
+# CSS {{{
+cssBraces                        blue   none
+cssFunctionName                  yellow none
+cssIdentifier                    orange none
+cssClassName                     green  none
+cssColor                         blue   none
+cssSelectorOp                    blue   none
+cssSelectorOp2                   blue   none
+cssImportant                     green  none
+cssVendor                        fg1    none
+
+cssTextProp                      aqua   none
+cssAnimationProp                 aqua   none
+cssUIProp                        yellow none
+cssTransformProp                 aqua   none
+cssTransitionProp                aqua   none
+cssPrintProp                     aqua   none
+cssPositioningProp               yellow none
+cssBoxProp                       aqua   none
+cssFontDescriptorProp            aqua   none
+cssFlexibleBoxProp               aqua   none
+cssBorderOutlineProp             aqua   none
+cssBackgroundProp                aqua   none
+cssMarginProp                    aqua   none
+cssListProp                      aqua   none
+cssTableProp                     aqua   none
+cssFontProp                      aqua   none
+cssPaddingProp                   aqua   none
+cssDimensionProp                 aqua   none
+cssRenderProp                    aqua   none
+cssColorProp                     aqua   none
+cssGeneratedContentProp          aqua   none
+# }}}
+# JavaScript {{{
+javaScriptBraces                 fg1    none
+javaScriptFunction               aqua   none
+javaScriptIdentifier             red    none
+javaScriptMember                 blue   none
+javaScriptNumber                 purple none
+javaScriptNull                   purple none
+javaScriptParens                 fg3    none
+# }}}
+# YAJS {{{
+javascriptImport                 aqua   none
+javascriptExport                 aqua   none
+javascriptClassKeyword           aqua   none
+javascriptClassExtends           aqua   none
+javascriptDefault                aqua   none
+
+javascriptClassName              yellow none
+javascriptClassSuperName         yellow none
+javascriptGlobal                 yellow none
+
+javascriptEndColons              fg1    none
+javascriptFuncArg                fg1    none
+javascriptGlobalMethod           fg1    none
+javascriptNodeGlobal             fg1    none
+javascriptBOMWindowProp          fg1    none
+javascriptArrayMethod            fg1    none
+javascriptArrayStaticMethod      fg1    none
+javascriptCacheMethod            fg1    none
+javascriptDateMethod             fg1    none
+javascriptMathStaticMethod       fg1    none
+
+javascriptURLUtilsProp           fg1    none
+javascriptBOMNavigatorProp       fg1    none
+javascriptDOMDocMethod           fg1    none
+javascriptDOMDocProp             fg1    none
+javascriptBOMLocationMethod      fg1    none
+javascriptBOMWindowMethod        fg1    none
+javascriptStringMethod           fg1    none
+
+javascriptVariable               orange none
+javascriptIdentifier             orange none
+javascriptClassSuper             orange none
+
+javascriptFuncKeyword            aqua   none
+javascriptAsyncFunc              aqua   none
+javascriptClassStatic            orange none
+
+javascriptOperator               red    none
+javascriptForOperator            red    none
+javascriptYield                  red    none
+javascriptExceptions             red    none
+javascriptMessage                red    none
+
+javascriptTemplateSB             aqua   none
+javascriptTemplateSubstitution   fg1    none
+
+javascriptLabel                  fg1    none
+javascriptObjectLabel            fg1    none
+javascriptPropertyName           fg1    none
+
+javascriptLogicSymbols           fg1    none
+javascriptArrowFunc              yellow none
+
+javascriptDocParamName           fg4    none
+javascriptDocTags                fg4    none
+javascriptDocNotation            fg4    none
+javascriptDocParamType           fg4    none
+javascriptDocNamedParamType      fg4    none
+
+javascriptBrackets               fg1    none
+javascriptDOMElemAttrs           fg1    none
+javascriptDOMEventMethod         fg1    none
+javascriptDOMNodeMethod          fg1    none
+javascriptDOMStorageMethod       fg1    none
+javascriptHeadersMethod          fg1    none
+
+javascriptAsyncFuncKeyword       red    none
+javascriptAwaitFuncKeyword       red    none
+# }}}
+# PanglossJS {{{
+jsClassKeyword                   aqua   none
+jsExtendsKeyword                 aqua   none
+jsExportDefault                  aqua   none
+jsTemplateBraces                 aqua   none
+jsGlobalNodeObjects              fg1    none
+jsGlobalObjects                  fg1    none
+jsFunction                       aqua   none
+jsFuncParens                     fg3    none
+jsParens                         fg3    none
+jsNull                           purple none
+jsUndefined                      purple none
+jsClassDefinition                yellow none
+# }}}
+# TypeScript {{{
+typeScriptReserved               aqua   none
+typeScriptLabel                  aqua   none
+typeScriptFuncKeyword            aqua   none
+typeScriptIdentifier             orange none
+typeScriptBraces                 fg1    none
+typeScriptEndColons              fg1    none
+typeScriptDOMObjects             fg1    none
+typeScriptAjaxMethods            fg1    none
+typeScriptLogicSymbols           fg1    none
+typeScriptDocSeeTag           -> Comment
+typeScriptDocParam            -> Comment
+typeScriptDocTags             -> vimCommentTitle
+typeScriptGlobalObjects          fg1    none
+typeScriptParens                 fg3    none
+typeScriptOpSymbols              fg3    none
+typeScriptHtmlElemProperties     fg1    none
+typeScriptNull                   purple none
+typeScriptInterpolationDelimiter aqua   none
+# }}}
+# PureScript {{{
+purescriptModuleKeyword          aqua   none
+purescriptModuleName             fg1    none
+purescriptWhere                  aqua   none
+purescriptDelimiter              fg4    none
+purescriptType                   fg1    none
+purescriptImportKeyword          aqua   none
+purescriptHidingKeyword          aqua   none
+purescriptAsKeyword              aqua   none
+purescriptStructure              aqua   none
+purescriptOperator               blue   none
+
+purescriptTypeVar                fg1    none
+purescriptConstructor            fg1    none
+purescriptFunction               fg1    none
+purescriptConditional            orange none
+purescriptBacktick               orange none
+# }}}
+# CoffeeScript {{{
+coffeeExtendedOp                 fg3    none
+coffeeSpecialOp                  fg3    none
+coffeeCurly                      orange none
+coffeeParen                      fg3    none
+coffeeBracket                    orange none
+# }}}
+# Ruby {{{
+rubyStringDelimiter              green  none
+rubyInterpolationDelimiter       aqua   none
+# }}}
+# ObjectiveC {{{
+objcTypeModifier                 red    none
+objcDirective                    blue   none
+# }}}
+# Go {{{
+goDirective                      aqua   none
+goConstants                      purple none
+goDeclaration                    red    none
+goDeclType                       blue   none
+goBuiltins                       orange none
+# }}}
+# Lua {{{
+luaIn                            red    none
+luaFunction                      aqua   none
+luaTable                         orange none
+# }}}
+# MoonScript {{{
+moonSpecialOp                    fg3    none
+moonExtendedOp                   fg3    none
+moonFunction                     fg3    none
+moonObject                       yellow none
+# }}}
+# Java {{{
+javaAnnotation                   blue   none
+javaDocTags                      aqua   none
+javaCommentTitle              -> vimCommentTitle
+javaParen                        fg3    none
+javaParen1                       fg3    none
+javaParen2                       fg3    none
+javaParen3                       fg3    none
+javaParen4                       fg3    none
+javaParen5                       fg3    none
+javaOperator                     orange none
+
+javaVarArg                       green  none
+# }}}
+# Elixir {{{
+elixirDocString               -> Comment
+
+elixirStringDelimiter            green  none
+elixirInterpolationDelimiter     aqua   none
+
+elixirModuleDeclaration          yellow none
+# }}}
+# Scala {{{
+scalaNameDefinition              fg1    none
+scalaCaseFollowing               fg1    none
+scalaCapitalWord                 fg1    none
+scalaTypeExtension               fg1    none
+
+scalaKeyword                     red    none
+scalaKeywordModifier             red    none
+
+scalaSpecial                     aqua   none
+scalaOperator                    fg1    none
+
+scalaTypeDeclaration             yellow none
+scalaTypeTypePostDeclaration     yellow none
+
+scalaInstanceDeclaration         fg1    none
+scalaInterpolation               aqua   none
+# }}}
+# Markdown {{{
+markdownItalic                   fg3    none    italic
+
+markdownH1                       green  none    bold
+markdownH2                       green  none    bold
+markdownH3                       yellow none    bold
+markdownH4                       yellow none    bold
+markdownH5                       yellow none
+markdownH6                       yellow none
+
+markdownCode                     aqua   none
+markdownCodeBlock                aqua   none
+markdownCodeDelimiter            aqua   none
+
+markdownBlockquote               grey   none
+markdownListMarker               grey   none
+markdownOrderedListMarker        grey   none
+markdownRule                     grey   none
+markdownHeadingRule              grey   none
+
+markdownUrlDelimiter             fg3    none
+markdownLinkDelimiter            fg3    none
+markdownLinkTextDelimiter        fg3    none
+
+markdownHeadingDelimiter         orange none
+markdownUrl                      purple none
+markdownUrlTitleDelimiter        green  none
+
+markdownLinkText                 grey   none    underline
+markdownIdDeclaration         -> markdownLinkText
+# }}}
+# Haskell {{{
+haskellType                      fg1    none
+haskellIdentifier                fg1    none
+haskellSeparator                 fg1    none
+haskellDelimiter                 fg4    none
+haskellOperators                 blue   none
+
+haskellBacktick                  orange none
+haskellStatement                 orange none
+haskellConditional               orange none
+
+haskellLet                       aqua   none
+haskellDefault                   aqua   none
+haskellWhere                     aqua   none
+haskellBottom                    aqua   none
+haskellBlockKeywords             aqua   none
+haskellImportKeywords            aqua   none
+haskellDeclKeyword               aqua   none
+haskellDeriving                  aqua   none
+haskellAssocType                 aqua   none
+
+haskellNumber                    purple none
+haskellPragma                    purple none
+
+haskellString                    green  none
+haskellChar                      green  none
+# }}}
+# JSON {{{
+jsonKeyword                      green  none
+jsonQuote                        green  none
+jsonBraces                       fg1    none
+jsonString                       fg1    none
+# }}}
+verbatim
+endif
+endverbatim
+

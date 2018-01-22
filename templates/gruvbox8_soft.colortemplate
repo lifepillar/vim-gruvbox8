@@ -1,0 +1,18 @@
+# vim: ft=colortemplate fdm=marker ts=8
+
+Full name:  Gruvbox 8 Soft
+Short name: gruvbox8_soft
+
+Include: _info.colortemplate
+Include: _neutral_colors.colortemplate
+
+Background: dark
+Color: bg0 rgb(50,48,47) ~
+Include: _dark.colortemplate
+
+Background: light
+Color: bg0 rgb(242,229,188)    ~
+Color: bg1 rgb(235, 219, 178) 251
+Color: bg2 rgb(213, 196, 161) 180
+Include: _light.colortemplate
+
