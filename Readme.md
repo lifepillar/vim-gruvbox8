@@ -1,4 +1,4 @@
-# Gruvbox 8
+# Gruvbox 8 - Vim Colorscheme
 
 This is a simplified and optimized version of
 [Gruvbox](https://github.com/morhetz/gruvbox) that should be suitable for
