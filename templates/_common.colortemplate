@@ -163,41 +163,6 @@ endverbatim
 # }}}
 
 # Additional highlight groups {{{
-GruvboxFg0        fg0    none
-GruvboxFg1        fg1    none
-GruvboxFg2        fg2    none
-GruvboxFg3        fg3    none
-GruvboxFg4        fg4    none
-GruvboxGray       grey   none
-GruvboxBg0        bg0    none
-GruvboxBg1        bg1    none
-GruvboxBg2        bg2    none
-GruvboxBg3        bg3    none
-GruvboxBg4        bg4    none
-
-GruvboxRed        red    none
-GruvboxRedBold    red    none bold
-GruvboxGreen      green  none
-GruvboxGreenBold  green  none bold
-GruvboxYellow     yellow none
-GruvboxYellowBold yellow none bold
-GruvboxBlue       blue   none
-GruvboxBlueBold   blue   none bold
-GruvboxPurple     purple none
-GruvboxPurpleBold purple none bold
-GruvboxAqua       aqua   none
-GruvboxAquaBold   aqua   none bold
-GruvboxOrange     orange none
-GruvboxOrangeBold orange none bold
-
-# FIXME
-GruvboxRedSign    red    bg1
-GruvboxGreenSign  green  bg1
-GruvboxYellowSign yellow bg1
-GruvboxBlueSign   blue   bg1
-GruvboxPurpleSign purple bg1
-GruvboxAquaSign   aqua   bg1
-
 # Input mode cursor
 iCursor                       -> Cursor
 # Visual mode cursor, selection
