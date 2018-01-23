@@ -74,17 +74,17 @@ TabLine                       -> TabLineFill
 TabLineFill                      bg4    bg1
 TabLineSel                       green  bg1
 Title                            green  none    bold
-verbatim
-if get(g:, "@optionprefix_invert_selection", 0)
-endverbatim
-Visual                           none   bg3     reverse
-verbatim
-else
-endverbatim
+# verbatim
+# if get(g:, "@optionprefix_invert_selection", 0)
+# endverbatim
+# Visual                           none   bg3     reverse
+# verbatim
+# else
+# endverbatim
 Visual                           none   bg3
-verbatim
-endif
-endverbatim
+# verbatim
+# endif
+# endverbatim
 VisualNOS                     -> Visual
 WarningMsg                       red    none    bold
 WildMenu                         blue   bg2     bold
@@ -116,19 +116,19 @@ SpecialChar                      red    none
 SpecialComment                   red    none
 Statement                        red    none
 StorageClass                     orange none
-verbatim
-if get(g:, "@optionprefix_improved_strings", 0)
-endverbatim
-Special                          orange bg1
-String                           fg1    bg1
-verbatim
-else
-endverbatim
+# verbatim
+# if get(g:, "@optionprefix_improved_strings", 0)
+# endverbatim
+# Special                          orange bg1
+# String                           fg1    bg1
+# verbatim
+# else
+# endverbatim
 Special                          orange none
 String                           green  none
-verbatim
-endif
-endverbatim
+# verbatim
+# endif
+# endverbatim
 Structure                        aqua   none
 Tag                           -> Special
 Todo                             fg     bg0     t=bold g=bold,italic
