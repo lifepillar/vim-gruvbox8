@@ -23,7 +23,7 @@ verbatim
 endif
 endverbatim
 
-# Group              Foreground        Background        Attributes
+# Group                          Fg     Bg      Attributes
 ColorColumn                      none   bg1
 Conceal                          blue   none
 Cursor                           none   none    reverse
@@ -52,7 +52,7 @@ Question                         orange none    bold
 QuickFixLine                  -> Search
 Search                           yellow bg0     reverse
 SpecialKey                       bg2    none
-SpellBad                         none   none    undercurl s=blue
+SpellBad                         none   none    t=underline g=undercurl s=blue
 verbatim
 if get(g:, "@optionprefix_improved_warnings", 0)
 endverbatim
@@ -60,12 +60,12 @@ SpellCap                         green  none    t=bold g=bold,italic
 verbatim
 else
 endverbatim
-SpellCap                         none   none    undercurl s=red
+SpellCap                         none   none    t=underline g=undercurl s=red
 verbatim
 endif
 endverbatim
-SpellLocal                       none   none    undercurl s=aqua
-SpellRare                        none   none    undercurl s=purple
+SpellLocal                       none   none    t=underline g=undercurl s=aqua
+SpellRare                        none   none    t=underline g=undercurl s=purple
 StatusLine                       bg2    fg1     reverse
 StatusLineNC                     bg1    fg4     reverse
 StatusLineTerm                -> StatusLine

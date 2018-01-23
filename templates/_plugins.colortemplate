@@ -5,9 +5,9 @@ verbatim
 if get(g:, "@optionprefix_plugin_hi_groups", 0)
 endverbatim
 # Asynchronous Lint Engine {{{
-ALEError                         none   none    undercurl s=red
-ALEWarning                       none   none    undercurl s=red
-ALEInfo                          none   none    undercurl s=blue
+ALEError                         none   none    t=underline g=undercurl s=red
+ALEWarning                       none   none    t=underline g=undercurl s=red
+ALEInfo                          none   none    t=underline g=undercurl s=blue
 ALEErrorSign                     red    bg1
 ALEWarningSign                   yellow bg1
 ALEInfoSign                      blue   bg1
@@ -155,8 +155,8 @@ StartifyHeader                   orange none
 StartifyFooter                   bg2    none
 # }}}
 # Syntastic {{{
-SyntasticError                   none   none    undercurl s=red
-SyntasticWarning                 none   none    undercurl s=yellow
+SyntasticError                   none   none    t=underline g=undercurl s=red
+SyntasticWarning                 none   none    t=underline g=undercurl s=yellow
 SyntasticErrorSign               red    bg1
 SyntasticWarningSign             yellow bg1
 # }}}
