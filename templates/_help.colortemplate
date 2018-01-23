@@ -32,13 +32,6 @@ Set to 1 if you want strings with a lighter background.
 >
 	let g:@optionprefix_improved_strings = 0
 <
-						*g:@optionprefix_improved_warnings*
-When set to 0 (which is the default), wrongly capitalized words and compile
-warnings are underlined. Set to 1 if you prefer to use a different color and
-boldface rather than underlining.
->
-	let g:@optionprefix_improved_warnings = 0
-<
 							*g:@optionprefix_italic*
 Set to 1 if you want to enable italics in the terminal. Note that the terminal
 must support italics.

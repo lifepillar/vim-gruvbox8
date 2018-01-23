@@ -3,6 +3,13 @@
 # These are options for features I do not use.
 
 documentation
+						*g:@optionprefix_improved_warnings*
+When set to 0 (which is the default), wrongly capitalized words and compile
+warnings are underlined. Set to 1 if you prefer to use a different color and
+boldface rather than underlining.
+>
+	let g:@optionprefix_improved_warnings = 0
+<
 						*g:@optionprefix_filetype_hi_groups*
 Set to 1 to include syntax highlighting definitions for several filetypes.
 >

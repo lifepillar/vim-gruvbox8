@@ -52,20 +52,20 @@ Question                         orange none    bold
 QuickFixLine                  -> Search
 Search                           yellow bg0     reverse
 SpecialKey                       bg2    none
-SpellBad                         none   none    t=underline g=undercurl s=blue
-verbatim
-if get(g:, "@optionprefix_improved_warnings", 0)
-endverbatim
-SpellCap                         green  none    t=bold g=bold,italic
-verbatim
-else
-endverbatim
-SpellCap                         none   none    t=underline g=undercurl s=red
-verbatim
-endif
-endverbatim
-SpellLocal                       none   none    t=underline g=undercurl s=aqua
-SpellRare                        none   none    t=underline g=undercurl s=purple
+SpellBad                         red    none    t=underline g=italic,undercurl s=red
+# verbatim
+# if get(g:, "@optionprefix_improved_warnings", 0)
+# endverbatim
+# SpellCap                         green  none    t=bold g=bold,italic
+# verbatim
+# else
+# endverbatim
+SpellCap                         blue   none    t=underline g=italic,undercurl s=blue
+# verbatim
+# endif
+# endverbatim
+SpellLocal                       aqua   none    t=underline g=italic,undercurl s=aqua
+SpellRare                        purple none    t=underline g=italic,undercurl s=purple
 StatusLine                       bg2    fg1     reverse
 StatusLineNC                     bg1    fg4     reverse
 StatusLineTerm                -> StatusLine
@@ -149,7 +149,10 @@ verbatim
 if get(g:, "@optionprefix_italic", 0)
   hi Comment cterm=italic
   hi Folded cterm=italic
-  hi SpellCap cterm=italic
+  hi SpellBad cterm=italic,underline
+  hi SpellCap cterm=italic,underline
+  hi SpellLocal cterm=italic,underline
+  hi SpellRare cterm=italic,underline
   hi Todo cterm=italic
 endif
 if get(g:, "@optionprefix_italicize_strings", 0)
