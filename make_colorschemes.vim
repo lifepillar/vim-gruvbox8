@@ -1,6 +1,6 @@
 " Source this script to parse all the templates in the templates folder and
-" generate corresponding colorschemes in the colors folder (the colors folder
-" will be created if it does not exist).
+" generate corresponding colorschemes in the colors folder (the colors and doc
+" folders will be created they do not exist).
 " Note: existing files in the colors and doc folders are overridden.
 
 let s:curdir = fnamemodify(resolve(expand('<sfile>:p')), ':h')
