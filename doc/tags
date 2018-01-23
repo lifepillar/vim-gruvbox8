@@ -1,6 +1,3 @@
-g:gruvbox_improved_strings	gruvbox8.txt	/*g:gruvbox_improved_strings*
-g:gruvbox_improved_warnings	gruvbox8.txt	/*g:gruvbox_improved_warnings*
-g:gruvbox_invert_selection	gruvbox8.txt	/*g:gruvbox_invert_selection*
 g:gruvbox_italic	gruvbox8.txt	/*g:gruvbox_italic*
 g:gruvbox_italicize_strings	gruvbox8.txt	/*g:gruvbox_italicize_strings*
 g:gruvbox_transp_bg	gruvbox8.txt	/*g:gruvbox_transp_bg*
