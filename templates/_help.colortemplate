@@ -63,3 +63,6 @@ terminal.
 	let g:@optionprefix_transp_bg = 0
 <
 enddocumentation
+
+# Include: _help_extra_options.colortemplate
+
