@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-gruvbox8/
 " License:      Vim License (see `:help license`)
-" Last Updated: Mon Jan 22 22:23:23 2018
+" Last Updated: Tue Jan 23 20:44:40 2018
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -50,13 +50,13 @@ if &background ==# 'dark'
     hi Normal ctermfg=187 ctermbg=NONE guifg=#ebdbb2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi CursorLineNr ctermfg=214 ctermbg=NONE guifg=#fabd2f guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi FoldColumn ctermfg=102 ctermbg=NONE guifg=#928374 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-    hi SignColumn ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi SignColumn ctermfg=187 ctermbg=NONE guifg=#ebdbb2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi VertSplit ctermfg=59 ctermbg=NONE guifg=#665c54 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   else
     hi Normal ctermfg=187 ctermbg=235 guifg=#ebdbb2 guibg=#282828 guisp=NONE cterm=NONE gui=NONE
     hi CursorLineNr ctermfg=214 ctermbg=237 guifg=#fabd2f guibg=#3c3836 guisp=NONE cterm=NONE gui=NONE
     hi FoldColumn ctermfg=102 ctermbg=237 guifg=#928374 guibg=#3c3836 guisp=NONE cterm=NONE gui=NONE
-    hi SignColumn ctermfg=NONE ctermbg=237 guifg=NONE guibg=#3c3836 guisp=NONE cterm=NONE gui=NONE
+    hi SignColumn ctermfg=187 ctermbg=237 guifg=#ebdbb2 guibg=#3c3836 guisp=NONE cterm=NONE gui=NONE
     hi VertSplit ctermfg=59 ctermbg=235 guifg=#665c54 guibg=#282828 guisp=NONE cterm=NONE gui=NONE
   endif
   hi ColorColumn ctermfg=NONE ctermbg=237 guifg=NONE guibg=#3c3836 guisp=NONE cterm=NONE gui=NONE
@@ -87,14 +87,10 @@ if &background ==# 'dark'
   hi! link QuickFixLine Search
   hi Search ctermfg=214 ctermbg=235 guifg=#fabd2f guibg=#282828 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi SpecialKey ctermfg=239 ctermbg=NONE guifg=#504945 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi SpellBad ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#83a598 cterm=NONE,undercurl gui=NONE,undercurl
-  if get(g:, "gruvbox_improved_warnings", 0)
-    hi SpellCap ctermfg=142 ctermbg=NONE guifg=#b8bb26 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold,italic
-  else
-    hi SpellCap ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#fb4934 cterm=NONE,undercurl gui=NONE,undercurl
-  endif
-  hi SpellLocal ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#8ec07c cterm=NONE,undercurl gui=NONE,undercurl
-  hi SpellRare ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#d3869b cterm=NONE,undercurl gui=NONE,undercurl
+  hi SpellBad ctermfg=203 ctermbg=NONE guifg=#fb4934 guibg=NONE guisp=#fb4934 cterm=NONE,underline gui=NONE,italic,undercurl
+  hi SpellCap ctermfg=109 ctermbg=NONE guifg=#83a598 guibg=NONE guisp=#83a598 cterm=NONE,underline gui=NONE,italic,undercurl
+  hi SpellLocal ctermfg=107 ctermbg=NONE guifg=#8ec07c guibg=NONE guisp=#8ec07c cterm=NONE,underline gui=NONE,italic,undercurl
+  hi SpellRare ctermfg=175 ctermbg=NONE guifg=#d3869b guibg=NONE guisp=#d3869b cterm=NONE,underline gui=NONE,italic,undercurl
   hi StatusLine ctermfg=239 ctermbg=187 guifg=#504945 guibg=#ebdbb2 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi StatusLineNC ctermfg=237 ctermbg=137 guifg=#3c3836 guibg=#a89984 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi! link StatusLineTerm StatusLine
@@ -103,11 +99,7 @@ if &background ==# 'dark'
   hi TabLineFill ctermfg=243 ctermbg=237 guifg=#7c6f64 guibg=#3c3836 guisp=NONE cterm=NONE gui=NONE
   hi TabLineSel ctermfg=142 ctermbg=237 guifg=#b8bb26 guibg=#3c3836 guisp=NONE cterm=NONE gui=NONE
   hi Title ctermfg=142 ctermbg=NONE guifg=#b8bb26 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-  if get(g:, "gruvbox_invert_selection", 0)
-    hi Visual ctermfg=NONE ctermbg=59 guifg=NONE guibg=#665c54 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-  else
-    hi Visual ctermfg=NONE ctermbg=59 guifg=NONE guibg=#665c54 guisp=NONE cterm=NONE gui=NONE
-  endif
+  hi Visual ctermfg=NONE ctermbg=59 guifg=NONE guibg=#665c54 guisp=NONE cterm=NONE gui=NONE
   hi! link VisualNOS Visual
   hi WarningMsg ctermfg=203 ctermbg=NONE guifg=#fb4934 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi WildMenu ctermfg=109 ctermbg=239 guifg=#83a598 guibg=#504945 guisp=NONE cterm=NONE,bold gui=NONE,bold
@@ -138,13 +130,8 @@ if &background ==# 'dark'
   hi SpecialComment ctermfg=203 ctermbg=NONE guifg=#fb4934 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi Statement ctermfg=203 ctermbg=NONE guifg=#fb4934 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi StorageClass ctermfg=208 ctermbg=NONE guifg=#fe8019 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  if get(g:, "gruvbox_improved_strings", 0)
-    hi Special ctermfg=208 ctermbg=237 guifg=#fe8019 guibg=#3c3836 guisp=NONE cterm=NONE gui=NONE
-    hi String ctermfg=187 ctermbg=237 guifg=#ebdbb2 guibg=#3c3836 guisp=NONE cterm=NONE gui=NONE
-  else
-    hi Special ctermfg=208 ctermbg=NONE guifg=#fe8019 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-    hi String ctermfg=142 ctermbg=NONE guifg=#b8bb26 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  endif
+  hi Special ctermfg=208 ctermbg=NONE guifg=#fe8019 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi String ctermfg=142 ctermbg=NONE guifg=#b8bb26 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi Structure ctermfg=107 ctermbg=NONE guifg=#8ec07c guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi! link Tag Special
   hi Todo ctermfg=fg ctermbg=235 guifg=fg guibg=#282828 guisp=NONE cterm=NONE,bold gui=NONE,bold,italic
@@ -158,44 +145,16 @@ if &background ==# 'dark'
   if get(g:, "gruvbox_italic", 0)
     hi Comment cterm=italic
     hi Folded cterm=italic
-    hi SpellCap cterm=italic
+    hi SpellBad cterm=italic,underline
+    hi SpellCap cterm=italic,underline
+    hi SpellLocal cterm=italic,underline
+    hi SpellRare cterm=italic,underline
     hi Todo cterm=italic
   endif
   if get(g:, "gruvbox_italicize_strings", 0)
     hi Special cterm=italic gui=italic
     hi String cterm=italic gui=italic
   endif
-  hi GruvboxFg0 ctermfg=230 ctermbg=NONE guifg=#fdf4c1 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi GruvboxFg1 ctermfg=187 ctermbg=NONE guifg=#ebdbb2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi GruvboxFg2 ctermfg=187 ctermbg=NONE guifg=#d5c4a1 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi GruvboxFg3 ctermfg=144 ctermbg=NONE guifg=#bdae93 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi GruvboxFg4 ctermfg=137 ctermbg=NONE guifg=#a89984 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi GruvboxGray ctermfg=102 ctermbg=NONE guifg=#928374 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi GruvboxBg0 ctermfg=235 ctermbg=NONE guifg=#282828 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi GruvboxBg1 ctermfg=237 ctermbg=NONE guifg=#3c3836 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi GruvboxBg2 ctermfg=239 ctermbg=NONE guifg=#504945 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi GruvboxBg3 ctermfg=59 ctermbg=NONE guifg=#665c54 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi GruvboxBg4 ctermfg=243 ctermbg=NONE guifg=#7c6f64 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi GruvboxRed ctermfg=203 ctermbg=NONE guifg=#fb4934 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi GruvboxRedBold ctermfg=203 ctermbg=NONE guifg=#fb4934 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-  hi GruvboxGreen ctermfg=142 ctermbg=NONE guifg=#b8bb26 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi GruvboxGreenBold ctermfg=142 ctermbg=NONE guifg=#b8bb26 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-  hi GruvboxYellow ctermfg=214 ctermbg=NONE guifg=#fabd2f guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi GruvboxYellowBold ctermfg=214 ctermbg=NONE guifg=#fabd2f guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-  hi GruvboxBlue ctermfg=109 ctermbg=NONE guifg=#83a598 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi GruvboxBlueBold ctermfg=109 ctermbg=NONE guifg=#83a598 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-  hi GruvboxPurple ctermfg=175 ctermbg=NONE guifg=#d3869b guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi GruvboxPurpleBold ctermfg=175 ctermbg=NONE guifg=#d3869b guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-  hi GruvboxAqua ctermfg=107 ctermbg=NONE guifg=#8ec07c guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi GruvboxAquaBold ctermfg=107 ctermbg=NONE guifg=#8ec07c guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-  hi GruvboxOrange ctermfg=208 ctermbg=NONE guifg=#fe8019 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi GruvboxOrangeBold ctermfg=208 ctermbg=NONE guifg=#fe8019 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-  hi GruvboxRedSign ctermfg=203 ctermbg=237 guifg=#fb4934 guibg=#3c3836 guisp=NONE cterm=NONE gui=NONE
-  hi GruvboxGreenSign ctermfg=142 ctermbg=237 guifg=#b8bb26 guibg=#3c3836 guisp=NONE cterm=NONE gui=NONE
-  hi GruvboxYellowSign ctermfg=214 ctermbg=237 guifg=#fabd2f guibg=#3c3836 guisp=NONE cterm=NONE gui=NONE
-  hi GruvboxBlueSign ctermfg=109 ctermbg=237 guifg=#83a598 guibg=#3c3836 guisp=NONE cterm=NONE gui=NONE
-  hi GruvboxPurpleSign ctermfg=175 ctermbg=237 guifg=#d3869b guibg=#3c3836 guisp=NONE cterm=NONE gui=NONE
-  hi GruvboxAquaSign ctermfg=107 ctermbg=237 guifg=#8ec07c guibg=#3c3836 guisp=NONE cterm=NONE gui=NONE
   hi! link iCursor Cursor
   hi! link vCursor Cursor
   hi NormalMode ctermfg=137 ctermbg=235 guifg=#a89984 guibg=#282828 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
@@ -257,13 +216,13 @@ if !has('gui_running') && get(g:, 'gruvbox_transp_bg', 0)
   hi Normal ctermfg=237 ctermbg=NONE guifg=#3c3836 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi CursorLineNr ctermfg=172 ctermbg=NONE guifg=#b57614 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi FoldColumn ctermfg=102 ctermbg=NONE guifg=#928374 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi SignColumn ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi SignColumn ctermfg=237 ctermbg=NONE guifg=#3c3836 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi VertSplit ctermfg=144 ctermbg=NONE guifg=#bdae93 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 else
   hi Normal ctermfg=237 ctermbg=230 guifg=#3c3836 guibg=#fdf4c1 guisp=NONE cterm=NONE gui=NONE
   hi CursorLineNr ctermfg=172 ctermbg=187 guifg=#b57614 guibg=#ebdbb2 guisp=NONE cterm=NONE gui=NONE
   hi FoldColumn ctermfg=102 ctermbg=187 guifg=#928374 guibg=#ebdbb2 guisp=NONE cterm=NONE gui=NONE
-  hi SignColumn ctermfg=NONE ctermbg=187 guifg=NONE guibg=#ebdbb2 guisp=NONE cterm=NONE gui=NONE
+  hi SignColumn ctermfg=237 ctermbg=187 guifg=#3c3836 guibg=#ebdbb2 guisp=NONE cterm=NONE gui=NONE
   hi VertSplit ctermfg=144 ctermbg=230 guifg=#bdae93 guibg=#fdf4c1 guisp=NONE cterm=NONE gui=NONE
 endif
 hi ColorColumn ctermfg=NONE ctermbg=187 guifg=NONE guibg=#ebdbb2 guisp=NONE cterm=NONE gui=NONE
@@ -294,14 +253,10 @@ hi Question ctermfg=124 ctermbg=NONE guifg=#af3a03 guibg=NONE guisp=NONE cterm=N
 hi! link QuickFixLine Search
 hi Search ctermfg=172 ctermbg=230 guifg=#b57614 guibg=#fdf4c1 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi SpecialKey ctermfg=187 ctermbg=NONE guifg=#d5c4a1 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi SpellBad ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#076678 cterm=NONE,undercurl gui=NONE,undercurl
-if get(g:, "gruvbox_improved_warnings", 0)
-  hi SpellCap ctermfg=100 ctermbg=NONE guifg=#79740e guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold,italic
-else
-  hi SpellCap ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#9d0006 cterm=NONE,undercurl gui=NONE,undercurl
-endif
-hi SpellLocal ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#427b58 cterm=NONE,undercurl gui=NONE,undercurl
-hi SpellRare ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#8f3f71 cterm=NONE,undercurl gui=NONE,undercurl
+hi SpellBad ctermfg=124 ctermbg=NONE guifg=#9d0006 guibg=NONE guisp=#9d0006 cterm=NONE,underline gui=NONE,italic,undercurl
+hi SpellCap ctermfg=23 ctermbg=NONE guifg=#076678 guibg=NONE guisp=#076678 cterm=NONE,underline gui=NONE,italic,undercurl
+hi SpellLocal ctermfg=29 ctermbg=NONE guifg=#427b58 guibg=NONE guisp=#427b58 cterm=NONE,underline gui=NONE,italic,undercurl
+hi SpellRare ctermfg=126 ctermbg=NONE guifg=#8f3f71 guibg=NONE guisp=#8f3f71 cterm=NONE,underline gui=NONE,italic,undercurl
 hi StatusLine ctermfg=187 ctermbg=237 guifg=#d5c4a1 guibg=#3c3836 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi StatusLineNC ctermfg=187 ctermbg=243 guifg=#ebdbb2 guibg=#7c6f64 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi! link StatusLineTerm StatusLine
@@ -310,11 +265,7 @@ hi! link TabLine TabLineFill
 hi TabLineFill ctermfg=137 ctermbg=187 guifg=#a89984 guibg=#ebdbb2 guisp=NONE cterm=NONE gui=NONE
 hi TabLineSel ctermfg=100 ctermbg=187 guifg=#79740e guibg=#ebdbb2 guisp=NONE cterm=NONE gui=NONE
 hi Title ctermfg=100 ctermbg=NONE guifg=#79740e guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-if get(g:, "gruvbox_invert_selection", 0)
-  hi Visual ctermfg=NONE ctermbg=144 guifg=NONE guibg=#bdae93 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-else
-  hi Visual ctermfg=NONE ctermbg=144 guifg=NONE guibg=#bdae93 guisp=NONE cterm=NONE gui=NONE
-endif
+hi Visual ctermfg=NONE ctermbg=144 guifg=NONE guibg=#bdae93 guisp=NONE cterm=NONE gui=NONE
 hi! link VisualNOS Visual
 hi WarningMsg ctermfg=124 ctermbg=NONE guifg=#9d0006 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi WildMenu ctermfg=23 ctermbg=187 guifg=#076678 guibg=#d5c4a1 guisp=NONE cterm=NONE,bold gui=NONE,bold
@@ -345,13 +296,8 @@ hi SpecialChar ctermfg=124 ctermbg=NONE guifg=#9d0006 guibg=NONE guisp=NONE cter
 hi SpecialComment ctermfg=124 ctermbg=NONE guifg=#9d0006 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Statement ctermfg=124 ctermbg=NONE guifg=#9d0006 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi StorageClass ctermfg=124 ctermbg=NONE guifg=#af3a03 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-if get(g:, "gruvbox_improved_strings", 0)
-  hi Special ctermfg=124 ctermbg=187 guifg=#af3a03 guibg=#ebdbb2 guisp=NONE cterm=NONE gui=NONE
-  hi String ctermfg=237 ctermbg=187 guifg=#3c3836 guibg=#ebdbb2 guisp=NONE cterm=NONE gui=NONE
-else
-  hi Special ctermfg=124 ctermbg=NONE guifg=#af3a03 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi String ctermfg=100 ctermbg=NONE guifg=#79740e guibg=NONE guisp=NONE cterm=NONE gui=NONE
-endif
+hi Special ctermfg=124 ctermbg=NONE guifg=#af3a03 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi String ctermfg=100 ctermbg=NONE guifg=#79740e guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Structure ctermfg=29 ctermbg=NONE guifg=#427b58 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link Tag Special
 hi Todo ctermfg=fg ctermbg=230 guifg=fg guibg=#fdf4c1 guisp=NONE cterm=NONE,bold gui=NONE,bold,italic
@@ -365,44 +311,16 @@ hi ToolbarButton ctermfg=235 ctermbg=144 guifg=#282828 guibg=#bdae93 guisp=NONE 
 if get(g:, "gruvbox_italic", 0)
   hi Comment cterm=italic
   hi Folded cterm=italic
-  hi SpellCap cterm=italic
+  hi SpellBad cterm=italic,underline
+  hi SpellCap cterm=italic,underline
+  hi SpellLocal cterm=italic,underline
+  hi SpellRare cterm=italic,underline
   hi Todo cterm=italic
 endif
 if get(g:, "gruvbox_italicize_strings", 0)
   hi Special cterm=italic gui=italic
   hi String cterm=italic gui=italic
 endif
-hi GruvboxFg0 ctermfg=235 ctermbg=NONE guifg=#282828 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi GruvboxFg1 ctermfg=237 ctermbg=NONE guifg=#3c3836 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi GruvboxFg2 ctermfg=237 ctermbg=NONE guifg=#503836 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi GruvboxFg3 ctermfg=59 ctermbg=NONE guifg=#665c54 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi GruvboxFg4 ctermfg=243 ctermbg=NONE guifg=#7c6f64 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi GruvboxGray ctermfg=102 ctermbg=NONE guifg=#928374 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi GruvboxBg0 ctermfg=230 ctermbg=NONE guifg=#fdf4c1 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi GruvboxBg1 ctermfg=187 ctermbg=NONE guifg=#ebdbb2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi GruvboxBg2 ctermfg=187 ctermbg=NONE guifg=#d5c4a1 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi GruvboxBg3 ctermfg=144 ctermbg=NONE guifg=#bdae93 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi GruvboxBg4 ctermfg=137 ctermbg=NONE guifg=#a89984 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi GruvboxRed ctermfg=124 ctermbg=NONE guifg=#9d0006 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi GruvboxRedBold ctermfg=124 ctermbg=NONE guifg=#9d0006 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi GruvboxGreen ctermfg=100 ctermbg=NONE guifg=#79740e guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi GruvboxGreenBold ctermfg=100 ctermbg=NONE guifg=#79740e guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi GruvboxYellow ctermfg=172 ctermbg=NONE guifg=#b57614 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi GruvboxYellowBold ctermfg=172 ctermbg=NONE guifg=#b57614 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi GruvboxBlue ctermfg=23 ctermbg=NONE guifg=#076678 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi GruvboxBlueBold ctermfg=23 ctermbg=NONE guifg=#076678 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi GruvboxPurple ctermfg=126 ctermbg=NONE guifg=#8f3f71 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi GruvboxPurpleBold ctermfg=126 ctermbg=NONE guifg=#8f3f71 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi GruvboxAqua ctermfg=29 ctermbg=NONE guifg=#427b58 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi GruvboxAquaBold ctermfg=29 ctermbg=NONE guifg=#427b58 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi GruvboxOrange ctermfg=124 ctermbg=NONE guifg=#af3a03 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi GruvboxOrangeBold ctermfg=124 ctermbg=NONE guifg=#af3a03 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi GruvboxRedSign ctermfg=124 ctermbg=187 guifg=#9d0006 guibg=#ebdbb2 guisp=NONE cterm=NONE gui=NONE
-hi GruvboxGreenSign ctermfg=100 ctermbg=187 guifg=#79740e guibg=#ebdbb2 guisp=NONE cterm=NONE gui=NONE
-hi GruvboxYellowSign ctermfg=172 ctermbg=187 guifg=#b57614 guibg=#ebdbb2 guisp=NONE cterm=NONE gui=NONE
-hi GruvboxBlueSign ctermfg=23 ctermbg=187 guifg=#076678 guibg=#ebdbb2 guisp=NONE cterm=NONE gui=NONE
-hi GruvboxPurpleSign ctermfg=126 ctermbg=187 guifg=#8f3f71 guibg=#ebdbb2 guisp=NONE cterm=NONE gui=NONE
-hi GruvboxAquaSign ctermfg=29 ctermbg=187 guifg=#427b58 guibg=#ebdbb2 guisp=NONE cterm=NONE gui=NONE
 hi! link iCursor Cursor
 hi! link vCursor Cursor
 hi NormalMode ctermfg=243 ctermbg=230 guifg=#7c6f64 guibg=#fdf4c1 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
@@ -462,12 +380,12 @@ finish
 "     Normal       fg1    none
 "     CursorLineNr yellow none
 "     FoldColumn   grey   none
-"     SignColumn   none   none
+"     SignColumn   fg1    none
 "     VertSplit    bg3    none
 "     Normal       fg1    bg0
 "     CursorLineNr yellow bg1
 "     FoldColumn   grey   bg1
-"     SignColumn   none   bg1
+"     SignColumn   fg1    bg1
 "     VertSplit    bg3    bg0
 " ColorColumn                      none   bg1
 " Conceal                          blue   none
@@ -497,11 +415,10 @@ finish
 " QuickFixLine                  -> Search
 " Search                           yellow bg0     reverse
 " SpecialKey                       bg2    none
-" SpellBad                         none   none    undercurl s=blue
-" SpellCap                         green  none    t=bold g=bold,italic
-" SpellCap                         none   none    undercurl s=red
-" SpellLocal                       none   none    undercurl s=aqua
-" SpellRare                        none   none    undercurl s=purple
+" SpellBad                         red    none    t=underline g=italic,undercurl s=red
+" SpellCap                         blue   none    t=underline g=italic,undercurl s=blue
+" SpellLocal                       aqua   none    t=underline g=italic,undercurl s=aqua
+" SpellRare                        purple none    t=underline g=italic,undercurl s=purple
 " StatusLine                       bg2    fg1     reverse
 " StatusLineNC                     bg1    fg4     reverse
 " StatusLineTerm                -> StatusLine
@@ -510,7 +427,6 @@ finish
 " TabLineFill                      bg4    bg1
 " TabLineSel                       green  bg1
 " Title                            green  none    bold
-" Visual                           none   bg3     reverse
 " Visual                           none   bg3
 " VisualNOS                     -> Visual
 " WarningMsg                       red    none    bold
@@ -542,8 +458,6 @@ finish
 " SpecialComment                   red    none
 " Statement                        red    none
 " StorageClass                     orange none
-" Special                          orange bg1
-" String                           fg1    bg1
 " Special                          orange none
 " String                           green  none
 " Structure                        aqua   none
@@ -556,37 +470,6 @@ finish
 " CursorIM                         none   none    reverse
 " ToolbarLine          none              bg3
 " ToolbarButton        fg0               bg3               bold
-" GruvboxFg0        fg0    none
-" GruvboxFg1        fg1    none
-" GruvboxFg2        fg2    none
-" GruvboxFg3        fg3    none
-" GruvboxFg4        fg4    none
-" GruvboxGray       grey   none
-" GruvboxBg0        bg0    none
-" GruvboxBg1        bg1    none
-" GruvboxBg2        bg2    none
-" GruvboxBg3        bg3    none
-" GruvboxBg4        bg4    none
-" GruvboxRed        red    none
-" GruvboxRedBold    red    none bold
-" GruvboxGreen      green  none
-" GruvboxGreenBold  green  none bold
-" GruvboxYellow     yellow none
-" GruvboxYellowBold yellow none bold
-" GruvboxBlue       blue   none
-" GruvboxBlueBold   blue   none bold
-" GruvboxPurple     purple none
-" GruvboxPurpleBold purple none bold
-" GruvboxAqua       aqua   none
-" GruvboxAquaBold   aqua   none bold
-" GruvboxOrange     orange none
-" GruvboxOrangeBold orange none bold
-" GruvboxRedSign    red    bg1
-" GruvboxGreenSign  green  bg1
-" GruvboxYellowSign yellow bg1
-" GruvboxBlueSign   blue   bg1
-" GruvboxPurpleSign purple bg1
-" GruvboxAquaSign   aqua   bg1
 " iCursor                       -> Cursor
 " vCursor                       -> Cursor
 " NormalMode                       fg4    bg0     reverse
@@ -619,12 +502,12 @@ finish
 "     Normal       fg1    none
 "     CursorLineNr yellow none
 "     FoldColumn   grey   none
-"     SignColumn   none   none
+"     SignColumn   fg1    none
 "     VertSplit    bg3    none
 "     Normal       fg1    bg0
 "     CursorLineNr yellow bg1
 "     FoldColumn   grey   bg1
-"     SignColumn   none   bg1
+"     SignColumn   fg1    bg1
 "     VertSplit    bg3    bg0
 " ColorColumn                      none   bg1
 " Conceal                          blue   none
@@ -654,11 +537,10 @@ finish
 " QuickFixLine                  -> Search
 " Search                           yellow bg0     reverse
 " SpecialKey                       bg2    none
-" SpellBad                         none   none    undercurl s=blue
-" SpellCap                         green  none    t=bold g=bold,italic
-" SpellCap                         none   none    undercurl s=red
-" SpellLocal                       none   none    undercurl s=aqua
-" SpellRare                        none   none    undercurl s=purple
+" SpellBad                         red    none    t=underline g=italic,undercurl s=red
+" SpellCap                         blue   none    t=underline g=italic,undercurl s=blue
+" SpellLocal                       aqua   none    t=underline g=italic,undercurl s=aqua
+" SpellRare                        purple none    t=underline g=italic,undercurl s=purple
 " StatusLine                       bg2    fg1     reverse
 " StatusLineNC                     bg1    fg4     reverse
 " StatusLineTerm                -> StatusLine
@@ -667,7 +549,6 @@ finish
 " TabLineFill                      bg4    bg1
 " TabLineSel                       green  bg1
 " Title                            green  none    bold
-" Visual                           none   bg3     reverse
 " Visual                           none   bg3
 " VisualNOS                     -> Visual
 " WarningMsg                       red    none    bold
@@ -699,8 +580,6 @@ finish
 " SpecialComment                   red    none
 " Statement                        red    none
 " StorageClass                     orange none
-" Special                          orange bg1
-" String                           fg1    bg1
 " Special                          orange none
 " String                           green  none
 " Structure                        aqua   none
@@ -713,37 +592,6 @@ finish
 " CursorIM                         none   none    reverse
 " ToolbarLine          none              bg3
 " ToolbarButton        fg0               bg3               bold
-" GruvboxFg0        fg0    none
-" GruvboxFg1        fg1    none
-" GruvboxFg2        fg2    none
-" GruvboxFg3        fg3    none
-" GruvboxFg4        fg4    none
-" GruvboxGray       grey   none
-" GruvboxBg0        bg0    none
-" GruvboxBg1        bg1    none
-" GruvboxBg2        bg2    none
-" GruvboxBg3        bg3    none
-" GruvboxBg4        bg4    none
-" GruvboxRed        red    none
-" GruvboxRedBold    red    none bold
-" GruvboxGreen      green  none
-" GruvboxGreenBold  green  none bold
-" GruvboxYellow     yellow none
-" GruvboxYellowBold yellow none bold
-" GruvboxBlue       blue   none
-" GruvboxBlueBold   blue   none bold
-" GruvboxPurple     purple none
-" GruvboxPurpleBold purple none bold
-" GruvboxAqua       aqua   none
-" GruvboxAquaBold   aqua   none bold
-" GruvboxOrange     orange none
-" GruvboxOrangeBold orange none bold
-" GruvboxRedSign    red    bg1
-" GruvboxGreenSign  green  bg1
-" GruvboxYellowSign yellow bg1
-" GruvboxBlueSign   blue   bg1
-" GruvboxPurpleSign purple bg1
-" GruvboxAquaSign   aqua   bg1
 " iCursor                       -> Cursor
 " vCursor                       -> Cursor
 " NormalMode                       fg4    bg0     reverse

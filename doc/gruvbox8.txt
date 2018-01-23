@@ -1,4 +1,4 @@
-*gruvbox8.txt*	For Vim version 8.0	Last change: 2018 January 22
+*gruvbox8.txt*	For Vim version 8.0	Last change: 2018 January 23
 
 
 		  VIM REFERENCE MANUAL    by Lifepillar
@@ -24,18 +24,6 @@ Gruvbox 8 requires at least 256 colors and supports "true color" terminals.
 ==============================================================================
 1. Colorscheme options					*gruvbox-options*
 
-						*g:gruvbox_improved_strings*
-Set to 1 if you want strings with a lighter background.
->
-	let g:gruvbox_improved_strings = 0
-<
-						*g:gruvbox_improved_warnings*
-When set to 0 (which is the default), wrongly capitalized words and compile
-warnings are underlined. Set to 1 if you prefer to use a different color and
-boldface rather than underlining.
->
-	let g:gruvbox_improved_warnings = 0
-<
 							*g:gruvbox_italic*
 Set to 1 if you want to enable italics in the terminal. Note that the terminal
 must support italics.
@@ -46,12 +34,6 @@ must support italics.
 Set to 1 if you want strings in italics.
 >
 	let g:gruvbox_italicize_strings = 0
-<
-						*g:gruvbox_invert_selection*
-When set to 1, selected text in Visual mode has inverted colors. When set to
-0 (which is the default), colors are not reversed.
->
-	let g:gruvbox_invert_selection = 0
 <
 						*g:gruvbox_transp_bg*
 Set to 1 if you want a transparent background. Takes effect only in the
