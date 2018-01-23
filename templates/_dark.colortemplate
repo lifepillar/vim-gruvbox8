@@ -1,4 +1,4 @@
-# vim: ft=colortemplate fdm=marker
+# vim: ft=colortemplate
 
 # Color palette for dark background
 Color: bg1             rgb(60,  56,  54)     ~

@@ -1,4 +1,4 @@
-# vim: ft=colortemplate fdm=marker
+# vim: ft=colortemplate
 
 # Color palette for light background
 Color: bg3               rgb(189, 174, 147)    ~

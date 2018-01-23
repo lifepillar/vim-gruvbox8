@@ -1,4 +1,4 @@
-# vim: ft=colortemplate fdm=marker
+# vim: ft=colortemplate
 
 # Neutral colors
 Color: neutralred        rgb(204,  36,  29)    ~
