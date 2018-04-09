@@ -17,5 +17,11 @@ Color: purple            rgb(143,  63, 113)    ~
 Color: aqua              rgb( 66, 123,  88)    ~
 Color: orange            rgb(175,  58,   3)    ~
 
+verbatim
+let g:terminal_ansi_colors = [
+\ '@guibg0', '@guineutralred', '@guineutralgreen', '@guineutralyellow', '@guineutralblue', '@guineutralpurple', '@guineutralaqua', '@guifg3',
+\ '@guibg4', '@guired', '@guigreen', '@guiyellow', '@guiblue', '@guipurple', '@guiaqua', '@guifg1']
+endverbatim
+
 Include: _common.colortemplate
 

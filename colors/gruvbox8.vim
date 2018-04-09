@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-gruvbox8/
 " License:      Vim License (see `:help license`)
-" Last Updated: Tue Jan 23 20:44:40 2018
+" Last Updated: Mon Apr  9 21:23:24 2018
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -46,6 +46,9 @@ if &background ==# 'dark'
   "           fg3: GUI=#bdae93/rgb(189,174,147)  Term=144 #afaf87/rgb(175,175,135)  [delta=8.449971]
   "          grey: GUI=#928374/rgb(146,131,116)  Term=102 #878787/rgb(135,135,135)  [delta=8.970802]
   "           fg4: GUI=#a89984/rgb(168,153,132)  Term=137 #af875f/rgb(175,135, 95)  [delta=10.269702]
+  let g:terminal_ansi_colors = [
+        \ '#282828', '#cc241d', '#98971a', '#d79921', '#458588', '#b16286', '#689d6a', '#bdae93',
+        \ '#7c6f64', '#fb4934', '#b8bb26', '#fabd2f', '#83a598', '#d3869b', '#8ec07c', '#ebdbb2']
   if !has('gui_running') && get(g:, 'gruvbox_transp_bg', 0)
     hi Normal ctermfg=187 ctermbg=NONE guifg=#ebdbb2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi CursorLineNr ctermfg=214 ctermbg=NONE guifg=#fabd2f guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -212,6 +215,9 @@ endif
 "          blue: GUI=#076678/rgb(  7,102,120)  Term= 23 #005f5f/rgb(  0, 95, 95)  [delta=9.442168]
 "           bg4: GUI=#a89984/rgb(168,153,132)  Term=137 #af875f/rgb(175,135, 95)  [delta=10.269702]
 "           fg2: GUI=#503836/rgb( 80, 56, 54)  Term=237 #3a3a3a/rgb( 58, 58, 58)  [delta=12.071597]
+let g:terminal_ansi_colors = [
+      \ '#fdf4c1', '#cc241d', '#98971a', '#d79921', '#458588', '#b16286', '#689d6a', '#665c54',
+      \ '#a89984', '#9d0006', '#79740e', '#b57614', '#076678', '#8f3f71', '#427b58', '#3c3836']
 if !has('gui_running') && get(g:, 'gruvbox_transp_bg', 0)
   hi Normal ctermfg=237 ctermbg=NONE guifg=#3c3836 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi CursorLineNr ctermfg=172 ctermbg=NONE guifg=#b57614 guibg=NONE guisp=NONE cterm=NONE gui=NONE
