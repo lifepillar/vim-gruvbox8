@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-gruvbox8/
 " License:      Vim License (see `:help license`)
-" Last Updated: Mon Apr  9 21:23:28 2018
+" Last Updated: Mon Apr 16 21:47:53 2018
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -183,9 +183,9 @@ if &background ==# 'dark'
     let g:terminal_color_14 = '#8ec07c'
     let g:terminal_color_7  = '#a89984'
     let g:terminal_color_15 = '#ebdbb2'
+    hi! link TermCursor Cursor
+    hi TermCursorNC ctermfg=237 ctermbg=187 guifg=#3c3836 guibg=#ebdbb2 guisp=NONE cterm=NONE gui=NONE
   endif
-  hi! link TermCursor Cursor
-  hi TermCursorNC ctermfg=237 ctermbg=187 guifg=#3c3836 guibg=#ebdbb2 guisp=NONE cterm=NONE gui=NONE
   finish
 endif
 
@@ -352,9 +352,9 @@ if has('nvim')
   let g:terminal_color_14 = '#427b58'
   let g:terminal_color_7  = '#7c6f64'
   let g:terminal_color_15 = '#3c3836'
+  hi! link TermCursor Cursor
+  hi TermCursorNC ctermfg=187 ctermbg=237 guifg=#ebdbb2 guibg=#3c3836 guisp=NONE cterm=NONE gui=NONE
 endif
-hi! link TermCursor Cursor
-hi TermCursorNC ctermfg=187 ctermbg=237 guifg=#ebdbb2 guibg=#3c3836 guisp=NONE cterm=NONE gui=NONE
 finish
 
 " Color: neutralred        rgb(204,  36,  29)    ~
