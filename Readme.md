@@ -6,8 +6,8 @@ to address some issues I had with the official colorscheme.
 
  These are the main differences compared to the official Gruvbox:
 
-- no plugin and filetype highlight groups to avoid messing up syntax
-  highlighting after switching colorschemes;
+- by default, no plugin and filetype highlight groups to avoid messing up syntax
+  highlighting after switching colorschemes (can be enabled through options);
 - reduced number of options;
 - all options are documented;
 - slightly different (and, IMHO, better) 256-color palette;
