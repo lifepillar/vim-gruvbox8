@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-gruvbox8/
 " License:      Vim License (see `:help license`)
-" Last Updated: Wed May  9 14:09:31 2018
+" Last Updated: Wed May  9 14:18:01 2018
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)

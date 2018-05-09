@@ -21,26 +21,6 @@ When set to 1, selected text in Visual mode has inverted colors. When set to
 >
 	let g:@optionprefix_invert_selection = 0
 <
-						*g:@optionprefix_filetype_hi_groups*
-Set to 1 to include syntax highlighting definitions for several filetypes.
->
-	let g:@optionprefix_filetype_hi_groups = 0
-<
-Note: setting this to 1 may leave "a wake of destruction when switching away"
-(Tim Pope), that is, when you switch to a different colorscheme the
-highlighting may look wrong or disabled.
-
-						*g:@optionprefix_plugin_hi_groups*
-Set to 1 to include syntax highlighting definitions for a number of popular
-plugins, including:
-
->
-	let g:@optionprefix_plugin_hi_groups = 0
-<
-Note: setting this to 1 may leave "a wake of destruction when switching away"
-(Tim Pope), that is, when you switch to a different colorscheme the
-highlighting may look wrong or disabled.
-
 						*g:@optionprefix_invert_indent_guides*
 Set to 1 if you use the Indent Guides plugin and you want to invert the colors
 of the indentation lines.

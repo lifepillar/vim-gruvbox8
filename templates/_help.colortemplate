@@ -27,6 +27,15 @@ before loading the colorscheme. For example:
 ==============================================================================
 1. Colorscheme options					*@optionprefix-options*
 
+						*g:@optionprefix_filetype_hi_groups*
+Set to 1 to include syntax highlighting definitions for several filetypes.
+>
+	let g:@optionprefix_filetype_hi_groups = 0
+<
+Note: setting this to 1 may leave "a wake of destruction when switching away"
+(Tim Pope), that is, when you switch to a different colorscheme the
+highlighting may look wrong or disabled.
+
 							*g:@optionprefix_italic*
 Set to 1 if you want to enable italics in the terminal. Note that the terminal
 must support italics.
@@ -38,6 +47,16 @@ Set to 1 if you want strings in italics.
 >
 	let g:@optionprefix_italicize_strings = 0
 <
+						*g:@optionprefix_plugin_hi_groups*
+Set to 1 to include syntax highlighting definitions for a number of popular
+plugins:
+>
+	let g:@optionprefix_plugin_hi_groups = 0
+<
+Note: setting this to 1 may leave "a wake of destruction when switching away"
+(Tim Pope), that is, when you switch to a different colorscheme the
+highlighting may look wrong or disabled.
+
 						*g:@optionprefix_transp_bg*
 Set to 1 if you want a transparent background. Takes effect only in the
 terminal.
