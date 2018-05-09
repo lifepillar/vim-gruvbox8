@@ -181,12 +181,12 @@ Warnings                         orange bg0     reverse
 Include: _neovim.colortemplate
 # }}}
 
-#verbatim
-#if !(get(g:, "@optionprefix_plugin_hi_groups", 0) || get(g:, "@optionprefix_filetype_hi_groups", 0))
-#  finish
-#endif
-#endverbatim
+verbatim
+if !(get(g:, "@optionprefix_plugin_hi_groups", 0) || get(g:, "@optionprefix_filetype_hi_groups", 0))
+ finish
+endif
+endverbatim
 
-#Include: _plugins.colortemplate
-#Include: _filetypes.colortemplate
+Include: _plugins.colortemplate
+Include: _filetypes.colortemplate
 
