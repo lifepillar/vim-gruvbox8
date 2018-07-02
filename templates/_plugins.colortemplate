@@ -70,7 +70,7 @@ if !exists('g:indentLine_color_term')
   let g:indentLine_color_term = @termbg2
 endif
 if !exists('g:indentLine_color_gui')
-  let g:indentLine_color_gui = @guibg2
+  let g:indentLine_color_gui = '@guibg2'
 endif
 endverbatim
 # }}}
@@ -167,10 +167,10 @@ multiple_cursors_visual          none   bg2
 # Vimshell {{{
 verbatim
 let g:vimshell_escape_colors = [
-  \ @guibg4, @guired, @guigreen, @guiyellow,
-  \ @guiblue, @guipurple, @guiaqua, @guifg4,
-  \ @guibg0, @guired, @guigreen, @guiorange,
-  \ @guiblue, @guipurple, @guiaqua, @guifg0
+  \ '@guibg4', '@guired', '@guigreen', '@guiyellow',
+  \ '@guiblue', '@guipurple', '@guiaqua', '@guifg4',
+  \ '@guibg0', '@guired', '@guigreen', '@guiorange',
+  \ '@guiblue', '@guipurple', '@guiaqua', '@guifg0'
   \ ]
 endverbatim
 # }}}

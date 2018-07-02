@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-gruvbox8/
 " License:      Vim License (see `:help license`)
-" Last Updated: Wed May  9 14:18:01 2018
+" Last Updated: Mon Jul  2 07:57:41 2018
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -232,7 +232,7 @@ if &background ==# 'dark'
       let g:indentLine_color_term = 239
     endif
     if !exists('g:indentLine_color_gui')
-      let g:indentLine_color_gui = #504945
+      let g:indentLine_color_gui = '#504945'
     endif
     hi NERDTreeDir ctermfg=107 ctermbg=NONE guifg=#8ec07c guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi NERDTreeDirSlash ctermfg=107 ctermbg=NONE guifg=#8ec07c guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -301,10 +301,10 @@ if &background ==# 'dark'
     hi multiple_cursors_cursor ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
     hi multiple_cursors_visual ctermfg=NONE ctermbg=239 guifg=NONE guibg=#504945 guisp=NONE cterm=NONE gui=NONE
     let g:vimshell_escape_colors = [
-          \ #7c6f64, #fb4934, #b8bb26, #fabd2f,
-          \ #83a598, #d3869b, #8ec07c, #a89984,
-          \ #32302f, #fb4934, #b8bb26, #fe8019,
-          \ #83a598, #d3869b, #8ec07c, #fdf4c1
+          \ '#7c6f64', '#fb4934', '#b8bb26', '#fabd2f',
+          \ '#83a598', '#d3869b', '#8ec07c', '#a89984',
+          \ '#32302f', '#fb4934', '#b8bb26', '#fe8019',
+          \ '#83a598', '#d3869b', '#8ec07c', '#fdf4c1'
           \ ]
   endif
   if get(g:, "gruvbox_filetype_hi_groups", 0)
@@ -847,7 +847,7 @@ if get(g:, "gruvbox_plugin_hi_groups", 0)
     let g:indentLine_color_term = 180
   endif
   if !exists('g:indentLine_color_gui')
-    let g:indentLine_color_gui = #d5c4a1
+    let g:indentLine_color_gui = '#d5c4a1'
   endif
   hi NERDTreeDir ctermfg=29 ctermbg=NONE guifg=#427b58 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi NERDTreeDirSlash ctermfg=29 ctermbg=NONE guifg=#427b58 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -916,10 +916,10 @@ if get(g:, "gruvbox_plugin_hi_groups", 0)
   hi multiple_cursors_cursor ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi multiple_cursors_visual ctermfg=NONE ctermbg=180 guifg=NONE guibg=#d5c4a1 guisp=NONE cterm=NONE gui=NONE
   let g:vimshell_escape_colors = [
-        \ #a89984, #9d0006, #79740e, #b57614,
-        \ #076678, #8f3f71, #427b58, #7c6f64,
-        \ #f2e5bc, #9d0006, #79740e, #af3a03,
-        \ #076678, #8f3f71, #427b58, #282828
+        \ '#a89984', '#9d0006', '#79740e', '#b57614',
+        \ '#076678', '#8f3f71', '#427b58', '#7c6f64',
+        \ '#f2e5bc', '#9d0006', '#79740e', '#af3a03',
+        \ '#076678', '#8f3f71', '#427b58', '#282828'
         \ ]
 endif
 if get(g:, "gruvbox_filetype_hi_groups", 0)
