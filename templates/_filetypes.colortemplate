@@ -242,6 +242,7 @@ jsTemplateBraces                 aqua   none
 jsGlobalNodeObjects              fg1    none
 jsGlobalObjects                  fg1    none
 jsFunction                       aqua   none
+jsFuncCall                       blue   none
 jsFuncParens                     fg3    none
 jsParens                         fg3    none
 jsNull                           purple none
