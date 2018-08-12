@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-gruvbox8/
 " License:      Vim License (see `:help license`)
-" Last Updated: Mon Jul  2 07:57:32 2018
+" Last Updated: Mon 06 Aug 2018 02:49:33 PM CEST
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -20,32 +20,6 @@ endif
 let g:colors_name = 'gruvbox8'
 
 if &background ==# 'dark'
-  " Color similarity table (dark background)
-  "           bg0: GUI=#282828/rgb( 40, 40, 40)  Term=235 #262626/rgb( 38, 38, 38)  [delta=0.631758]
-  " neutralpurple: GUI=#b16286/rgb(177, 98,134)  Term=132 #af5f87/rgb(175, 95,135)  [delta=1.447558]
-  " neutralorange: GUI=#d65d0e/rgb(214, 93, 14)  Term=166 #d75f00/rgb(215, 95,  0)  [delta=1.594261]
-  "           bg1: GUI=#3c3836/rgb( 60, 56, 54)  Term=237 #3a3a3a/rgb( 58, 58, 58)  [delta=2.591691]
-  "         green: GUI=#b8bb26/rgb(184,187, 38)  Term=142 #afaf00/rgb(175,175,  0)  [delta=3.417395]
-  "        orange: GUI=#fe8019/rgb(254,128, 25)  Term=208 #ff8700/rgb(255,135,  0)  [delta=3.424299]
-  "    neutralred: GUI=#cc241d/rgb(204, 36, 29)  Term=160 #d70000/rgb(215,  0,  0)  [delta=3.678548]
-  "           bg2: GUI=#504945/rgb( 80, 73, 69)  Term=239 #4e4e4e/rgb( 78, 78, 78)  [delta=4.437203]
-  "           fg0: GUI=#fdf4c1/rgb(253,244,193)  Term=230 #ffffd7/rgb(255,255,215)  [delta=4.485567]
-  "   neutralblue: GUI=#458588/rgb( 69,133,136)  Term= 66 #5f8787/rgb( 95,135,135)  [delta=4.654950]
-  "        yellow: GUI=#fabd2f/rgb(250,189, 47)  Term=214 #ffaf00/rgb(255,175,  0)  [delta=5.124662]
-  "        purple: GUI=#d3869b/rgb(211,134,155)  Term=175 #d787af/rgb(215,135,175)  [delta=5.579873]
-  "  neutralgreen: GUI=#98971a/rgb(152,151, 26)  Term=100 #878700/rgb(135,135,  0)  [delta=5.597892]
-  "          aqua: GUI=#8ec07c/rgb(142,192,124)  Term=107 #87af5f/rgb(135,175, 95)  [delta=5.816248]
-  "          blue: GUI=#83a598/rgb(131,165,152)  Term=109 #87afaf/rgb(135,175,175)  [delta=6.121678]
-  "           bg3: GUI=#665c54/rgb(102, 92, 84)  Term= 59 #5f5f5f/rgb( 95, 95, 95)  [delta=6.186264]
-  " neutralyellow: GUI=#d79921/rgb(215,153, 33)  Term=172 #d78700/rgb(215,135,  0)  [delta=6.285960]
-  "           fg1: GUI=#ebdbb2/rgb(235,219,178)  Term=187 #d7d7af/rgb(215,215,175)  [delta=6.290489]
-  "   neutralaqua: GUI=#689d6a/rgb(104,157,106)  Term= 71 #5faf5f/rgb( 95,175, 95)  [delta=7.301224]
-  "           bg4: GUI=#7c6f64/rgb(124,111,100)  Term=243 #767676/rgb(118,118,118)  [delta=7.889685]
-  "           fg2: GUI=#d5c4a1/rgb(213,196,161)  Term=187 #d7d7af/rgb(215,215,175)  [delta=8.170537]
-  "           red: GUI=#fb4934/rgb(251, 73, 52)  Term=203 #ff5f5f/rgb(255, 95, 95)  [delta=8.215867]
-  "           fg3: GUI=#bdae93/rgb(189,174,147)  Term=144 #afaf87/rgb(175,175,135)  [delta=8.449971]
-  "          grey: GUI=#928374/rgb(146,131,116)  Term=102 #878787/rgb(135,135,135)  [delta=8.970802]
-  "           fg4: GUI=#a89984/rgb(168,153,132)  Term=137 #af875f/rgb(175,135, 95)  [delta=10.269702]
   let g:terminal_ansi_colors = [
         \ '#282828', '#cc241d', '#98971a', '#d79921', '#458588', '#b16286', '#689d6a', '#bdae93',
         \ '#7c6f64', '#fb4934', '#b8bb26', '#fabd2f', '#83a598', '#d3869b', '#8ec07c', '#ebdbb2']
@@ -497,6 +471,7 @@ if &background ==# 'dark'
     hi jsGlobalNodeObjects ctermfg=187 ctermbg=NONE guifg=#ebdbb2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi jsGlobalObjects ctermfg=187 ctermbg=NONE guifg=#ebdbb2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi jsFunction ctermfg=107 ctermbg=NONE guifg=#8ec07c guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsFuncCall ctermfg=109 ctermbg=NONE guifg=#83a598 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi jsFuncParens ctermfg=144 ctermbg=NONE guifg=#bdae93 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi jsParens ctermfg=144 ctermbg=NONE guifg=#bdae93 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi jsNull ctermfg=175 ctermbg=NONE guifg=#d3869b guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -635,32 +610,6 @@ if &background ==# 'dark'
   finish
 endif
 
-" Color similarity table (light background)
-"           fg0: GUI=#282828/rgb( 40, 40, 40)  Term=235 #262626/rgb( 38, 38, 38)  [delta=0.631758]
-" neutralpurple: GUI=#b16286/rgb(177, 98,134)  Term=132 #af5f87/rgb(175, 95,135)  [delta=1.447558]
-" neutralorange: GUI=#d65d0e/rgb(214, 93, 14)  Term=166 #d75f00/rgb(215, 95,  0)  [delta=1.594261]
-"           fg1: GUI=#3c3836/rgb( 60, 56, 54)  Term=237 #3a3a3a/rgb( 58, 58, 58)  [delta=2.591691]
-"    neutralred: GUI=#cc241d/rgb(204, 36, 29)  Term=160 #d70000/rgb(215,  0,  0)  [delta=3.678548]
-"           red: GUI=#9d0006/rgb(157,  0,  6)  Term=124 #af0000/rgb(175,  0,  0)  [delta=3.945287]
-"           bg0: GUI=#fdf4c1/rgb(253,244,193)  Term=230 #ffffd7/rgb(255,255,215)  [delta=4.485567]
-"   neutralblue: GUI=#458588/rgb( 69,133,136)  Term= 66 #5f8787/rgb( 95,135,135)  [delta=4.654950]
-"  neutralgreen: GUI=#98971a/rgb(152,151, 26)  Term=100 #878700/rgb(135,135,  0)  [delta=5.597892]
-"           fg3: GUI=#665c54/rgb(102, 92, 84)  Term= 59 #5f5f5f/rgb( 95, 95, 95)  [delta=6.186264]
-" neutralyellow: GUI=#d79921/rgb(215,153, 33)  Term=172 #d78700/rgb(215,135,  0)  [delta=6.285960]
-"           bg1: GUI=#ebdbb2/rgb(235,219,178)  Term=187 #d7d7af/rgb(215,215,175)  [delta=6.290489]
-"          aqua: GUI=#427b58/rgb( 66,123, 88)  Term= 29 #00875f/rgb(  0,135, 95)  [delta=6.512362]
-"   neutralaqua: GUI=#689d6a/rgb(104,157,106)  Term= 71 #5faf5f/rgb( 95,175, 95)  [delta=7.301224]
-"         green: GUI=#79740e/rgb(121,116, 14)  Term=100 #878700/rgb(135,135,  0)  [delta=7.387225]
-"           fg4: GUI=#7c6f64/rgb(124,111,100)  Term=243 #767676/rgb(118,118,118)  [delta=7.889685]
-"        yellow: GUI=#b57614/rgb(181,118, 20)  Term=172 #d78700/rgb(215,135,  0)  [delta=8.074928]
-"        orange: GUI=#af3a03/rgb(175, 58,  3)  Term=124 #af0000/rgb(175,  0,  0)  [delta=8.117734]
-"           bg2: GUI=#d5c4a1/rgb(213,196,161)  Term=187 #d7d7af/rgb(215,215,175)  [delta=8.170537]
-"           bg3: GUI=#bdae93/rgb(189,174,147)  Term=144 #afaf87/rgb(175,175,135)  [delta=8.449971]
-"        purple: GUI=#8f3f71/rgb(143, 63,113)  Term=126 #af0087/rgb(175,  0,135)  [delta=8.757905]
-"          grey: GUI=#928374/rgb(146,131,116)  Term=102 #878787/rgb(135,135,135)  [delta=8.970802]
-"          blue: GUI=#076678/rgb(  7,102,120)  Term= 23 #005f5f/rgb(  0, 95, 95)  [delta=9.442168]
-"           bg4: GUI=#a89984/rgb(168,153,132)  Term=137 #af875f/rgb(175,135, 95)  [delta=10.269702]
-"           fg2: GUI=#503836/rgb( 80, 56, 54)  Term=237 #3a3a3a/rgb( 58, 58, 58)  [delta=12.071597]
 let g:terminal_ansi_colors = [
       \ '#fdf4c1', '#cc241d', '#98971a', '#d79921', '#458588', '#b16286', '#689d6a', '#665c54',
       \ '#a89984', '#9d0006', '#79740e', '#b57614', '#076678', '#8f3f71', '#427b58', '#3c3836']
@@ -1112,6 +1061,7 @@ if get(g:, "gruvbox_filetype_hi_groups", 0)
   hi jsGlobalNodeObjects ctermfg=237 ctermbg=NONE guifg=#3c3836 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi jsGlobalObjects ctermfg=237 ctermbg=NONE guifg=#3c3836 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi jsFunction ctermfg=29 ctermbg=NONE guifg=#427b58 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsFuncCall ctermfg=23 ctermbg=NONE guifg=#076678 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi jsFuncParens ctermfg=59 ctermbg=NONE guifg=#665c54 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi jsParens ctermfg=59 ctermbg=NONE guifg=#665c54 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi jsNull ctermfg=126 ctermbg=NONE guifg=#8f3f71 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -1644,6 +1594,7 @@ finish
 " jsGlobalNodeObjects              fg1    none
 " jsGlobalObjects                  fg1    none
 " jsFunction                       aqua   none
+" jsFuncCall                       blue   none
 " jsFuncParens                     fg3    none
 " jsParens                         fg3    none
 " jsNull                           purple none
@@ -2166,6 +2117,7 @@ finish
 " jsGlobalNodeObjects              fg1    none
 " jsGlobalObjects                  fg1    none
 " jsFunction                       aqua   none
+" jsFuncCall                       blue   none
 " jsFuncParens                     fg3    none
 " jsParens                         fg3    none
 " jsNull                           purple none
