@@ -108,7 +108,7 @@ Keyword                          red    none
 Label                            red    none
 Macro                            aqua   none
 Number                           purple none
-Operator                      -> Normal
+Operator                         aqua   none
 PreCondit                        aqua   none
 PreProc                          aqua   none
 Repeat                           red    none
