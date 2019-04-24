@@ -1,5 +1,7 @@
 # Gruvbox 8 - Vim Colorscheme
 
+![](https://raw.github.com/lifepillar/Resources/master/gruvbox8/gruvbox8-dark-and-light.png)
+
 This is a simplified and optimized<sup>*</sup> version of
 [Gruvbox](https://github.com/morhetz/gruvbox) that I have developed
 to address some issues I had with the official colorscheme.
@@ -21,6 +23,14 @@ to address some issues I had with the official colorscheme.
   i.e., easily hackable.
 
 <sup>*</sup> Loads in ~1.5ms compared to the >9ms required by Gruvbox.
+
+## True-color Variants
+
+![](https://raw.github.com/lifepillar/Resources/master/gruvbox8/gruvbox8-variants.png)
+
+## 256-color Variants
+
+![](https://raw.github.com/lifepillar/Resources/master/gruvbox8/gruvbox8-256-variants.png)
 
 ## Hacking
 
