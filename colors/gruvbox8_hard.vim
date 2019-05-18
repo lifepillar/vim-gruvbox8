@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-gruvbox8/
 " License:      Vim License (see `:help license`)
-" Last Updated: Sun Apr 21 09:12:13 2019
+" Last Updated: Sat May 18 11:17:24 2019
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -464,19 +464,60 @@ if &background ==# 'dark'
     hi javascriptHeadersMethod ctermfg=187 ctermbg=NONE guifg=#ebdbb2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi javascriptAsyncFuncKeyword ctermfg=203 ctermbg=NONE guifg=#fb4934 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi javascriptAwaitFuncKeyword ctermfg=203 ctermbg=NONE guifg=#fb4934 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-    hi jsClassKeyword ctermfg=107 ctermbg=NONE guifg=#8ec07c guibg=NONE guisp=NONE cterm=NONE gui=NONE
-    hi jsExtendsKeyword ctermfg=107 ctermbg=NONE guifg=#8ec07c guibg=NONE guisp=NONE cterm=NONE gui=NONE
-    hi jsExportDefault ctermfg=107 ctermbg=NONE guifg=#8ec07c guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsImport ctermfg=203 ctermbg=NONE guifg=#fb4934 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsExport ctermfg=203 ctermbg=NONE guifg=#fb4934 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsFrom ctermfg=203 ctermbg=NONE guifg=#fb4934 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsThis ctermfg=175 ctermbg=NONE guifg=#d3869b guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsParen ctermfg=109 ctermbg=NONE guifg=#83a598 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsOperator ctermfg=107 ctermbg=NONE guifg=#8ec07c guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsSpreadOperator ctermfg=142 ctermbg=NONE guifg=#b8bb26 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsSpreadExpression ctermfg=109 ctermbg=NONE guifg=#83a598 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsClassKeyword ctermfg=203 ctermbg=NONE guifg=#fb4934 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsClassProperty ctermfg=142 ctermbg=NONE guifg=#b8bb26 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsExtendsKeyword ctermfg=203 ctermbg=NONE guifg=#fb4934 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsExportDefault ctermfg=208 ctermbg=NONE guifg=#fe8019 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
     hi jsTemplateBraces ctermfg=107 ctermbg=NONE guifg=#8ec07c guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi jsGlobalNodeObjects ctermfg=187 ctermbg=NONE guifg=#ebdbb2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi jsGlobalObjects ctermfg=187 ctermbg=NONE guifg=#ebdbb2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-    hi jsFunction ctermfg=107 ctermbg=NONE guifg=#8ec07c guibg=NONE guisp=NONE cterm=NONE gui=NONE
-    hi jsFuncCall ctermfg=109 ctermbg=NONE guifg=#83a598 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-    hi jsFuncParens ctermfg=144 ctermbg=NONE guifg=#bdae93 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsFunction ctermfg=142 ctermbg=NONE guifg=#b8bb26 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsFuncParens ctermfg=175 ctermbg=NONE guifg=#d3869b guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsFuncBlock ctermfg=109 ctermbg=NONE guifg=#83a598 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi jsParens ctermfg=144 ctermbg=NONE guifg=#bdae93 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi jsNull ctermfg=175 ctermbg=NONE guifg=#d3869b guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi jsUndefined ctermfg=175 ctermbg=NONE guifg=#d3869b guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi jsClassDefinition ctermfg=214 ctermbg=NONE guifg=#fabd2f guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsFunctionKey ctermfg=142 ctermbg=NONE guifg=#b8bb26 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsBracket ctermfg=203 ctermbg=NONE guifg=#fb4934 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsObjectColon ctermfg=203 ctermbg=NONE guifg=#fb4934 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsObjectProp ctermfg=109 ctermbg=NONE guifg=#83a598 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsFuncBraces ctermfg=142 ctermbg=NONE guifg=#b8bb26 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsVariableDef ctermfg=214 ctermbg=NONE guifg=#fabd2f guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsObjectValue ctermfg=109 ctermbg=NONE guifg=#83a598 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsDestructuringBlock ctermfg=214 ctermbg=NONE guifg=#fabd2f guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsParenIfElse ctermfg=109 ctermbg=NONE guifg=#83a598 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsClassBlock ctermfg=109 ctermbg=NONE guifg=#83a598 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsFutureKeys ctermfg=208 ctermbg=NONE guifg=#fe8019 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
+    hi jsStorageClass ctermfg=208 ctermbg=NONE guifg=#fe8019 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsModuleKeyword ctermfg=109 ctermbg=NONE guifg=#83a598 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsObjectShorthandProp ctermfg=109 ctermbg=NONE guifg=#83a598 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsxRegion ctermfg=109 ctermbg=NONE guifg=#83a598 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsxTagName ctermfg=109 ctermbg=NONE guifg=#83a598 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsxComponentName ctermfg=214 ctermbg=NONE guifg=#fabd2f guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsxEscapeJsAttributes ctermfg=109 ctermbg=NONE guifg=#83a598 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsxEscapeJsContent ctermfg=109 ctermbg=NONE guifg=#83a598 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsxAttrib ctermfg=214 ctermbg=NONE guifg=#fabd2f guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsxAttributeBraces ctermfg=187 ctermbg=NONE guifg=#ebdbb2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsxEqual ctermfg=107 ctermbg=NONE guifg=#8ec07c guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsxString ctermfg=142 ctermbg=NONE guifg=#b8bb26 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsxCloseTag ctermfg=109 ctermbg=NONE guifg=#83a598 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsxEndTag ctermfg=109 ctermbg=NONE guifg=#83a598 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsxEndString ctermfg=109 ctermbg=NONE guifg=#83a598 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsxCloseString ctermfg=109 ctermbg=NONE guifg=#83a598 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsxIfOperator ctermfg=107 ctermbg=NONE guifg=#8ec07c guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsxElseOperator ctermfg=107 ctermbg=NONE guifg=#8ec07c guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsxDot ctermfg=187 ctermbg=NONE guifg=#ebdbb2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsxNamespace ctermfg=109 ctermbg=NONE guifg=#83a598 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi jsxPunct ctermfg=107 ctermbg=NONE guifg=#8ec07c guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi typeScriptReserved ctermfg=107 ctermbg=NONE guifg=#8ec07c guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi typeScriptLabel ctermfg=107 ctermbg=NONE guifg=#8ec07c guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi typeScriptFuncKeyword ctermfg=107 ctermbg=NONE guifg=#8ec07c guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -1054,19 +1095,60 @@ if get(g:, "gruvbox_filetype_hi_groups", 0)
   hi javascriptHeadersMethod ctermfg=237 ctermbg=NONE guifg=#3c3836 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi javascriptAsyncFuncKeyword ctermfg=124 ctermbg=NONE guifg=#9d0006 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi javascriptAwaitFuncKeyword ctermfg=124 ctermbg=NONE guifg=#9d0006 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi jsClassKeyword ctermfg=29 ctermbg=NONE guifg=#427b58 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi jsExtendsKeyword ctermfg=29 ctermbg=NONE guifg=#427b58 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi jsExportDefault ctermfg=29 ctermbg=NONE guifg=#427b58 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsImport ctermfg=124 ctermbg=NONE guifg=#9d0006 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsExport ctermfg=124 ctermbg=NONE guifg=#9d0006 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsFrom ctermfg=124 ctermbg=NONE guifg=#9d0006 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsThis ctermfg=126 ctermbg=NONE guifg=#8f3f71 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsParen ctermfg=23 ctermbg=NONE guifg=#076678 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsOperator ctermfg=29 ctermbg=NONE guifg=#427b58 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsSpreadOperator ctermfg=100 ctermbg=NONE guifg=#79740e guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsSpreadExpression ctermfg=23 ctermbg=NONE guifg=#076678 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsClassKeyword ctermfg=124 ctermbg=NONE guifg=#9d0006 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsClassProperty ctermfg=100 ctermbg=NONE guifg=#79740e guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsExtendsKeyword ctermfg=124 ctermbg=NONE guifg=#9d0006 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsExportDefault ctermfg=124 ctermbg=NONE guifg=#af3a03 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi jsTemplateBraces ctermfg=29 ctermbg=NONE guifg=#427b58 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi jsGlobalNodeObjects ctermfg=237 ctermbg=NONE guifg=#3c3836 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi jsGlobalObjects ctermfg=237 ctermbg=NONE guifg=#3c3836 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi jsFunction ctermfg=29 ctermbg=NONE guifg=#427b58 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi jsFuncCall ctermfg=23 ctermbg=NONE guifg=#076678 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi jsFuncParens ctermfg=59 ctermbg=NONE guifg=#665c54 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsFunction ctermfg=100 ctermbg=NONE guifg=#79740e guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsFuncParens ctermfg=126 ctermbg=NONE guifg=#8f3f71 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsFuncBlock ctermfg=23 ctermbg=NONE guifg=#076678 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi jsParens ctermfg=59 ctermbg=NONE guifg=#665c54 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi jsNull ctermfg=126 ctermbg=NONE guifg=#8f3f71 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi jsUndefined ctermfg=126 ctermbg=NONE guifg=#8f3f71 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi jsClassDefinition ctermfg=172 ctermbg=NONE guifg=#b57614 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsFunctionKey ctermfg=100 ctermbg=NONE guifg=#79740e guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsBracket ctermfg=124 ctermbg=NONE guifg=#9d0006 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsObjectColon ctermfg=124 ctermbg=NONE guifg=#9d0006 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsObjectProp ctermfg=23 ctermbg=NONE guifg=#076678 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsFuncBraces ctermfg=100 ctermbg=NONE guifg=#79740e guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsVariableDef ctermfg=172 ctermbg=NONE guifg=#b57614 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsObjectValue ctermfg=23 ctermbg=NONE guifg=#076678 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsDestructuringBlock ctermfg=172 ctermbg=NONE guifg=#b57614 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsParenIfElse ctermfg=23 ctermbg=NONE guifg=#076678 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsClassBlock ctermfg=23 ctermbg=NONE guifg=#076678 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsFutureKeys ctermfg=124 ctermbg=NONE guifg=#af3a03 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
+  hi jsStorageClass ctermfg=124 ctermbg=NONE guifg=#af3a03 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsModuleKeyword ctermfg=23 ctermbg=NONE guifg=#076678 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsObjectShorthandProp ctermfg=23 ctermbg=NONE guifg=#076678 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsxRegion ctermfg=23 ctermbg=NONE guifg=#076678 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsxTagName ctermfg=23 ctermbg=NONE guifg=#076678 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsxComponentName ctermfg=172 ctermbg=NONE guifg=#b57614 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsxEscapeJsAttributes ctermfg=23 ctermbg=NONE guifg=#076678 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsxEscapeJsContent ctermfg=23 ctermbg=NONE guifg=#076678 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsxAttrib ctermfg=172 ctermbg=NONE guifg=#b57614 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsxAttributeBraces ctermfg=237 ctermbg=NONE guifg=#3c3836 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsxEqual ctermfg=29 ctermbg=NONE guifg=#427b58 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsxString ctermfg=100 ctermbg=NONE guifg=#79740e guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsxCloseTag ctermfg=23 ctermbg=NONE guifg=#076678 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsxEndTag ctermfg=23 ctermbg=NONE guifg=#076678 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsxEndString ctermfg=23 ctermbg=NONE guifg=#076678 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsxCloseString ctermfg=23 ctermbg=NONE guifg=#076678 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsxIfOperator ctermfg=29 ctermbg=NONE guifg=#427b58 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsxElseOperator ctermfg=29 ctermbg=NONE guifg=#427b58 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsxDot ctermfg=237 ctermbg=NONE guifg=#3c3836 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsxNamespace ctermfg=23 ctermbg=NONE guifg=#076678 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi jsxPunct ctermfg=29 ctermbg=NONE guifg=#427b58 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi typeScriptReserved ctermfg=29 ctermbg=NONE guifg=#427b58 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi typeScriptLabel ctermfg=29 ctermbg=NONE guifg=#427b58 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi typeScriptFuncKeyword ctermfg=29 ctermbg=NONE guifg=#427b58 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -1587,19 +1669,60 @@ finish
 " javascriptHeadersMethod          fg1    none
 " javascriptAsyncFuncKeyword       red    none
 " javascriptAwaitFuncKeyword       red    none
-" jsClassKeyword                   aqua   none
-" jsExtendsKeyword                 aqua   none
-" jsExportDefault                  aqua   none
+" jsImport                         red  none
+" jsExport                         red  none
+" jsFrom                           red  none
+" jsThis                           purple none
+" jsParen                          blue none
+" jsOperator                       aqua none
+" jsSpreadOperator                 green none
+" jsSpreadExpression               blue  none
+" jsClassKeyword                   red   none
+" jsClassProperty                  green none
+" jsExtendsKeyword                 red   none
+" jsExportDefault                  orange none bold
 " jsTemplateBraces                 aqua   none
-" jsGlobalNodeObjects              fg1    none
-" jsGlobalObjects                  fg1    none
-" jsFunction                       aqua   none
-" jsFuncCall                       blue   none
-" jsFuncParens                     fg3    none
+" jsGlobalNodeObjects              fg1   none
+" jsGlobalObjects                  fg1   none
+" jsFunction                       green  none
+" jsFuncParens                     purple none
+" jsFuncBlock                      blue  none
 " jsParens                         fg3    none
 " jsNull                           purple none
 " jsUndefined                      purple none
 " jsClassDefinition                yellow none
+" jsFunctionKey                    green none
+" jsBracket                        red none
+" jsObjectColon                    red none
+" jsObjectProp                     blue none
+" jsFuncBraces                     green none
+" jsVariableDef                    yellow none
+" jsObjectValue                    blue none
+" jsDestructuringBlock             yellow none
+" jsParenIfElse                    blue none
+" jsClassBlock                     blue none
+" jsFutureKeys                     orange none bold
+" jsStorageClass                   orange none
+" jsModuleKeyword                  blue none
+" jsObjectShorthandProp            blue none
+" jsxRegion                        blue none
+" jsxTagName                       blue   none
+" jsxComponentName                 yellow none
+" jsxEscapeJsAttributes            blue none
+" jsxEscapeJsContent               blue none
+" jsxAttrib                        yellow none
+" jsxAttributeBraces               fg1    none
+" jsxEqual                         aqua   none
+" jsxString                        green  none
+" jsxCloseTag                      blue   none
+" jsxEndTag                        blue   none
+" jsxEndString                     blue   none
+" jsxCloseString                   blue   none
+" jsxIfOperator                    aqua   none
+" jsxElseOperator                  aqua   none
+" jsxDot                           fg1    none
+" jsxNamespace                     blue   none
+" jsxPunct                         aqua   none
 " typeScriptReserved               aqua   none
 " typeScriptLabel                  aqua   none
 " typeScriptFuncKeyword            aqua   none
@@ -2110,19 +2233,60 @@ finish
 " javascriptHeadersMethod          fg1    none
 " javascriptAsyncFuncKeyword       red    none
 " javascriptAwaitFuncKeyword       red    none
-" jsClassKeyword                   aqua   none
-" jsExtendsKeyword                 aqua   none
-" jsExportDefault                  aqua   none
+" jsImport                         red  none
+" jsExport                         red  none
+" jsFrom                           red  none
+" jsThis                           purple none
+" jsParen                          blue none
+" jsOperator                       aqua none
+" jsSpreadOperator                 green none
+" jsSpreadExpression               blue  none
+" jsClassKeyword                   red   none
+" jsClassProperty                  green none
+" jsExtendsKeyword                 red   none
+" jsExportDefault                  orange none bold
 " jsTemplateBraces                 aqua   none
-" jsGlobalNodeObjects              fg1    none
-" jsGlobalObjects                  fg1    none
-" jsFunction                       aqua   none
-" jsFuncCall                       blue   none
-" jsFuncParens                     fg3    none
+" jsGlobalNodeObjects              fg1   none
+" jsGlobalObjects                  fg1   none
+" jsFunction                       green  none
+" jsFuncParens                     purple none
+" jsFuncBlock                      blue  none
 " jsParens                         fg3    none
 " jsNull                           purple none
 " jsUndefined                      purple none
 " jsClassDefinition                yellow none
+" jsFunctionKey                    green none
+" jsBracket                        red none
+" jsObjectColon                    red none
+" jsObjectProp                     blue none
+" jsFuncBraces                     green none
+" jsVariableDef                    yellow none
+" jsObjectValue                    blue none
+" jsDestructuringBlock             yellow none
+" jsParenIfElse                    blue none
+" jsClassBlock                     blue none
+" jsFutureKeys                     orange none bold
+" jsStorageClass                   orange none
+" jsModuleKeyword                  blue none
+" jsObjectShorthandProp            blue none
+" jsxRegion                        blue none
+" jsxTagName                       blue   none
+" jsxComponentName                 yellow none
+" jsxEscapeJsAttributes            blue none
+" jsxEscapeJsContent               blue none
+" jsxAttrib                        yellow none
+" jsxAttributeBraces               fg1    none
+" jsxEqual                         aqua   none
+" jsxString                        green  none
+" jsxCloseTag                      blue   none
+" jsxEndTag                        blue   none
+" jsxEndString                     blue   none
+" jsxCloseString                   blue   none
+" jsxIfOperator                    aqua   none
+" jsxElseOperator                  aqua   none
+" jsxDot                           fg1    none
+" jsxNamespace                     blue   none
+" jsxPunct                         aqua   none
 " typeScriptReserved               aqua   none
 " typeScriptLabel                  aqua   none
 " typeScriptFuncKeyword            aqua   none
