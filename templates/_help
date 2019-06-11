@@ -15,7 +15,7 @@ Each variant supports dark and light backgrounds, so you must set 'background'
 before loading the colorscheme. For example:
 >
 	set background=dark
-	colorscheme gruvbox8
+	colorscheme @shortname
 <
 @fullname works out of the box anywhere, from black&white terminals to
 true-color terminals and GUI versions of Vim.
