@@ -1,8 +1,7 @@
 g:gruvbox_filetype_hi_groups	gruvbox8.txt	/*g:gruvbox_filetype_hi_groups*
-g:gruvbox_italic	gruvbox8.txt	/*g:gruvbox_italic*
 g:gruvbox_italicize_strings	gruvbox8.txt	/*g:gruvbox_italicize_strings*
+g:gruvbox_italics	gruvbox8.txt	/*g:gruvbox_italics*
 g:gruvbox_plugin_hi_groups	gruvbox8.txt	/*g:gruvbox_plugin_hi_groups*
 g:gruvbox_transp_bg	gruvbox8.txt	/*g:gruvbox_transp_bg*
 gruvbox-options	gruvbox8.txt	/*gruvbox-options*
-gruvbox8	gruvbox8.txt	/*gruvbox8*
 gruvbox8.txt	gruvbox8.txt	/*gruvbox8.txt*

@@ -1,0 +1,13 @@
+# vim: ft=colortemplate fdm=marker
+
+CursorColumn     -> CursorLine
+QuickFixLine     -> Search
+StatusLineTerm   -> StatusLine
+StatusLineTermNC -> StatusLineNC
+TabLine          -> TabLineFill
+VisualNOS        -> Visual
+Tag              -> Special
+lCursor          -> Cursor
+iCursor          -> Cursor
+vCursor          -> Cursor
+

@@ -1,10 +1,7 @@
-*gruvbox8.txt*	For Vim version 8.0	Last change: 2018 January 23
+*gruvbox8.txt*	For Vim version 8.1	Last change: 2019 Jun 11
 
 
-		  VIM REFERENCE MANUAL    by Lifepillar
-
-
-			Gruvbox 8 colorscheme			*gruvbox8*
+		Gruvbox 8 color scheme
 
 Gruvbox 8 is a popular colorscheme originally designed by morhetz. The Vim
 version comes in three variants:
@@ -19,10 +16,11 @@ before loading the colorscheme. For example:
 	set background=dark
 	colorscheme gruvbox8
 <
-Gruvbox 8 requires at least 256 colors and supports "true color" terminals.
+Gruvbox 8 works out of the box anywhere, from black&white terminals to
+true-color terminals and GUI versions of Vim.
 
 ==============================================================================
-1. Colorscheme options					*gruvbox-options*
+Colorscheme options				*gruvbox-options*
 
 						*g:gruvbox_filetype_hi_groups*
 Set to 1 to include syntax highlighting definitions for several filetypes.
@@ -33,16 +31,19 @@ Note: setting this to 1 may leave "a wake of destruction when switching away"
 (Tim Pope), that is, when you switch to a different colorscheme the
 highlighting may look wrong or disabled.
 
-							*g:gruvbox_italic*
-Set to 1 if you want to enable italics in the terminal. Note that the terminal
-must support italics.
+						*g:gruvbox_italics*
+Set to 0 if you do not want to enable italics. Note that the color scheme in
+normal circumstances automatically detects whether italics is available. You
+should never need to set this option explicitly. You may want to unset it if
+you do not want Vim to display italics even when the feature is available
+(e.g., in GUI versions of Vim).
 >
-	let g:gruvbox_italic = 0
+	let g:gruvbox_italics = 1
 <
 						*g:gruvbox_italicize_strings*
-Set to 1 if you want strings in italics.
+Set to 0 if you do not want strings in italics.
 >
-	let g:gruvbox_italicize_strings = 0
+	let g:gruvbox_italicize_strings = 1
 <
 						*g:gruvbox_plugin_hi_groups*
 Set to 1 to include syntax highlighting definitions for a number of popular
@@ -60,5 +61,5 @@ terminal.
 >
 	let g:gruvbox_transp_bg = 0
 <
-
-vim:tw=78:ts=8:ft=help:norl:
+==============================================================================
+ vim:tw=78:ts=8:noet:ft=help:norl:

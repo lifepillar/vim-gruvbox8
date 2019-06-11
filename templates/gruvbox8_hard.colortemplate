@@ -3,16 +3,22 @@
 Full name:  Gruvbox 8 Hard
 Short name: gruvbox8_hard
 
-Include: _info.colortemplate
-Include: _neutral_colors.colortemplate
+Include: _info
+Include: _neutral_colors
+Include: _global
+
+Variant: gui 256
 
 Background: dark
-Color: bg0 rgb(29,32,33) ~
-Include: _dark.colortemplate
+Color: bg0 rgb(29,32,33) ~ Black
+Include: _dark
 
 Background: light
-Color: bg0 rgb(249,245,215)   229
+Color: bg0 rgb(249,245,215)   229 Black
 Color: bg1 rgb(235, 219, 178)  ~
 Color: bg2 rgb(213, 196, 161)  ~
-Include: _light.colortemplate
+Include: _light
+
+Background: any
+Include: _bw
 

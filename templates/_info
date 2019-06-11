@@ -4,6 +4,6 @@ Author:          morhetz <morhetz@gmail.com>
 Maintainer:      Lifepillar <lifepillar@lifepillar.me>
 Website:         https://github.com/lifepillar/vim-gruvbox8/
 Description:     Retro groove color scheme originally designed by morhetz
-Terminal Colors: 256
 Option Prefix:   gruvbox
+Neovim:          yes
 

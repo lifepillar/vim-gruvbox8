@@ -1,9 +1,7 @@
 # vim: ft=colortemplate fdm=marker
 
 # Plugin specific groups
-verbatim
-if get(g:, "@optionprefix_plugin_hi_groups", 0)
-endverbatim
+#if get(g:, "@optionprefix_plugin_hi_groups", 0)
 # Asynchronous Lint Engine {{{
 ALEError                         none   none    t=underline g=undercurl s=red
 ALEWarning                       none   none    t=underline g=undercurl s=red
@@ -47,32 +45,23 @@ GitGutterDelete                  red    bg1
 GitGutterChangeDelete            aqua   bg1
 # }}}
 # Indent Guides {{{
-verbatim
-if get(g:, "indent_guides_auto_colors", 0)
-  if get(g: "@optionprefix_invert_indent_guides", 0)
-endverbatim
-IndentGuidesOdd  bg0 bg2 reverse
-IndentGuidesEven bg0 bg1 reverse
-verbatim
-  else
-endverbatim
-IndentGuidesOdd  bg0 bg2
-IndentGuidesEven bg0 bg1
-verbatim
-  endif
-endif
-endverbatim
+#if get(g:, 'indent_guides_auto_colors', 0)
+  #if get(g: '@optionprefix_invert_indent_guides', 0)
+    IndentGuidesOdd  bg0 bg2 reverse
+    IndentGuidesEven bg0 bg1 reverse
+  #else
+    IndentGuidesOdd  bg0 bg2
+    IndentGuidesEven bg0 bg1
+  #endif
+#endif
 # }}}
 # IndentLine {{{
-verbatim
-" IndentLine
-if !exists('g:indentLine_color_term')
-  let g:indentLine_color_term = @termbg2
-endif
-if !exists('g:indentLine_color_gui')
-  let g:indentLine_color_gui = '@guibg2'
-endif
-endverbatim
+#if !exists('g:indentLine_color_term')
+  #let g:indentLine_color_term = @term256bg2
+#endif
+#if !exists('g:indentLine_color_gui')
+  #let g:indentLine_color_gui = '@guibg2'
+#endif
 # }}}
 # NERDTree {{{
 NERDTreeDir                      aqua   none
@@ -108,11 +97,11 @@ verbatim
 " Rainbow Parentheses
 if !exists('g:rbpt_colorpairs')
   let g:rbpt_colorpairs = [['blue', '@guineutralblue'], ['magenta', '@guineutralpurple'],
-    \ ['red', '@guineutralred'], ['@termneutralorange', '@guineutralorange']]
+    \ ['red', '@guineutralred'], ['@term256neutralorange', '@guineutralorange']]
 endif
 
 let g:rainbow_guifgs = [ '@guineutralorange', '@guineutralred', '@guineutralpurple', '@guineutralblue' ]
-let g:rainbow_ctermfgs = [ '@termneutralorange', 'red', 'magenta', 'blue' ]
+let g:rainbow_ctermfgs = [ '@term256neutralorange', 'red', 'magenta', 'blue' ]
 
 if !exists('g:rainbow_conf')
    let g:rainbow_conf = {}
@@ -174,7 +163,5 @@ let g:vimshell_escape_colors = [
   \ ]
 endverbatim
 # }}}
-verbatim
-endif
-endverbatim
+#endif
 

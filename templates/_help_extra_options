@@ -1,6 +1,7 @@
 # vim: ft=colortemplate fdm=marker noet ts=8 tw=78
 
-# These are options for features I do not use.
+# These are options for features that were in the original Gruvbox but were
+# removed in Gruvbox 8.
 
 documentation
 						*g:@optionprefix_improved_strings*
@@ -29,4 +30,5 @@ of the indentation lines.
 <
 Note: for this to take effect, you also need to set
 |@optionprefix_plugin_hi_groups|.
+
 enddocumentation

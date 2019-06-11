@@ -19,8 +19,6 @@ if has('nvim')
   let g:terminal_color_7  = '@guifg4'
   let g:terminal_color_15 = '@guifg1'
 endverbatim
-TermCursor        -> Cursor
-TermCursorNC         bg1            fg1
 verbatim
 endif
 endverbatim

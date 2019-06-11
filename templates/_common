@@ -1,33 +1,32 @@
 # vim: ft=colortemplate fdm=marker
 
+Term colors: bg0 neutralred neutralgreen neutralyellow
+Term colors: neutralblue neutralpurple neutralaqua fg4
+Term colors: grey red green yellow blue purple aqua fg1
+
 # Default highlight groups {{{
-verbatim
-if !has('gui_running') && get(g:, '@optionprefix_transp_bg', 0)
-endverbatim
-    # Transparent background
+Variant: gui
+#if get(g:, '@optionprefix_transp_bg', 0) && !has('gui_running')
+Variant: 256
+#if get(g:, '@optionprefix_transp_bg', 0)
+Variant: gui 256
     Normal       fg1    none
     CursorLineNr yellow none
     FoldColumn   grey   none
     SignColumn   fg1    none
     VertSplit    bg3    none
-verbatim
-else
-endverbatim
-    # Opaque background
+#else
     Normal       fg1    bg0
     CursorLineNr yellow bg1
     FoldColumn   grey   bg1
     SignColumn   fg1    bg1
     VertSplit    bg3    bg0
-verbatim
-endif
-endverbatim
+#endif
 
 # Group                          Fg     Bg      Attributes
 ColorColumn                      none   bg1
 Conceal                          blue   none
 Cursor                           none   none    reverse
-CursorColumn                  -> CursorLine
 CursorLine                       none   bg1
 DiffAdd                          green  bg0     reverse
 DiffChange                       aqua   bg0     reverse
@@ -37,7 +36,7 @@ Directory                        green  none    bold
 EndOfBuffer                      bg0    none
 Error                            red    bg0     bold,reverse
 ErrorMsg                         bg0    red     bold
-Folded                           grey   bg1     g=italic
+Folded                           grey   bg1     italic
 IncSearch                        orange bg0     reverse
 LineNr                           bg4    none
 MatchParen                       none   bg3     bold
@@ -49,49 +48,24 @@ PmenuSbar                        none   bg2
 PmenuSel                         bg2    blue    bold
 PmenuThumb                       none   bg4
 Question                         orange none    bold
-QuickFixLine                  -> Search
 Search                           yellow bg0     reverse
 SpecialKey                       bg2    none
-SpellBad                         red    none    t=underline g=italic,undercurl s=red
-# verbatim
-# if get(g:, "@optionprefix_improved_warnings", 0)
-# endverbatim
-# SpellCap                         green  none    t=bold g=bold,italic
-# verbatim
-# else
-# endverbatim
-SpellCap                         blue   none    t=underline g=italic,undercurl s=blue
-# verbatim
-# endif
-# endverbatim
-SpellLocal                       aqua   none    t=underline g=italic,undercurl s=aqua
-SpellRare                        purple none    t=underline g=italic,undercurl s=purple
+SpellBad                         red    none    italic t=underline g=undercurl s=red
+SpellCap                         blue   none    italic t=underline g=undercurl s=blue
+SpellLocal                       aqua   none    italic t=underline g=undercurl s=aqua
+SpellRare                        purple none    italic t=underline g=undercurl s=purple
 StatusLine                       bg2    fg1     reverse
 StatusLineNC                     bg1    fg4     reverse
-StatusLineTerm                -> StatusLine
-StatusLineTermNC              -> StatusLineNC
-TabLine                       -> TabLineFill
 TabLineFill                      bg4    bg1
 TabLineSel                       green  bg1
 Title                            green  none    bold
-# verbatim
-# if get(g:, "@optionprefix_invert_selection", 0)
-# endverbatim
-# Visual                           none   bg3     reverse
-# verbatim
-# else
-# endverbatim
 Visual                           none   bg3
-# verbatim
-# endif
-# endverbatim
-VisualNOS                     -> Visual
 WarningMsg                       red    none    bold
 WildMenu                         blue   bg2     bold
 # Other conventional group names (see `:help group-name`)
 Boolean                          purple none
 Character                        purple none
-Comment                          grey   none    g=italic
+Comment                          grey   none    italic
 Conditional                      red    none
 Constant                         purple none
 Define                           aqua   none
@@ -116,58 +90,26 @@ SpecialChar                      red    none
 SpecialComment                   red    none
 Statement                        red    none
 StorageClass                     orange none
-# verbatim
-# if get(g:, "@optionprefix_improved_strings", 0)
-# endverbatim
-# Special                          orange bg1
-# String                           fg1    bg1
-# verbatim
-# else
-# endverbatim
-Special                          orange none
-String                           green  none
-# verbatim
-# endif
-# endverbatim
+Special                          orange none    italic
+String                           green  none    italic
 Structure                        aqua   none
-Tag                           -> Special
-Todo                             fg     bg0     t=bold g=bold,italic
+Todo                             fg     bg0     bold,italic
 Type                             yellow none
 Typedef                          yellow none
 Underlined                       blue   none    underline
-# Language mapping cursor
-lCursor                       -> Cursor
-# See `:help CursorIM`
 CursorIM                         none   none    reverse
-# See `:help window-toolbar`
 ToolbarLine          none              bg3
-ToolbarButton        fg0               bg3               bold
+ToolbarButton        fg0               bg3      bold
 # }}}
-
 # Italics {{{
 verbatim
-if get(g:, "@optionprefix_italic", 0)
-  hi Comment cterm=italic
-  hi Folded cterm=italic
-  hi SpellBad cterm=italic,underline
-  hi SpellCap cterm=italic,underline
-  hi SpellLocal cterm=italic,underline
-  hi SpellRare cterm=italic,underline
-  hi Todo cterm=italic
-endif
-if get(g:, "@optionprefix_italicize_strings", 0)
-  hi Special cterm=italic gui=italic
-  hi String cterm=italic gui=italic
+if !get(g:, '@optionprefix_italicize_strings', 1)
+  hi Special gui=NONE cterm=NONE
+  hi String gui=NONE cterm=NONE
 endif
 endverbatim
 # }}}
-
 # Additional highlight groups {{{
-# Input mode cursor
-iCursor                       -> Cursor
-# Visual mode cursor, selection
-vCursor                       -> Cursor
-
 # Useful for custom status lines
 NormalMode                       fg4    bg0     reverse
 InsertMode                       blue   bg0     reverse
@@ -176,17 +118,17 @@ VisualMode                       orange bg0     reverse
 CommandMode                      purple bg0     reverse
 Warnings                         orange bg0     reverse
 # }}}
-
 # NeoVim terminal colors {{{
-Include: _neovim.colortemplate
+TermCursor        -> Cursor
+TermCursorNC         bg1            fg1
 # }}}
 
 verbatim
-if !(get(g:, "@optionprefix_plugin_hi_groups", 0) || get(g:, "@optionprefix_filetype_hi_groups", 0))
+if !(get(g:, '@optionprefix_plugin_hi_groups', 0) || get(g:, '@optionprefix_filetype_hi_groups', 0))
  finish
 endif
 endverbatim
 
-Include: _plugins.colortemplate
-Include: _filetypes.colortemplate
+Include: _plugins
+Include: _filetypes
 

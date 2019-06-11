@@ -1,9 +1,7 @@
 # vim: ft=colortemplate fdm=marker
 
 # Filetype specific groups
-verbatim
-if get(g:, "@optionprefix_filetype_hi_groups", 0)
-endverbatim
+#if get(g:, "@optionprefix_filetype_hi_groups", 0)
 # Diff {{{
 diffAdded                        green  none
 diffRemoved                      red    none
@@ -235,49 +233,49 @@ javascriptAsyncFuncKeyword       red    none
 javascriptAwaitFuncKeyword       red    none
 # }}}
 #PanglossJS {{{
-jsImport                         red  none
-jsExport                         red  none
-jsFrom                           red  none
+jsImport                         red    none
+jsExport                         red    none
+jsFrom                           red    none
 jsThis                           purple none
-jsParen                          blue none
-jsOperator                       aqua none
-jsSpreadOperator                 green none
-jsSpreadExpression               blue  none
-jsClassKeyword                   red   none
-jsClassProperty                  green none
-jsExtendsKeyword                 red   none
+jsParen                          blue   none
+jsOperator                       aqua   none
+jsSpreadOperator                 green  none
+jsSpreadExpression               blue   none
+jsClassKeyword                   red    none
+jsClassProperty                  green  none
+jsExtendsKeyword                 red    none
 jsExportDefault                  orange none bold
 jsTemplateBraces                 aqua   none
-jsGlobalNodeObjects              fg1   none
-jsGlobalObjects                  fg1   none
+jsGlobalNodeObjects              fg1    none
+jsGlobalObjects                  fg1    none
 jsFunction                       green  none
 jsFuncParens                     purple none
-jsFuncBlock                      blue  none
+jsFuncBlock                      blue   none
 jsParens                         fg3    none
 jsNull                           purple none
 jsUndefined                      purple none
 jsClassDefinition                yellow none
-jsFunctionKey                    green none
-jsBracket                        red none
-jsObjectColon                    red none
-jsObjectProp                     blue none
-jsFuncBraces                     green none
+jsFunctionKey                    green  none
+jsBracket                        red    none
+jsObjectColon                    red    none
+jsObjectProp                     blue   none
+jsFuncBraces                     green  none
 jsVariableDef                    yellow none
-jsObjectValue                    blue none
+jsObjectValue                    blue   none
 jsDestructuringBlock             yellow none
-jsParenIfElse                    blue none
-jsClassBlock                     blue none
+jsParenIfElse                    blue   none
+jsClassBlock                     blue   none
 jsFutureKeys                     orange none bold
 jsStorageClass                   orange none
-jsModuleKeyword                  blue none
-jsObjectShorthandProp            blue none
-jsxRegion                        blue none
+jsModuleKeyword                  blue   none
+jsObjectShorthandProp            blue   none
+jsxRegion                        blue   none
 # }}}
 # JSx{{{
 jsxTagName                       blue   none
 jsxComponentName                 yellow none
-jsxEscapeJsAttributes            blue none
-jsxEscapeJsContent               blue none
+jsxEscapeJsAttributes            blue   none
+jsxEscapeJsContent               blue   none
 jsxAttrib                        yellow none
 jsxAttributeBraces               fg1    none
 jsxEqual                         aqua   none
@@ -344,7 +342,7 @@ rubyInterpolationDelimiter       aqua   none
 # ObjectiveC {{{
 objcTypeModifier                 red    none
 objcDirective                    blue   none
-# }z}}
+# }}}
 # Go {{{
 goDirective                      aqua   none
 goConstants                      purple none
@@ -467,7 +465,5 @@ jsonQuote                        green  none
 jsonBraces                       fg1    none
 jsonString                       fg1    none
 # }}}
-verbatim
-endif
-endverbatim
+#endif
 
