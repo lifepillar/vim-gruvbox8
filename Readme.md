@@ -14,7 +14,7 @@ to address some issues I had with the official color scheme.
 - reduced number of options;
 - all options are documented;
 - slightly different (and, IMHO, better) 256-color palette;
-- no 16-color version;
+- gracefully degrades to 16, 8 or even only 2 colors;
 - support for transparent backgrounds in terminals;
 - no autoload folder, no shell scripts;
 - up to date highlight group definitions (e.g., includes `ToolbarLine`
@@ -40,6 +40,15 @@ true-color terminals and 256-color terminals.
 ## 256-color Variants
 
 ![](https://raw.github.com/lifepillar/Resources/master/gruvbox8/gruvbox8-256-variants.png)
+
+## Less capable terminals
+
+Earlier versions of Gruvbox 8 would complain when the terminal did not have
+enough colors. This is no longer the case: Gruvbox 8 will gracefully degrade to
+16, 8 or even 2 colors, as illustrated by the screenshot below:
+
+![](https://raw.github.com/lifepillar/Resources/master/gruvbox8/gruvbox8-degrade.png)
+
 
 ## Hacking
 
