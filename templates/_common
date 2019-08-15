@@ -35,7 +35,7 @@ Pmenu                            fg1    bg2
 PmenuSbar                        none   bg2
 PmenuSel                         bg2    blue    bold
 PmenuThumb                       none   bg4
-SpecialKey                       bg2    none
+SpecialKey                       grey   none
 StatusLine                       bg2    fg1     reverse
 StatusLineNC                     bg1    fg4     reverse
 TabLine                          bg4    bg1
