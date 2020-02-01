@@ -1,9 +1,5 @@
 # vim: ft=colortemplate fdm=marker
 
-Term colors: bg0 neutralred neutralgreen neutralyellow
-Term colors: neutralblue neutralpurple neutralaqua fg4
-Term colors: grey red green yellow blue purple aqua fg1
-
 # GUI & 256-color specific {{{
 Variant: gui
 #if get(g:, '@optionprefix_transp_bg', 0) && !has('gui_running')
@@ -186,6 +182,15 @@ ReplaceMode                      aqua   bg0     reverse
 VisualMode                       orange bg0     reverse
 CommandMode                      purple bg0     reverse
 Warnings                         orange bg0     reverse
+# }}}
+# Terminal {{{
+Term colors: bg0 neutralred neutralgreen neutralyellow
+Term colors: neutralblue neutralpurple neutralaqua fg4
+Term colors: grey red green yellow blue purple aqua fg1
+
+Variant: 256 16 8
+Terminal                         fg1    bg0
+Variant: gui 256 16 8
 # }}}
 # NeoVim terminal colors {{{
 TermCursor        -> Cursor
