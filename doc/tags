@@ -1,3 +1,4 @@
+g:gruvbox_bold	gruvbox8.txt	/*g:gruvbox_bold*
 g:gruvbox_filetype_hi_groups	gruvbox8.txt	/*g:gruvbox_filetype_hi_groups*
 g:gruvbox_italicize_strings	gruvbox8.txt	/*g:gruvbox_italicize_strings*
 g:gruvbox_italics	gruvbox8.txt	/*g:gruvbox_italics*

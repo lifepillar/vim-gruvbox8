@@ -174,8 +174,30 @@ if !get(g:, '@optionprefix_italicize_strings', 1)
 endif
 endverbatim
 # }}}
+# Boldface {{{
+Variant: gui
+verbatim
+if !get(g:, '@optionprefix_bold', 1)
+  hi Directory gui=NONE cterm=NONE
+  hi Error gui=reverse cterm=reverse
+  hi ErrorMsg gui=NONE cterm=NONE
+  hi Function gui=NONE cterm=NONE
+  hi MatchParen gui=underline cterm=underline
+  hi ModeMsg gui=NONE cterm=NONE
+  hi MoreMsg gui=NONE cterm=NONE
+  hi PmenuSel gui=NONE cterm=NONE
+  hi Question gui=NONE cterm=NONE
+  hi Title gui=NONE cterm=NONE
+  hi Todo gui=italic cterm=italic
+  hi ToolbarButton gui=NONE cterm=NONE
+  hi WarningMsg gui=NONE cterm=NONE
+  hi WildMenu gui=NONE cterm=NONE
+endif
+endverbatim
+# }}}
 # Additional highlight groups {{{
 # Useful for custom status lines
+Variant: gui 256 16 8
 NormalMode                       fg4    bg0     reverse
 InsertMode                       blue   bg0     reverse
 ReplaceMode                      aqua   bg0     reverse
@@ -190,9 +212,9 @@ Term colors: grey red green yellow blue purple aqua fg1
 
 Variant: 256 16 8
 Terminal                         fg1    bg0
-Variant: gui 256 16 8
 # }}}
 # NeoVim terminal colors {{{
+Variant: gui 256 16 8
 TermCursor        -> Cursor
 TermCursorNC         bg1            fg1
 # }}}

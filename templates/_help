@@ -23,6 +23,16 @@ true-color terminals and GUI versions of Vim.
 ==============================================================================
 Colorscheme options				*@optionprefix-options*
 
+						*g:@optionprefix_bold*
+Set to 0 to suppress boldface in gVim.
+>
+	let g:@optionprefix_bold = 1
+<
+NOTE: to disable boldface in terminal Vim, use your terminal's preferences, or
+try putting the following line in your |vimrc|:
+>
+	set t_md=
+<
 						*g:@optionprefix_filetype_hi_groups*
 Set to 1 to include syntax highlighting definitions for several filetypes.
 >

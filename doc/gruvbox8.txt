@@ -1,4 +1,4 @@
-*gruvbox8.txt*	For Vim version 8.2	Last change: 2020 Feb 01
+*gruvbox8.txt*	For Vim version 8.1	Last change: 2020 Feb 07
 
 
 		Gruvbox 8 color scheme
@@ -22,6 +22,16 @@ true-color terminals and GUI versions of Vim.
 ==============================================================================
 Colorscheme options				*gruvbox-options*
 
+						*g:gruvbox_bold*
+Set to 0 to suppress boldface in gVim.
+>
+	let g:gruvbox_bold = 1
+<
+NOTE: to disable boldface in terminal Vim, use your terminal's preferences, or
+try putting the following line in your |vimrc|:
+>
+	set t_md=
+<
 						*g:gruvbox_filetype_hi_groups*
 Set to 1 to include syntax highlighting definitions for several filetypes.
 >

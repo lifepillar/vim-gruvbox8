@@ -465,5 +465,30 @@ jsonQuote                        green  none
 jsonBraces                       fg1    none
 jsonString                       fg1    none
 # }}}
+
+# Boldface {{{
+Variant: gui
+verbatim
+if !get(g:, '@optionprefix_bold', 1)
+  hi htmlTagName gui=NONE cterm=NONE
+  hi htmlSpecialTagName gui=NONE cterm=NONE
+  hi htmlBold gui=NONE cterm=NONE
+  hi htmlBoldUnderline gui=underline cterm=underline
+  hi htmlBoldItalic gui=italic cterm=italic
+  hi htmlBoldUnderlineItalic gui=underline,italic cterm=underline,italic
+  hi docbkKeyword gui=NONE cterm=NONE
+  hi vimCommentTitle gui=NONE cterm=NONE
+  hi clojureRegexpCharClass gui=NONE cterm=NONE
+  hi pythonDottedName gui=NONE cterm=NONE
+  hi jsExportDefault gui=NONE cterm=NONE
+  hi jsFutureKeys gui=NONE cterm=NONE
+  hi markdownH1 gui=NONE cterm=NONE
+  hi markdownH2 gui=NONE cterm=NONE
+  hi markdownH3 gui=NONE cterm=NONE
+  hi markdownH4 gui=NONE cterm=NONE
+endif
+endverbatim
+Variant: gui 256
+# }}}
 #endif
 
