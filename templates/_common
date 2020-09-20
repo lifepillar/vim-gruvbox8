@@ -1,6 +1,6 @@
-# vim: ft=colortemplate fdm=marker
+; vim: ft=colortemplate fdm=marker
 
-# GUI & 256-color specific {{{
+; GUI & 256-color specific {{{
 Variant: gui
 #if get(g:, '@optionprefix_transp_bg', 0) && !has('gui_running')
 Variant: 256
@@ -41,8 +41,8 @@ ToolbarButton                    fg0    bg3     bold
 ToolbarLine                      none   bg3
 Visual                           none   bg3
 WildMenu                         blue   bg2     bold
-# }}}
-# 16-color specific {{{
+; }}}
+; 16-color specific {{{
 Variant: 16
 #if get(g:, '@optionprefix_transp_bg', 0)
     Normal                       fg1    none
@@ -76,8 +76,8 @@ ToolbarLine                      none   bg1
 VertSplit                        bg0    bg1
 Visual                           bg0    bg1
 WildMenu                         fg1    bg0     bold
-# }}}
-# 8-color specific {{{
+; }}}
+; 8-color specific {{{
 Variant: 8
 Normal                           fg4    none
 ColorColumn                      bg0    fg4
@@ -107,10 +107,10 @@ ToolbarLine                      none   fg4
 VertSplit                        bg0    fg4
 Visual                           bg0    fg4
 WildMenu                         blue   bg1     bold
-# }}}
-# Common {{{
+; }}}
+; Common {{{
 Variant: gui 256 16 8
-# Group                          Fg     Bg      Attributes
+; Group                          Fg     Bg      Attributes
 Conceal                          blue   none
 Cursor                           none   none    reverse
 DiffAdd                          green  bg0     reverse
@@ -130,7 +130,7 @@ SpellLocal                       aqua   none    italic t=underline g=undercurl s
 SpellRare                        purple none    italic t=underline g=undercurl s=purple
 Title                            green  none    bold
 WarningMsg                       red    none    bold
-# Other conventional group names (see `:help group-name`)
+; Other conventional group names (see `:help group-name`)
 Boolean                          purple none
 Character                        purple none
 Conditional                      red    none
@@ -165,16 +165,16 @@ Type                             yellow none
 Typedef                          yellow none
 Underlined                       blue   none    underline
 CursorIM                         none   none    reverse
-# }}}
-# Italics {{{
+; }}}
+; Italics {{{
 verbatim
 if !get(g:, '@optionprefix_italicize_strings', 1)
   hi Special gui=NONE cterm=NONE
   hi String gui=NONE cterm=NONE
 endif
 endverbatim
-# }}}
-# Boldface {{{
+; }}}
+; Boldface {{{
 Variant: gui
 verbatim
 if !get(g:, '@optionprefix_bold', 1)
@@ -194,9 +194,9 @@ if !get(g:, '@optionprefix_bold', 1)
   hi WildMenu gui=NONE cterm=NONE
 endif
 endverbatim
-# }}}
-# Additional highlight groups {{{
-# Useful for custom status lines
+; }}}
+; Additional highlight groups {{{
+; Useful for custom status lines
 Variant: gui 256 16 8
 NormalMode                       fg4    bg0     reverse
 InsertMode                       blue   bg0     reverse
@@ -204,21 +204,21 @@ ReplaceMode                      aqua   bg0     reverse
 VisualMode                       orange bg0     reverse
 CommandMode                      purple bg0     reverse
 Warnings                         orange bg0     reverse
-# }}}
-# Terminal {{{
+; }}}
+; Terminal {{{
 Term colors: bg0 neutralred neutralgreen neutralyellow
 Term colors: neutralblue neutralpurple neutralaqua fg4
 Term colors: grey red green yellow blue purple aqua fg1
 
 Variant: 256 16 8
 Terminal                         fg1    bg0
-# }}}
-# NeoVim terminal colors {{{
+; }}}
+; NeoVim terminal colors {{{
 Variant: gui 256 16 8
 TermCursor        -> Cursor
 TermCursorNC         bg1            fg1
-# }}}
-# Extra highlight groups {{{
+; }}}
+; Extra highlight groups {{{
 Variant: gui 256
 
 verbatim
@@ -229,4 +229,4 @@ endverbatim
 
 Include: _plugins
 Include: _filetypes
-# }}}
+; }}}
