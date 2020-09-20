@@ -1528,7 +1528,7 @@ if s:t_Co >= 256
       hi GitGutterDelete ctermfg=203 ctermbg=237 cterm=NONE
       hi GitGutterChangeDelete ctermfg=107 ctermbg=237 cterm=NONE
       if get(g:, 'indent_guides_auto_colors', 0)
-        if get(g: 'gruvbox_invert_indent_guides', 0)
+        if get(g:, 'gruvbox_invert_indent_guides', 0)
           hi IndentGuidesOdd ctermfg=236 ctermbg=239 cterm=reverse
           hi IndentGuidesEven ctermfg=236 ctermbg=237 cterm=reverse
         else
@@ -2141,7 +2141,7 @@ if s:t_Co >= 256
     hi GitGutterDelete ctermfg=124 ctermbg=251 cterm=NONE
     hi GitGutterChangeDelete ctermfg=29 ctermbg=251 cterm=NONE
     if get(g:, 'indent_guides_auto_colors', 0)
-      if get(g: 'gruvbox_invert_indent_guides', 0)
+      if get(g:, 'gruvbox_invert_indent_guides', 0)
         hi IndentGuidesOdd ctermfg=187 ctermbg=180 cterm=reverse
         hi IndentGuidesEven ctermfg=187 ctermbg=251 cterm=reverse
       else
