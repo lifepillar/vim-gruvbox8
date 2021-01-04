@@ -1,16 +1,17 @@
-let s:bg0 = [ '#282828', 235 ]
-let s:bg1 = [ '#3c3836', 237 ]
-let s:bg2 = [ '#504945', 239 ]
-let s:bg4 = [ '#7c6f64', 243 ]
+auxfile autoload/lightline/colorscheme/@shortname.vim
+let s:bg0 = [ '@guibg0', @term256bg0 ]
+let s:bg1 = [ '@guibg1', @term256bg1 ]
+let s:bg2 = [ '@guibg2', @term256bg2 ]
+let s:bg4 = [ '@guibg4', @term256bg4 ]
 
-let s:fg1 = [ '#ebdbb2', 187 ]
-let s:fg4 = [ '#a89984', 137 ]
+let s:fg1 = [ '@guifg1', @term256fg1 ]
+let s:fg4 = [ '@guifg4', @term256fg4 ]
 
-let s:green  = [ '#98971a', 100 ]
-let s:yellow = [ '#d79921', 172 ]
-let s:blue   = [ '#458588', 66 ]
-let s:aqua   = [ '#689d6a', 71 ]
-let s:orange = [ '#d65d0e', 166 ]
+let s:green  = [ '@guineutralgreen', @term256neutralgreen ]
+let s:yellow = [ '@guineutralyellow', @term256neutralyellow ]
+let s:blue   = [ '@guineutralblue', @term256neutralblue ]
+let s:aqua   = [ '@guineutralaqua', @term256neutralaqua ]
+let s:orange = [ '@guineutralorange', @term256neutralorange ]
 
 let s:p = { 'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}, 'terminal': {} }
 
@@ -47,3 +48,4 @@ let s:p.normal.error   = [ [ s:bg0, s:orange ] ]
 let s:p.normal.warning = [ [ s:bg2, s:yellow ] ]
 
 let g:lightline#colorscheme#gruvbox8#palette = lightline#colorscheme#flatten(s:p)
+endauxfile
