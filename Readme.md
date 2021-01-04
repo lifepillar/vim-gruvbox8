@@ -16,7 +16,7 @@ to address some issues I had with the official color scheme.
 - slightly different (and, IMHO, better) 256-color palette;
 - gracefully degrades to 16, 8 or even only 2 colors;
 - support for transparent backgrounds in terminals;
-- no autoload folder, no shell scripts;
+- no shell scripts;
 - up to date highlight group definitions (e.g., includes `ToolbarLine`
   and `ToolbarButton`);
 - defines `g:terminal_ansi_colors`;
