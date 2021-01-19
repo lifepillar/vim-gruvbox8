@@ -60,10 +60,17 @@ gitcommitSelectedFile            green  none
 gitcommitDiscardedFile           red    none
 ; }}}
 ; GitGutter {{{
-GitGutterAdd                     green  bg1
-GitGutterChange                  aqua   bg1
-GitGutterDelete                  red    bg1
-GitGutterChangeDelete            aqua   bg1
+#if get(g:, 'gruvbox_transp_bg', 0)
+  GitGutterAdd                     green  none
+  GitGutterChange                  aqua   none
+  GitGutterDelete                  red    none
+  GitGutterChangeDelete            aqua   none
+#else
+  GitGutterAdd                     green  bg1
+  GitGutterChange                  aqua   bg1
+  GitGutterDelete                  red    bg1
+  GitGutterChangeDelete            aqua   bg1
+#endif
 ; }}}
 ; Indent Guides {{{
 #if get(g:, 'indent_guides_auto_colors', 0)
@@ -185,4 +192,3 @@ let g:vimshell_escape_colors = [
 endverbatim
 ; }}}
 #endif
-
