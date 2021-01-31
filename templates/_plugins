@@ -1,22 +1,34 @@
-# vim: ft=colortemplate fdm=marker
+; vim: ft=colortemplate fdm=marker
 
-# Plugin specific groups
+; Plugin specific groups
 #if get(g:, "@optionprefix_plugin_hi_groups", 0)
-# Asynchronous Lint Engine {{{
+; Asynchronous Lint Engine {{{
 ALEError                         none   none    t=underline g=undercurl s=red
 ALEWarning                       none   none    t=underline g=undercurl s=red
 ALEInfo                          none   none    t=underline g=undercurl s=blue
 ALEErrorSign                     red    bg1
 ALEWarningSign                   yellow bg1
 ALEInfoSign                      blue   bg1
-# }}}
-# BufTabLine {{{
+; }}}
+; BufTabLine {{{
 BufTabLineCurrent                bg0    fg4
 BufTabLineActive                 fg4    bg2
 BufTabLineHidden                 bg4    bg1
 BufTabLineFill                   bg0    bg0
-# }}}
-# CtrlP {{{
+; }}}
+; coc.nvim {{{
+CocErrorSign                     red    bg0
+CocWarningSign                   yellow bg0
+CocInfoSign                      blue   none
+CocHintSign                      bg2    none
+CocErrorFloat                    red    none
+CocWarningFloat                  yellow none
+CocInfoFloat                     blue   none
+CocHintFloat                     purple none
+CocSelectedText                  bg1    bg0
+CocCodeLens                      bg2    none
+; }}}
+; CtrlP {{{
 CtrlPMatch                       yellow none
 CtrlPNoEntries                   red    none
 CtrlPPrtBase                     bg2    none
@@ -34,28 +46,35 @@ if !get(g:, '@optionprefix_bold', 1)
 endif
 endverbatim
 Variant: gui 256
-# }}}
-# Dirvish {{{
+; }}}
+; Dirvish {{{
 DirvishPathTail                  aqua   none
 DirvishArg                       yellow none
-# }}}
-# EasyMotion {{{
+; }}}
+; EasyMotion {{{
 EasyMotionTarget              -> Search
 EasyMotionShade               -> Comment
-# }}}
-# GitCommit {{{
+; }}}
+; GitCommit {{{
 gitcommitSelectedFile            green  none
 gitcommitDiscardedFile           red    none
-# }}}
-# GitGutter {{{
-GitGutterAdd                     green  bg1
-GitGutterChange                  aqua   bg1
-GitGutterDelete                  red    bg1
-GitGutterChangeDelete            aqua   bg1
-# }}}
-# Indent Guides {{{
+; }}}
+; GitGutter {{{
+#if get(g:, 'gruvbox_transp_bg', 0)
+  GitGutterAdd                     green  none
+  GitGutterChange                  aqua   none
+  GitGutterDelete                  red    none
+  GitGutterChangeDelete            aqua   none
+#else
+  GitGutterAdd                     green  bg1
+  GitGutterChange                  aqua   bg1
+  GitGutterDelete                  red    bg1
+  GitGutterChangeDelete            aqua   bg1
+#endif
+; }}}
+; Indent Guides {{{
 #if get(g:, 'indent_guides_auto_colors', 0)
-  #if get(g: '@optionprefix_invert_indent_guides', 0)
+  #if get(g:, '@optionprefix_invert_indent_guides', 0)
     IndentGuidesOdd  bg0 bg2 reverse
     IndentGuidesEven bg0 bg1 reverse
   #else
@@ -63,16 +82,16 @@ GitGutterChangeDelete            aqua   bg1
     IndentGuidesEven bg0 bg1
   #endif
 #endif
-# }}}
-# IndentLine {{{
+; }}}
+; IndentLine {{{
 #if !exists('g:indentLine_color_term')
   #let g:indentLine_color_term = @term256bg2
 #endif
 #if !exists('g:indentLine_color_gui')
   #let g:indentLine_color_gui = '@guibg2'
 #endif
-# }}}
-# NERDTree {{{
+; }}}
+; NERDTree {{{
 NERDTreeDir                      aqua   none
 NERDTreeDirSlash                 aqua   none
 
@@ -88,8 +107,8 @@ NERDTreeHelp                     fg1    none
 
 NERDTreeToggleOn                 green  none
 NERDTreeToggleOff                red    none
-# }}}
-# Netrw {{{
+; }}}
+; Netrw {{{
 netrwDir                         aqua   none
 netrwClassify                    aqua   none
 netrwLink                        grey   none
@@ -100,8 +119,8 @@ netrwList                        blue   none
 netrwHelpCmd                     aqua   none
 netrwCmdSep                      fg3    none
 netrwVersion                     green  none
-# }}}
-# Rainbow Parentheses {{{
+; }}}
+; Rainbow Parentheses {{{
 verbatim
 " Rainbow Parentheses
 if !exists('g:rbpt_colorpairs')
@@ -125,23 +144,23 @@ endif
 let g:niji_dark_colours = g:rbpt_colorpairs
 let g:niji_light_colours = g:rbpt_colorpairs
 endverbatim
-# }}}
-# ShowMarks {{{
+; }}}
+; ShowMarks {{{
 ShowMarksHLl                     blue   bg1
 ShowMarksHLu                     blue   bg1
 ShowMarksHLo                     blue   bg1
 ShowMarksHLm                     blue   bg1
-# }}}
-# Signify {{{
+; }}}
+; Signify {{{
 SignifySignAdd                   green  none
 SignifySignChange                aqua   none
 SignifySignDelete                red    none
-# }}}
-# Signature {{{
+; }}}
+; Signature {{{
 SignatureMarkText                blue   bg1
 SignatureMarkerText              purple bg1
-# }}}
-# Startify {{{
+; }}}
+; Startify {{{
 StartifyBracket                  fg3    none
 StartifyFile                     fg1    none
 StartifyNumber                   blue   none
@@ -151,18 +170,18 @@ StartifySection                  yellow none
 StartifySpecial                  bg2    none
 StartifyHeader                   orange none
 StartifyFooter                   bg2    none
-# }}}
-# Syntastic {{{
+; }}}
+; Syntastic {{{
 SyntasticError                   none   none    t=underline g=undercurl s=red
 SyntasticWarning                 none   none    t=underline g=undercurl s=yellow
 SyntasticErrorSign               red    bg1
 SyntasticWarningSign             yellow bg1
-# }}}
-# Vim Multiple Cursors {{{
+; }}}
+; Vim Multiple Cursors {{{
 multiple_cursors_cursor          none   none    reverse
 multiple_cursors_visual          none   bg2
-# }}}
-# Vimshell {{{
+; }}}
+; Vimshell {{{
 verbatim
 let g:vimshell_escape_colors = [
   \ '@guibg4', '@guired', '@guigreen', '@guiyellow',
@@ -171,6 +190,5 @@ let g:vimshell_escape_colors = [
   \ '@guiblue', '@guipurple', '@guiaqua', '@guifg0'
   \ ]
 endverbatim
-# }}}
+; }}}
 #endif
-

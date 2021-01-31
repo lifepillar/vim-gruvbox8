@@ -1,8 +1,8 @@
-# vim: ft=colortemplate fdm=marker
+; vim: ft=colortemplate fdm=marker
 
-# Filetype specific groups
+; Filetype specific groups
 #if get(g:, "@optionprefix_filetype_hi_groups", 0)
-# Diff {{{
+; Diff {{{
 diffAdded                        green  none
 diffRemoved                      red    none
 diffChanged                      aqua   none
@@ -11,8 +11,8 @@ diffFile                         orange none
 diffNewFile                      yellow none
 
 diffLine                         blue   none
-# }}}
-# HTML {{{
+; }}}
+; HTML {{{
 htmlTag                          blue   none
 htmlEndTag                       blue   none
 
@@ -35,8 +35,8 @@ htmlBoldUnderlineItalic          fg     bg0     bold,underline,italic
 htmlUnderline                    fg     bg0     underline
 htmlUnderlineItalic              fg     bg0     underline,italic
 htmlItalic                       fg     bg0     italic
-# }}}
-# XML {{{
+; }}}
+; XML {{{
 xmlTag                           blue   none
 xmlEndTag                        blue   none
 xmlTagName                       blue   none
@@ -58,8 +58,8 @@ xmlAttribPunct                   grey   none
 
 xmlEntity                        orange none
 xmlEntityPunct                   orange none
-# }}}
-# Vim {{{
+; }}}
+; Vim {{{
 vimCommentTitle                  fg4    none    bold
 vimNotation                      orange none
 vimBracket                       orange none
@@ -68,8 +68,8 @@ vimFuncSID                       fg3    none
 vimSetSep                        fg3    none
 vimSep                           fg3    none
 vimContinue                      fg3    none
-# }}}
-# Clojure {{{
+; }}}
+; Clojure {{{
 clojureKeyword                   blue   none
 clojureCond                      orange none
 clojureSpecial                   orange none
@@ -96,12 +96,12 @@ clojureMeta                      yellow none
 clojureDeref                     yellow none
 clojureQuote                     yellow none
 clojureUnquote                   yellow none
-# }}}
-# C {{{
+; }}}
+; C {{{
 cOperator                        purple none
 cStructure                       orange none
-# }}}
-# Python {{{
+; }}}
+; Python {{{
 pythonBuiltin                    orange none
 pythonBuiltinObj                 orange none
 pythonBuiltinFunc                orange none
@@ -119,8 +119,8 @@ pythonDot                        fg3    none
 pythonConditional                red    none
 pythonRepeat                     red    none
 pythonDottedName                 green  none    bold
-# }}}
-# CSS {{{
+; }}}
+; CSS {{{
 cssBraces                        blue   none
 cssFunctionName                  yellow none
 cssIdentifier                    orange none
@@ -152,8 +152,8 @@ cssDimensionProp                 aqua   none
 cssRenderProp                    aqua   none
 cssColorProp                     aqua   none
 cssGeneratedContentProp          aqua   none
-# }}}
-# JavaScript {{{
+; }}}
+; JavaScript {{{
 javaScriptBraces                 fg1    none
 javaScriptFunction               aqua   none
 javaScriptIdentifier             red    none
@@ -161,8 +161,8 @@ javaScriptMember                 blue   none
 javaScriptNumber                 purple none
 javaScriptNull                   purple none
 javaScriptParens                 fg3    none
-# }}}
-# YAJS {{{
+; }}}
+; YAJS {{{
 javascriptImport                 aqua   none
 javascriptExport                 aqua   none
 javascriptClassKeyword           aqua   none
@@ -231,8 +231,8 @@ javascriptHeadersMethod          fg1    none
 
 javascriptAsyncFuncKeyword       red    none
 javascriptAwaitFuncKeyword       red    none
-# }}}
-#PanglossJS {{{
+; }}}
+;PanglossJS {{{
 jsImport                         red    none
 jsExport                         red    none
 jsFrom                           red    none
@@ -270,8 +270,8 @@ jsStorageClass                   orange none
 jsModuleKeyword                  blue   none
 jsObjectShorthandProp            blue   none
 jsxRegion                        blue   none
-# }}}
-# JSx{{{
+; }}}
+; JSx{{{
 jsxTagName                       blue   none
 jsxComponentName                 yellow none
 jsxEscapeJsAttributes            blue   none
@@ -289,8 +289,8 @@ jsxElseOperator                  aqua   none
 jsxDot                           fg1    none
 jsxNamespace                     blue   none
 jsxPunct                         aqua   none
-#}}}
-# TypeScript {{{
+;}}}
+; TypeScript {{{
 typeScriptReserved               aqua   none
 typeScriptLabel                  aqua   none
 typeScriptFuncKeyword            aqua   none
@@ -309,8 +309,8 @@ typeScriptOpSymbols              fg3    none
 typeScriptHtmlElemProperties     fg1    none
 typeScriptNull                   purple none
 typeScriptInterpolationDelimiter aqua   none
-# }}}
-# PureScript {{{
+; }}}
+; PureScript {{{
 purescriptModuleKeyword          aqua   none
 purescriptModuleName             fg1    none
 purescriptWhere                  aqua   none
@@ -327,41 +327,41 @@ purescriptConstructor            fg1    none
 purescriptFunction               fg1    none
 purescriptConditional            orange none
 purescriptBacktick               orange none
-# }}}
-# CoffeeScript {{{
+; }}}
+; CoffeeScript {{{
 coffeeExtendedOp                 fg3    none
 coffeeSpecialOp                  fg3    none
 coffeeCurly                      orange none
 coffeeParen                      fg3    none
 coffeeBracket                    orange none
-# }}}
-# Ruby {{{
+; }}}
+; Ruby {{{
 rubyStringDelimiter              green  none
 rubyInterpolationDelimiter       aqua   none
-# }}}
-# ObjectiveC {{{
+; }}}
+; ObjectiveC {{{
 objcTypeModifier                 red    none
 objcDirective                    blue   none
-# }}}
-# Go {{{
+; }}}
+; Go {{{
 goDirective                      aqua   none
 goConstants                      purple none
 goDeclaration                    red    none
 goDeclType                       blue   none
 goBuiltins                       orange none
-# z}}}
-# Lua {{{
+; z}}}
+; Lua {{{
 luaIn                            red    none
 luaFunction                      aqua   none
 luaTable                         orange none
-# }}}
-# MoonScript {{{
+; }}}
+; MoonScript {{{
 moonSpecialOp                    fg3    none
 moonExtendedOp                   fg3    none
 moonFunction                     fg3    none
 moonObject                       yellow none
-# }}}
-# Java {{{
+; }}}
+; Java {{{
 javaAnnotation                   blue   none
 javaDocTags                      aqua   none
 javaCommentTitle              -> vimCommentTitle
@@ -374,16 +374,16 @@ javaParen5                       fg3    none
 javaOperator                     orange none
 
 javaVarArg                       green  none
-# }}}
-# Elixir {{{
+; }}}
+; Elixir {{{
 elixirDocString               -> Comment
 
 elixirStringDelimiter            green  none
 elixirInterpolationDelimiter     aqua   none
 
 elixirModuleDeclaration          yellow none
-# }}}
-# Scala {{{
+; }}}
+; Scala {{{
 scalaNameDefinition              fg1    none
 scalaCaseFollowing               fg1    none
 scalaCapitalWord                 fg1    none
@@ -400,8 +400,8 @@ scalaTypeTypePostDeclaration     yellow none
 
 scalaInstanceDeclaration         fg1    none
 scalaInterpolation               aqua   none
-# }}}
-# Markdown {{{
+; }}}
+; Markdown {{{
 markdownItalic                   fg3    none    italic
 
 markdownH1                       green  none    bold
@@ -431,8 +431,8 @@ markdownUrlTitleDelimiter        green  none
 
 markdownLinkText                 grey   none    underline
 markdownIdDeclaration         -> markdownLinkText
-# }}}
-# Haskell {{{
+; }}}
+; Haskell {{{
 haskellType                      fg1    none
 haskellIdentifier                fg1    none
 haskellSeparator                 fg1    none
@@ -458,15 +458,15 @@ haskellPragma                    purple none
 
 haskellString                    green  none
 haskellChar                      green  none
-# }}}
-# JSON {{{
+; }}}
+; JSON {{{
 jsonKeyword                      green  none
 jsonQuote                        green  none
 jsonBraces                       fg1    none
 jsonString                       fg1    none
-# }}}
+; }}}
 
-# Boldface {{{
+; Boldface {{{
 Variant: gui
 verbatim
 if !get(g:, '@optionprefix_bold', 1)
@@ -489,6 +489,6 @@ if !get(g:, '@optionprefix_bold', 1)
 endif
 endverbatim
 Variant: gui 256
-# }}}
+; }}}
 #endif
 

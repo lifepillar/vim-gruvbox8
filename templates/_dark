@@ -1,6 +1,6 @@
-# vim: ft=colortemplate
+; vim: ft=colortemplate
 
-# Color palette for dark background
+; Color palette for dark background
 Color: bg1             rgb(60,  56,  54)     237 DarkGray
 Color: bg2             rgb(80,  73,  69)     239
 Color: bg3             rgb(102, 92,  84)      59

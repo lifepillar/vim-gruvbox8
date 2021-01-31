@@ -1,4 +1,4 @@
-# vim: ft=colortemplate
+; vim: ft=colortemplate
 
 Full name:  Gruvbox 8
 Short name: gruvbox8
@@ -14,6 +14,7 @@ Variant: gui 256 16 8
 Background: dark
 Color: bg0 rgb(40,40,40) 235 Black
 Include: _dark
+Include: _lightline
 
 Background: light
 Color: bg0 rgb(251, 241, 199) 230 White
