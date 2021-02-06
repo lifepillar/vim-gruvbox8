@@ -14,7 +14,9 @@ Variant: gui 256 16 8
 Background: dark
 Color: bg0 rgb(40,40,40) 235 Black
 Include: _dark
+
 Include: _lightline
+Include: _airline
 
 Background: light
 Color: bg0 rgb(251, 241, 199) 230 White
