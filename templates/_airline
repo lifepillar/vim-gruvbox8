@@ -1,3 +1,4 @@
+auxfile autoload/airline/themes/@shortname.vim
 let g:airline#themes#gruvbox8#palette = {}
 
 function! airline#themes#gruvbox8#refresh()
@@ -69,3 +70,4 @@ endfunction
 call airline#themes#gruvbox8#refresh()
 
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
+endauxfile
