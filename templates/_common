@@ -25,7 +25,7 @@ Error                            red    bg0     bold,reverse
 ErrorMsg                         bg0    red     bold
 Folded                           grey   bg1     italic
 LineNr                           bg4    none
-MatchParen                       none   bg3     bold,underline
+MatchParen                       none   bg2     bold,underline
 NonText                          bg2    none
 Pmenu                            fg1    bg2
 PmenuSbar                        none   bg2
@@ -58,7 +58,7 @@ ErrorMsg                         bg0    red
 FoldColumn                       bg1    none
 Folded                           bg1    none    italic
 LineNr                           bg1    none
-MatchParen                       none   bg1     bold,underline
+MatchParen                       none   bg0     bold,underline
 NonText                          bg1    none
 Pmenu                            bg0    bg1
 PmenuSbar                        none   bg1
