@@ -19,5 +19,15 @@ Color: purple          rgb(211, 134, 155)    175 Magenta
 Color: aqua            rgb(142, 192, 124)    107 Cyan
 Color: orange          rgb(254, 128, 25)     208 Magenta
 
+; Terminal {{{
+Variant: gui 256 16 8
+Term colors: bg0  neutralred neutralgreen neutralyellow neutralblue neutralpurple neutralaqua fg4
+Term colors: grey red        green        yellow        blue        purple        aqua        fg1
+
+Variant: 256 16 8
+Terminal fg1 bg0
+Variant: gui 256 16 8
+; }}}
+
 Include: _common
 

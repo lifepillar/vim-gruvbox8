@@ -205,16 +205,7 @@ VisualMode                       orange bg0     reverse
 CommandMode                      purple bg0     reverse
 Warnings                         orange bg0     reverse
 ; }}}
-; Terminal {{{
-Term colors: bg0 neutralred neutralgreen neutralyellow
-Term colors: neutralblue neutralpurple neutralaqua fg4
-Term colors: grey red green yellow blue purple aqua fg1
-
-Variant: 256 16 8
-Terminal                         fg1    bg0
-; }}}
 ; NeoVim terminal colors {{{
-Variant: gui 256 16 8
 TermCursor        -> Cursor
 TermCursorNC         bg1            fg1
 ; }}}
