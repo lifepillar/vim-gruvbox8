@@ -91,6 +91,22 @@ gitcommitDiscardedFile           red    none
   #let g:indentLine_color_gui = '@guibg2'
 #endif
 ; }}}
+; LSP {{{
+LspDiagnosticsDefaultError       red    none
+LspDiagnosticsSignError          red    bg0
+LspDiagnosticsUnderlineError     red    none    t=underline g=undercurl s=red
+LspDiagnosticsDefaultWarning     yellow none
+LspDiagnosticsSignWarning        yellow bg1
+LspDiagnosticsUnderlineWarning   yellow none    t=underline g=undercurl s=yellow
+
+LspDiagnosticsDefaultInformation blue   none
+LspDiagnosticsSignInformation    blue   bg1
+LspDiagnosticsUnderlineInformation blue none    t=underline g=undercurl s=blue
+
+LspDiagnosticsDefaultHint        aqua   none
+LspDiagnosticsSignHint           aqua   bg1
+LspDiagnosticsUnderlineHint      aqua   none    t=underline g=undercurl s=aqua
+; }}}
 ; NERDTree {{{
 NERDTreeDir                      aqua   none
 NERDTreeDirSlash                 aqua   none
