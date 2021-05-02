@@ -107,6 +107,17 @@ LspDiagnosticsDefaultHint        aqua   none
 LspDiagnosticsSignHint           aqua   bg1
 LspDiagnosticsUnderlineHint      aqua   none    t=underline g=undercurl s=aqua
 ; }}}
+; LanguageClient {{{
+LanguageClientError              red    none
+LanguageClientErrorSign          red    bg0
+LanguageClientWarning            yellow none
+LanguageClientWarningSign        yellow bg1
+
+LangaugeClientInfo               blue   none
+LanguageClientInfoSign           blue   bg1
+
+LanguageClientCodeLens           blue   none
+; }}}
 ; NERDTree {{{
 NERDTreeDir                      aqua   none
 NERDTreeDirSlash                 aqua   none
