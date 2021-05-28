@@ -163,7 +163,7 @@ Structure                        aqua   none
 Todo                             fg     bg0     bold,italic
 Type                             yellow none
 Typedef                          yellow none
-Underlined                       blue   none    underline
+Underlined                       blue   none    underline s=blue
 CursorIM                         none   none    reverse
 ; }}}
 ; Italics {{{
