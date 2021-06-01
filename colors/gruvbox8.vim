@@ -310,7 +310,7 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
       hi ShowMarksHLu guifg=#83a598 guibg=#3c3836 gui=NONE cterm=NONE
       hi ShowMarksHLo guifg=#83a598 guibg=#3c3836 gui=NONE cterm=NONE
       hi ShowMarksHLm guifg=#83a598 guibg=#3c3836 gui=NONE cterm=NONE
-      hi SignifySignAdd guifg=#b8bb26 guibg=NONE gui=NONE cterm=NONE
+      hi SignifySignAdd guifg=#b8bb26 guibg=#3c3836 gui=NONE cterm=NONE
       hi SignifySignChange guifg=#8ec07c guibg=#3c3836 gui=NONE cterm=NONE
       hi SignifySignDelete guifg=#fb4934 guibg=#3c3836 gui=NONE cterm=NONE
       hi SignatureMarkText guifg=#83a598 guibg=#3c3836 gui=NONE cterm=NONE
@@ -1016,9 +1016,9 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
     hi ShowMarksHLu guifg=#076678 guibg=#ebdbb2 gui=NONE cterm=NONE
     hi ShowMarksHLo guifg=#076678 guibg=#ebdbb2 gui=NONE cterm=NONE
     hi ShowMarksHLm guifg=#076678 guibg=#ebdbb2 gui=NONE cterm=NONE
-    hi SignifySignAdd guifg=#79740e guibg=NONE gui=NONE cterm=NONE
-    hi SignifySignChange guifg=#427b58 guibg=NONE gui=NONE cterm=NONE
-    hi SignifySignDelete guifg=#9d0006 guibg=NONE gui=NONE cterm=NONE
+    hi SignifySignAdd guifg=#79740e guibg=#ebdbb2 gui=NONE cterm=NONE
+    hi SignifySignChange guifg=#427b58 guibg=#ebdbb2 gui=NONE cterm=NONE
+    hi SignifySignDelete guifg=#9d0006 guibg=#ebdbb2 gui=NONE cterm=NONE
     hi SignatureMarkText guifg=#076678 guibg=#ebdbb2 gui=NONE cterm=NONE
     hi SignatureMarkerText guifg=#8f3f71 guibg=#ebdbb2 gui=NONE cterm=NONE
     hi StartifyBracket guifg=#665c54 guibg=NONE gui=NONE cterm=NONE
