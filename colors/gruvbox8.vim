@@ -953,16 +953,16 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
     endif
     hi LspDiagnosticsDefaultError guifg=#9d0006 guibg=NONE gui=NONE cterm=NONE
     hi LspDiagnosticsSignError guifg=#9d0006 guibg=#fbf1c7 gui=NONE cterm=NONE
-    hi LspDiagnosticsUnderlineError guifg=#9d0006 guibg=NONE guisp=#9d0006 gui=undercurl cterm=underline
+    hi LspDiagnosticsUnderlineError guifg=NONE guibg=NONE guisp=NONE gui=NONE cterm=NONE
     hi LspDiagnosticsDefaultWarning guifg=#b57614 guibg=NONE gui=NONE cterm=NONE
     hi LspDiagnosticsSignWarning guifg=#b57614 guibg=#ebdbb2 gui=NONE cterm=NONE
-    hi LspDiagnosticsUnderlineWarning guifg=#b57614 guibg=NONE guisp=#b57614 gui=undercurl cterm=underline
+    hi LspDiagnosticsUnderlineWarning guifg=NONE guibg=NONE guisp=NONE gui=NONE cterm=NONE
     hi LspDiagnosticsDefaultInformation guifg=#076678 guibg=NONE gui=NONE cterm=NONE
     hi LspDiagnosticsSignInformation guifg=#076678 guibg=#ebdbb2 gui=NONE cterm=NONE
-    hi LspDiagnosticsUnderlineInformation guifg=#076678 guibg=NONE guisp=#076678 gui=undercurl cterm=underline
+    hi LspDiagnosticsUnderlineInformation guifg=NONE guibg=NONE guisp=NONE gui=NONE cterm=NONE
     hi LspDiagnosticsDefaultHint guifg=#427b58 guibg=NONE gui=NONE cterm=NONE
     hi LspDiagnosticsSignHint guifg=#427b58 guibg=#ebdbb2 gui=NONE cterm=NONE
-    hi LspDiagnosticsUnderlineHint guifg=#427b58 guibg=NONE guisp=#427b58 gui=undercurl cterm=underline
+    hi LspDiagnosticsUnderlineHint guifg=NONE guibg=NONE guisp=NONE gui=NONE cterm=NONE
     hi LanguageClientError guifg=#9d0006 guibg=NONE gui=NONE cterm=NONE
     hi LanguageClientErrorSign guifg=#9d0006 guibg=#fbf1c7 gui=NONE cterm=NONE
     hi LanguageClientWarning guifg=#b57614 guibg=NONE gui=NONE cterm=NONE
@@ -1625,16 +1625,16 @@ if s:t_Co >= 256
       endif
       hi LspDiagnosticsDefaultError ctermfg=203 ctermbg=NONE cterm=NONE
       hi LspDiagnosticsSignError ctermfg=203 ctermbg=235 cterm=NONE
-      hi LspDiagnosticsUnderlineError ctermfg=203 ctermbg=NONE cterm=underline
+      hi LspDiagnosticsUnderlineError ctermfg=NONE ctermbg=NONE cterm=NONE
       hi LspDiagnosticsDefaultWarning ctermfg=214 ctermbg=NONE cterm=NONE
       hi LspDiagnosticsSignWarning ctermfg=214 ctermbg=237 cterm=NONE
-      hi LspDiagnosticsUnderlineWarning ctermfg=214 ctermbg=NONE cterm=underline
+      hi LspDiagnosticsUnderlineWarning ctermfg=NONE ctermbg=NONE cterm=NONE
       hi LspDiagnosticsDefaultInformation ctermfg=109 ctermbg=NONE cterm=NONE
       hi LspDiagnosticsSignInformation ctermfg=109 ctermbg=237 cterm=NONE
-      hi LspDiagnosticsUnderlineInformation ctermfg=109 ctermbg=NONE cterm=underline
+      hi LspDiagnosticsUnderlineInformation ctermfg=NONE ctermbg=NONE cterm=NONE
       hi LspDiagnosticsDefaultHint ctermfg=107 ctermbg=NONE cterm=NONE
       hi LspDiagnosticsSignHint ctermfg=107 ctermbg=237 cterm=NONE
-      hi LspDiagnosticsUnderlineHint ctermfg=107 ctermbg=NONE cterm=underline
+      hi LspDiagnosticsUnderlineHint ctermfg=NONE ctermbg=NONE cterm=NONE
       hi LanguageClientError ctermfg=203 ctermbg=NONE cterm=NONE
       hi LanguageClientErrorSign ctermfg=203 ctermbg=235 cterm=NONE
       hi LanguageClientWarning ctermfg=214 ctermbg=NONE cterm=NONE
@@ -2274,16 +2274,16 @@ if s:t_Co >= 256
     endif
     hi LspDiagnosticsDefaultError ctermfg=124 ctermbg=NONE cterm=NONE
     hi LspDiagnosticsSignError ctermfg=124 ctermbg=230 cterm=NONE
-    hi LspDiagnosticsUnderlineError ctermfg=124 ctermbg=NONE cterm=underline
+    hi LspDiagnosticsUnderlineError ctermfg=NONE ctermbg=NONE cterm=NONE
     hi LspDiagnosticsDefaultWarning ctermfg=172 ctermbg=NONE cterm=NONE
     hi LspDiagnosticsSignWarning ctermfg=172 ctermbg=187 cterm=NONE
-    hi LspDiagnosticsUnderlineWarning ctermfg=172 ctermbg=NONE cterm=underline
+    hi LspDiagnosticsUnderlineWarning ctermfg=NONE ctermbg=NONE cterm=NONE
     hi LspDiagnosticsDefaultInformation ctermfg=23 ctermbg=NONE cterm=NONE
     hi LspDiagnosticsSignInformation ctermfg=23 ctermbg=187 cterm=NONE
-    hi LspDiagnosticsUnderlineInformation ctermfg=23 ctermbg=NONE cterm=underline
+    hi LspDiagnosticsUnderlineInformation ctermfg=NONE ctermbg=NONE cterm=NONE
     hi LspDiagnosticsDefaultHint ctermfg=29 ctermbg=NONE cterm=NONE
     hi LspDiagnosticsSignHint ctermfg=29 ctermbg=187 cterm=NONE
-    hi LspDiagnosticsUnderlineHint ctermfg=29 ctermbg=NONE cterm=underline
+    hi LspDiagnosticsUnderlineHint ctermfg=NONE ctermbg=NONE cterm=NONE
     hi LanguageClientError ctermfg=124 ctermbg=NONE cterm=NONE
     hi LanguageClientErrorSign ctermfg=124 ctermbg=230 cterm=NONE
     hi LanguageClientWarning ctermfg=172 ctermbg=NONE cterm=NONE
