@@ -246,17 +246,17 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
         let g:indentLine_color_gui = '#504945'
       endif
       hi LspDiagnosticsDefaultError guifg=#fb4934 guibg=NONE gui=NONE cterm=NONE
-      hi LspDiagnosticsSignError guifg=#fb4934 guibg=#282828 gui=NONE cterm=NONE
-      hi LspDiagnosticsUnderlineError guifg=#fb4934 guibg=NONE guisp=#fb4934 gui=undercurl cterm=underline
+      hi LspDiagnosticsSignError guifg=#fb4934 guibg=#3c3836 gui=NONE cterm=NONE
+      hi LspDiagnosticsUnderlineError guifg=NONE guibg=NONE guisp=NONE gui=NONE cterm=NONE
       hi LspDiagnosticsDefaultWarning guifg=#fabd2f guibg=NONE gui=NONE cterm=NONE
       hi LspDiagnosticsSignWarning guifg=#fabd2f guibg=#3c3836 gui=NONE cterm=NONE
-      hi LspDiagnosticsUnderlineWarning guifg=#fabd2f guibg=NONE guisp=#fabd2f gui=undercurl cterm=underline
+      hi LspDiagnosticsUnderlineWarning guifg=NONE guibg=NONE guisp=NONE gui=NONE cterm=NONE
       hi LspDiagnosticsDefaultInformation guifg=#83a598 guibg=NONE gui=NONE cterm=NONE
       hi LspDiagnosticsSignInformation guifg=#83a598 guibg=#3c3836 gui=NONE cterm=NONE
-      hi LspDiagnosticsUnderlineInformation guifg=#83a598 guibg=NONE guisp=#83a598 gui=undercurl cterm=underline
+      hi LspDiagnosticsUnderlineInformation guifg=NONE guibg=NONE guisp=NONE gui=NONE cterm=NONE
       hi LspDiagnosticsDefaultHint guifg=#8ec07c guibg=NONE gui=NONE cterm=NONE
       hi LspDiagnosticsSignHint guifg=#8ec07c guibg=#3c3836 gui=NONE cterm=NONE
-      hi LspDiagnosticsUnderlineHint guifg=#8ec07c guibg=NONE guisp=#8ec07c gui=undercurl cterm=underline
+      hi LspDiagnosticsUnderlineHint guifg=NONE guibg=NONE guisp=NONE gui=NONE cterm=NONE
       hi LanguageClientError guifg=#fb4934 guibg=NONE gui=NONE cterm=NONE
       hi LanguageClientErrorSign guifg=#fb4934 guibg=#282828 gui=NONE cterm=NONE
       hi LanguageClientWarning guifg=#fabd2f guibg=NONE gui=NONE cterm=NONE
