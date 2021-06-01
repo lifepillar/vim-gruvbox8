@@ -93,19 +93,20 @@ gitcommitDiscardedFile           red    none
 ; }}}
 ; LSP {{{
 LspDiagnosticsDefaultError       red    none
-LspDiagnosticsSignError          red    bg0
-LspDiagnosticsUnderlineError     red    none    t=underline g=undercurl s=red
+LspDiagnosticsSignError          red    bg1
+LspDiagnosticsUnderlineError     none   none    s=none
+
 LspDiagnosticsDefaultWarning     yellow none
 LspDiagnosticsSignWarning        yellow bg1
-LspDiagnosticsUnderlineWarning   yellow none    t=underline g=undercurl s=yellow
+LspDiagnosticsUnderlineWarning   none  none    s=none
 
 LspDiagnosticsDefaultInformation blue   none
 LspDiagnosticsSignInformation    blue   bg1
-LspDiagnosticsUnderlineInformation blue none    t=underline g=undercurl s=blue
+LspDiagnosticsUnderlineInformation none none    s=none
 
 LspDiagnosticsDefaultHint        aqua   none
 LspDiagnosticsSignHint           aqua   bg1
-LspDiagnosticsUnderlineHint      aqua   none    t=underline g=undercurl s=aqua
+LspDiagnosticsUnderlineHint      none   none    s=none
 ; }}}
 ; LanguageClient {{{
 LanguageClientError              red    none
@@ -179,9 +180,9 @@ ShowMarksHLo                     blue   bg1
 ShowMarksHLm                     blue   bg1
 ; }}}
 ; Signify {{{
-SignifySignAdd                   green  none
-SignifySignChange                aqua   none
-SignifySignDelete                red    none
+SignifySignAdd                   green  bg1
+SignifySignChange                aqua   bg1
+SignifySignDelete                red    bg1
 ; }}}
 ; Signature {{{
 SignatureMarkText                blue   bg1
