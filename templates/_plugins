@@ -17,16 +17,16 @@ BufTabLineHidden                 bg4    bg1
 BufTabLineFill                   bg0    bg0
 ; }}}
 ; coc.nvim {{{
-CocErrorSign                     red    bg0
-CocWarningSign                   yellow bg0
+CocErrorSign                     red    none
+CocWarningSign                   yellow none
 CocInfoSign                      blue   none
 CocHintSign                      bg2    none
 CocErrorFloat                    red    none
 CocWarningFloat                  yellow none
 CocInfoFloat                     blue   none
 CocHintFloat                     purple none
-CocSelectedText                  bg1    bg0
-CocCodeLens                      bg2    none
+CocSelectedText                  bg1    none
+CocCodeLens                      bg4    none
 ; }}}
 ; CtrlP {{{
 CtrlPMatch                       yellow none
