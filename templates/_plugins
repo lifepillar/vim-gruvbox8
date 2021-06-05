@@ -17,10 +17,10 @@ BufTabLineHidden                 bg4    bg1
 BufTabLineFill                   bg0    bg0
 ; }}}
 ; coc.nvim {{{
-CocErrorSign                     red    bg1 s=none
-CocWarningSign                   orange bg1 s=none
-CocInfoSign                      yellow bg1 s=none
-CocHintSign                      blue   bg1 s=none
+CocErrorSign                     red    bg1 reverse
+CocWarningSign                   orange bg1 reverse
+CocInfoSign                      yellow bg1 reverse
+CocHintSign                      blue   bg1 reverse
 
 CocErrorFloat                    fg1   none
 CocWarningFloat                  fg1   none
@@ -32,10 +32,10 @@ CocWarningVirtualText            orange none
 CocInfoVirtualText               yellow none
 CocHintVirtualText               blue   none
 
-CocErrorHighlight                none   none t=none g=none s=none
-CocWarningHighlight              none   none t=none g=none s=none
-CocInfoHighlight                 none   none t=none g=none s=none
-CocHintHighlight                 none   none t=none g=none s=none
+CocErrorHighlight                none   none t=omit g=omit
+CocWarningHighlight              none   none t=omit g=omit
+CocInfoHighlight                 none   none t=omit g=omit
+CocHintHighlight                 none   none t=omit g=omit
 
 ; }}}
 ; CtrlP {{{
