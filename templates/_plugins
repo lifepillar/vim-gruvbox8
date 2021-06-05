@@ -21,12 +21,20 @@ CocErrorSign                     red    bg1
 CocWarningSign                   yellow bg1
 CocInfoSign                      aqua   bg1
 CocHintSign                      purple bg1
+
 CocErrorFloat                    red    none
 CocWarningFloat                  yellow none
 CocInfoFloat                     aqua   none
 CocHintFloat                     purple none
-CocSelectedText                  bg1    none
-CocCodeLens                      fg4    none
+
+CocCodeLens                      fg4    bg0
+
+CocErrorVirtualText              red    bg0
+CocWarningVirtualText            yellow bg0
+CocInfoVirtualText               aqua   bg0
+CocHintVirtualText               purple bg0
+
+
 ; }}}
 ; CtrlP {{{
 CtrlPMatch                       yellow none
