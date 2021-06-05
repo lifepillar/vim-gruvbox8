@@ -22,18 +22,20 @@ CocWarningSign                   orange bg1
 CocInfoSign                      aqua   bg1
 CocHintSign                      aqua   bg1
 
-CocErrorFloat                    red    none
-CocWarningFloat                  orange none
-CocInfoFloat                     yellow none
-CocHintFloat                     aqua   none
-
-CocCodeLens                      fg4    bg0
+CocErrorFloat                    none   none
+CocWarningFloat                  none   none
+CocInfoFloat                     none   none
+CocHintFloat                     none   none
 
 CocErrorVirtualText              red    none
 CocWarningVirtualText            orange none
 CocInfoVirtualText               yellow none
 CocHintVirtualText               aqua   none
 
+CocErrorHighlight                none   none
+CocWarningHighlight              none   none
+CocInfoHighlight                 none   none
+CocHintHighlight                 none   none
 
 ; }}}
 ; CtrlP {{{
@@ -102,19 +104,19 @@ gitcommitDiscardedFile           red    none
 ; LSP {{{
 LspDiagnosticsDefaultError       red    none
 LspDiagnosticsSignError          red    bg1
-LspDiagnosticsUnderlineError     none   none    s=none
+LspDiagnosticsUnderlineError     none   none
 
-LspDiagnosticsDefaultWarning     yellow none
-LspDiagnosticsSignWarning        yellow bg1
-LspDiagnosticsUnderlineWarning   none  none    s=none
+LspDiagnosticsDefaultWarning     orange none
+LspDiagnosticsSignWarning        orange bg1
+LspDiagnosticsUnderlineWarning   none  none
 
-LspDiagnosticsDefaultInformation blue   none
-LspDiagnosticsSignInformation    blue   bg1
-LspDiagnosticsUnderlineInformation none none    s=none
+LspDiagnosticsDefaultInformation yellow none
+LspDiagnosticsSignInformation    yellow bg1
+LspDiagnosticsUnderlineInformation none none
 
 LspDiagnosticsDefaultHint        aqua   none
 LspDiagnosticsSignHint           aqua   bg1
-LspDiagnosticsUnderlineHint      none   none    s=none
+LspDiagnosticsUnderlineHint      none   none
 ; }}}
 ; LanguageClient {{{
 LanguageClientError              red    none
