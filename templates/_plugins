@@ -19,8 +19,8 @@ BufTabLineFill                   bg0    bg0
 ; coc.nvim {{{
 CocErrorSign                     red    bg1
 CocWarningSign                   orange bg1
-CocInfoSign                      aqua   bg1
-CocHintSign                      aqua   bg1
+CocInfoSign                      yellow bg1
+CocHintSign                      blue   bg1
 
 CocErrorFloat                    none   none
 CocWarningFloat                  none   none
@@ -30,12 +30,12 @@ CocHintFloat                     none   none
 CocErrorVirtualText              red    none
 CocWarningVirtualText            orange none
 CocInfoVirtualText               yellow none
-CocHintVirtualText               aqua   none
+CocHintVirtualText               blue   none
 
-CocErrorHighlight                none   none
-CocWarningHighlight              none   none
-CocInfoHighlight                 none   none
-CocHintHighlight                 none   none
+CocErrorHighlight                none   none s=none
+CocWarningHighlight              none   none s=none
+CocInfoHighlight                 none   none s=none
+CocHintHighlight                 none   none s=none
 
 ; }}}
 ; CtrlP {{{
@@ -104,19 +104,19 @@ gitcommitDiscardedFile           red    none
 ; LSP {{{
 LspDiagnosticsDefaultError       red    none
 LspDiagnosticsSignError          red    bg1
-LspDiagnosticsUnderlineError     none   none
+LspDiagnosticsUnderlineError     none   none    s=none
 
 LspDiagnosticsDefaultWarning     orange none
 LspDiagnosticsSignWarning        orange bg1
-LspDiagnosticsUnderlineWarning   none  none
+LspDiagnosticsUnderlineWarning   none  none    s=none
 
-LspDiagnosticsDefaultInformation yellow none
-LspDiagnosticsSignInformation    yellow bg1
-LspDiagnosticsUnderlineInformation none none
+LspDiagnosticsDefaultInformation yellow   none
+LspDiagnosticsSignInformation    yellow   bg1
+LspDiagnosticsUnderlineInformation none none    s=none
 
-LspDiagnosticsDefaultHint        aqua   none
-LspDiagnosticsSignHint           aqua   bg1
-LspDiagnosticsUnderlineHint      none   none
+LspDiagnosticsDefaultHint        blue   none
+LspDiagnosticsSignHint           blue   bg1
+LspDiagnosticsUnderlineHint      none   none    s=none
 ; }}}
 ; LanguageClient {{{
 LanguageClientError              red    none
