@@ -17,16 +17,16 @@ BufTabLineHidden                 bg4    bg1
 BufTabLineFill                   bg0    bg0
 ; }}}
 ; coc.nvim {{{
-CocErrorSign                     red    bg0
-CocWarningSign                   yellow bg0
-CocInfoSign                      blue   none
-CocHintSign                      bg2    none
+CocErrorSign                     red    bg1
+CocWarningSign                   orange bg1
+CocInfoSign                      yellow bg1
+CocHintSign                      blue   bg1
+
 CocErrorFloat                    red    none
-CocWarningFloat                  yellow none
-CocInfoFloat                     blue   none
-CocHintFloat                     purple none
-CocSelectedText                  bg1    bg0
-CocCodeLens                      bg2    none
+CocWarningFloat                  orange none
+CocInfoFloat                     yellow none
+CocHintFloat                     blue   none
+
 ; }}}
 ; CtrlP {{{
 CtrlPMatch                       yellow none
@@ -93,19 +93,20 @@ gitcommitDiscardedFile           red    none
 ; }}}
 ; LSP {{{
 LspDiagnosticsDefaultError       red    none
-LspDiagnosticsSignError          red    bg0
-LspDiagnosticsUnderlineError     red    none    t=underline g=undercurl s=red
-LspDiagnosticsDefaultWarning     yellow none
-LspDiagnosticsSignWarning        yellow bg1
-LspDiagnosticsUnderlineWarning   yellow none    t=underline g=undercurl s=yellow
+LspDiagnosticsSignError          red    bg1
+LspDiagnosticsUnderlineError     none   none    s=none
 
-LspDiagnosticsDefaultInformation blue   none
-LspDiagnosticsSignInformation    blue   bg1
-LspDiagnosticsUnderlineInformation blue none    t=underline g=undercurl s=blue
+LspDiagnosticsDefaultWarning     orange none
+LspDiagnosticsSignWarning        orange bg1
+LspDiagnosticsUnderlineWarning   none  none    s=none
 
-LspDiagnosticsDefaultHint        aqua   none
-LspDiagnosticsSignHint           aqua   bg1
-LspDiagnosticsUnderlineHint      aqua   none    t=underline g=undercurl s=aqua
+LspDiagnosticsDefaultInformation yellow   none
+LspDiagnosticsSignInformation    yellow   bg1
+LspDiagnosticsUnderlineInformation none none    s=none
+
+LspDiagnosticsDefaultHint        blue   none
+LspDiagnosticsSignHint           blue   bg1
+LspDiagnosticsUnderlineHint      none   none    s=none
 ; }}}
 ; LanguageClient {{{
 LanguageClientError              red    none
@@ -179,9 +180,9 @@ ShowMarksHLo                     blue   bg1
 ShowMarksHLm                     blue   bg1
 ; }}}
 ; Signify {{{
-SignifySignAdd                   green  none
-SignifySignChange                aqua   none
-SignifySignDelete                red    none
+SignifySignAdd                   green  bg1
+SignifySignChange                aqua   bg1
+SignifySignDelete                red    bg1
 ; }}}
 ; Signature {{{
 SignatureMarkText                blue   bg1
