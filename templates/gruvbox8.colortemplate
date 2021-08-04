@@ -24,6 +24,8 @@ Color: bg1 rgb(235, 219, 178) 187 Grey
 Color: bg2 rgb(213, 196, 161) 187
 Include: _light
 
+Include: _lightline
+
 Background: any
 Include: _bw
 
