@@ -212,12 +212,6 @@ TermCursorNC         bg1            fg1
 ; Extra highlight groups {{{
 Variant: gui 256
 
-verbatim
-if !(get(g:, '@optionprefix_plugin_hi_groups', 0) || get(g:, '@optionprefix_filetype_hi_groups', 0))
- finish
-endif
-endverbatim
-
 Include: _plugins
 Include: _filetypes
 ; }}}

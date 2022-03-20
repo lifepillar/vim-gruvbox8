@@ -1,7 +1,7 @@
 ; vim: ft=colortemplate fdm=marker
 
 ; Plugin specific groups
-#if get(g:, "@optionprefix_plugin_hi_groups", 0)
+#if get(g:, "@optionprefix_plugin_hi_groups", 1)
 ; Asynchronous Lint Engine {{{
 ALEError                         none   none    t=underline g=undercurl s=red
 ALEWarning                       none   none    t=underline g=undercurl s=red

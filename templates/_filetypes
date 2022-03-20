@@ -1,7 +1,7 @@
 ; vim: ft=colortemplate fdm=marker
 
 ; Filetype specific groups
-#if get(g:, "@optionprefix_filetype_hi_groups", 0)
+#if get(g:, "@optionprefix_filetype_hi_groups", 1)
 ; Diff {{{
 diffAdded                        green  none
 diffRemoved                      red    none
