@@ -1,222 +1,327 @@
 ; vim: ft=colortemplate fdm=marker
 
 ; Plugin specific groups
-#if get(g:, "@optionprefix_plugin_hi_groups", 1)
+
+; IndentLine, Rainbow Parentheses, and Vimshell {{{
+verbatim
+if get(g:, '@prefix_plugin_hi_groups', 0)
+  " IndentLine
+  if !exists('g:indentLine_color_term')
+    let g:indentLine_color_term = @256bg2
+  endif
+  if !exists('g:indentLine_color_gui')
+    let g:indentLine_color_gui = '@bg2'
+  endif
+
+  " Rainbow Parentheses
+  if !exists('g:rbpt_colorpairs')
+    let g:rbpt_colorpairs = [['blue', '@guineutralblue'], ['magenta', '@guineutralpurple'],
+      \ ['red', '@guineutralred'], ['@256neutralorange', '@guineutralorange']]
+  endif
+
+  let g:rainbow_guifgs = [ '@guineutralorange', '@guineutralred', '@guineutralpurple', '@guineutralblue' ]
+  let g:rainbow_ctermfgs = [ '@256neutralorange', 'red', 'magenta', 'blue' ]
+
+  if !exists('g:rainbow_conf')
+     let g:rainbow_conf = {}
+  endif
+  if !has_key(g:rainbow_conf, 'guifgs')
+     let g:rainbow_conf['guifgs'] = g:rainbow_guifgs
+  endif
+  if !has_key(g:rainbow_conf, 'ctermfgs')
+     let g:rainbow_conf['ctermfgs'] = g:rainbow_ctermfgs
+  endif
+
+  let g:niji_dark_colours = g:rbpt_colorpairs
+  let g:niji_light_colours = g:rbpt_colorpairs
+
+  " Vimshell
+  let g:vimshell_escape_colors = [
+    \ '@guibg4', '@guired', '@guigreen', '@guiyellow',
+    \ '@guiblue', '@guipurple', '@guiaqua', '@guifg4',
+    \ '@guibg0', '@guired', '@guigreen', '@guiorange',
+    \ '@guiblue', '@guipurple', '@guiaqua', '@guifg0'
+    \ ]
+endif
+endverbatim
+; }}}
+
+#const plugin        = get(g:, '@prefix_plugin_hi_groups', 0)
+#const plugin_bold   = get(g:, '@prefix_plugin_hi_groups', 0) + 2 * get(g:, '@prefix_bold', 1)
+#const plugin_transp = get(g:, '@prefix_plugin_hi_groups', 0) + 2 * get(g:, '@prefix_transp_bg', 0)
+
 ; Asynchronous Lint Engine {{{
-ALEError                         none   none    t=underline g=undercurl s=red
-ALEWarning                       none   none    t=underline g=undercurl s=red
-ALEInfo                          none   none    t=underline g=undercurl s=blue
-ALEErrorSign                     red    bg1
-ALEWarningSign                   yellow bg1
-ALEInfoSign                      blue   bg1
+ALEError       -> omit
+ALEWarning     -> omit
+ALEInfo        -> omit
+ALEErrorSign   -> omit
+ALEWarningSign -> omit
+ALEInfoSign    -> omit
+
+ALEError       /gui     +plugin 1  none   none s=red   undercurl
+               /256     +plugin 1  none   none s=red   underline
+ALEWarning     /gui     +plugin 1  none   none s=red   undercurl
+               /256     +plugin 1  none   none s=red   underline
+ALEInfo        /gui     +plugin 1  none   none s=blue  undercurl
+               /256     +plugin 1  none   none s=blue  underline
+ALEErrorSign   /gui/256 +plugin 1  red    bg1
+ALEWarningSign /gui/256 +plugin 1  yellow bg1
+ALEInfoSign    /gui/256 +plugin 1  blue   bg1
 ; }}}
 ; BufTabLine {{{
-BufTabLineCurrent                bg0    fg4
-BufTabLineActive                 fg4    bg2
-BufTabLineHidden                 bg4    bg1
-BufTabLineFill                   bg0    bg0
+BufTabLineCurrent -> omit
+BufTabLineActive  -> omit
+BufTabLineHidden  -> omit
+BufTabLineFill    -> omit
+
+BufTabLineCurrent/gui/256+plugin 1  bg0    fg4
+BufTabLineActive /gui/256+plugin 1  fg4    bg2
+BufTabLineHidden /gui/256+plugin 1  bg4    bg1
+BufTabLineFill   /gui/256+plugin 1  bg0    bg0
 ; }}}
 ; coc.nvim {{{
-CocErrorSign                     red    bg1
-CocWarningSign                   orange bg1
-CocInfoSign                      yellow bg1
-CocHintSign                      blue   bg1
+CocErrorSign    -> omit
+CocWarningSign  -> omit
+CocInfoSign     -> omit
+CocHintSign     -> omit
+CocErrorFloat   -> omit
+CocWarningFloat -> omit
+CocInfoFloat    -> omit
+CocHintFloat    -> omit
 
-CocErrorFloat                    red    none
-CocWarningFloat                  orange none
-CocInfoFloat                     yellow none
-CocHintFloat                     blue   none
-
+CocErrorSign   /gui/256+plugin 1  red    bg1
+CocWarningSign /gui/256+plugin 1  orange bg1
+CocInfoSign    /gui/256+plugin 1  yellow bg1
+CocHintSign    /gui/256+plugin 1  blue   bg1
+CocErrorFloat  /gui/256+plugin 1  red    none
+CocWarningFloat/gui/256+plugin 1  orange none
+CocInfoFloat   /gui/256+plugin 1  yellow none
+CocHintFloat   /gui/256+plugin 1  blue   none
 ; }}}
 ; CtrlP {{{
-CtrlPMatch                       yellow none
-CtrlPNoEntries                   red    none
-CtrlPPrtBase                     bg2    none
-CtrlPPrtCursor                   blue   none
-CtrlPLinePre                     bg2    none
-CtrlPMode1                       blue   bg2     bold
-CtrlPMode2                       bg0    blue    bold
-CtrlPStats                       fg4    bg2     bold
-Variant: gui
-verbatim
-if !get(g:, '@optionprefix_bold', 1)
-  hi CtrlPMode1 gui=NONE cterm=NONE
-  hi CtrlPMode2 gui=NONE cterm=NONE
-  hi CtrlPStats gui=NONE cterm=NONE
-endif
-endverbatim
-Variant: gui 256
+CtrlPMatch      -> omit
+CtrlPNoEntries  -> omit
+CtrlPPrtBase    -> omit
+CtrlPPrtCursor  -> omit
+CtrlPLinePre    -> omit
+CtrlPMode1      -> omit
+CtrlPMode2      -> omit
+CtrlPStats      -> omit
+
+CtrlPMatch     /gui/256+plugin      1  yellow none
+CtrlPNoEntries /gui/256+plugin      1  red    none
+CtrlPPrtBase   /gui/256+plugin      1  bg2    none
+CtrlPPrtCursor /gui/256+plugin      1  blue   none
+CtrlPLinePre   /gui/256+plugin      1  bg2    none
+CtrlPMode1     /gui/256+plugin_bold 1  blue   bg2
+                                    3  blue   bg2     bold
+CtrlPMode2     /gui/256+plugin_bold 1  bg0    blue
+                                    3  bg0    blue    bold
+CtrlPStats     /gui/256+plugin_bold 1  fg4    bg2
+                                    3  fg4    bg2     bold
 ; }}}
 ; Dirvish {{{
-DirvishPathTail                  aqua   none
-DirvishArg                       yellow none
+DirvishPathTail -> omit
+DirvishArg      -> omit
+
+DirvishPathTail/gui/256+plugin 1 aqua   none
+DirvishArg     /gui/256+plugin 1 yellow none
 ; }}}
 ; EasyMotion {{{
-EasyMotionTarget              -> Search
-EasyMotionShade               -> Comment
+EasyMotionTarget -> omit
+EasyMotionShade  -> omit
+
+EasyMotionTarget /gui/256+plugin 1 -> Search
+EasyMotionShade  /gui/256+plugin 1 -> Comment
 ; }}}
 ; GitCommit {{{
-gitcommitSelectedFile            green  none
-gitcommitDiscardedFile           red    none
+gitcommitSelectedFile  -> omit
+gitcommitDiscardedFile -> omit
+gitcommitSelectedFile /gui/256+plugin 1  green  none
+gitcommitDiscardedFile/gui/256+plugin 1  red    none
 ; }}}
 ; GitGutter {{{
-#if get(g:, 'gruvbox_transp_bg', 0)
-  GitGutterAdd                     green  none
-  GitGutterChange                  aqua   none
-  GitGutterDelete                  red    none
-  GitGutterChangeDelete            aqua   none
-#else
-  GitGutterAdd                     green  bg1
-  GitGutterChange                  aqua   bg1
-  GitGutterDelete                  red    bg1
-  GitGutterChangeDelete            aqua   bg1
-#endif
+GitGutterAdd          -> omit
+GitGutterChange       -> omit
+GitGutterDelete       -> omit
+GitGutterChangeDelete -> omit
+
+GitGutterAdd          /gui/256+plugin_transp 1  green  bg1
+                                             3  green  none
+GitGutterChange       /gui/256+plugin_transp 1  aqua   bg1
+                                             3  aqua   none
+GitGutterDelete       /gui/256+plugin_transp 1  red    bg1
+                                             3  red    none
+GitGutterChangeDelete /gui/256+plugin        1  aqua   bg1
 ; }}}
 ; Indent Guides {{{
-#if get(g:, 'indent_guides_auto_colors', 0)
-  #if get(g:, '@optionprefix_invert_indent_guides', 0)
-    IndentGuidesOdd  bg0 bg2 reverse
-    IndentGuidesEven bg0 bg1 reverse
-  #else
-    IndentGuidesOdd  bg0 bg2
-    IndentGuidesEven bg0 bg1
-  #endif
-#endif
-; }}}
-; IndentLine {{{
-#if !exists('g:indentLine_color_term')
-  #let g:indentLine_color_term = @term256bg2
-#endif
-#if !exists('g:indentLine_color_gui')
-  #let g:indentLine_color_gui = '@guibg2'
-#endif
+#const indent_guides = get(g:, 'indent_guides_auto_colors', 0) + 2 * get(g:, '@prefix_invert_indent_guides', 0)
+
+IndentGuidesOdd  -> omit
+IndentGuidesEven -> omit
+
+IndentGuidesOdd  /gui/256+indent_guides 1 bg0 bg2
+IndentGuidesOdd  /gui/256+indent_guides 3 bg0 bg2 reverse
+IndentGuidesEven /gui/256+indent_guides 1 bg0 bg1
+IndentGuidesEven /gui/256+indent_guides 3 bg0 bg1 reverse
 ; }}}
 ; LSP {{{
-LspDiagnosticsDefaultError       red    none
-LspDiagnosticsSignError          red    bg1
-LspDiagnosticsUnderlineError     none   none    s=none
+LspDiagnosticsDefaultError         -> omit
+LspDiagnosticsSignError            -> omit
+LspDiagnosticsUnderlineError       -> omit
+LspDiagnosticsDefaultWarning       -> omit
+LspDiagnosticsSignWarning          -> omit
+LspDiagnosticsUnderlineWarning     -> omit
+LspDiagnosticsDefaultInformation   -> omit
+LspDiagnosticsSignInformation      -> omit
+LspDiagnosticsUnderlineInformation -> omit
+LspDiagnosticsDefaultHint          -> omit
+LspDiagnosticsSignHint             -> omit
+LspDiagnosticsUnderlineHint        -> omit
 
-LspDiagnosticsDefaultWarning     orange none
-LspDiagnosticsSignWarning        orange bg1
-LspDiagnosticsUnderlineWarning   none  none    s=none
-
-LspDiagnosticsDefaultInformation yellow   none
-LspDiagnosticsSignInformation    yellow   bg1
-LspDiagnosticsUnderlineInformation none none    s=none
-
-LspDiagnosticsDefaultHint        blue   none
-LspDiagnosticsSignHint           blue   bg1
-LspDiagnosticsUnderlineHint      none   none    s=none
+LspDiagnosticsDefaultError         /gui/256+plugin 1  red    none
+LspDiagnosticsSignError            /gui/256+plugin 1  red    bg1
+LspDiagnosticsUnderlineError       /gui/256+plugin 1  none   none    s=none
+LspDiagnosticsDefaultWarning       /gui/256+plugin 1  orange none
+LspDiagnosticsSignWarning          /gui/256+plugin 1  orange bg1
+LspDiagnosticsUnderlineWarning     /gui/256+plugin 1  none  none    s=none
+LspDiagnosticsDefaultInformation   /gui/256+plugin 1  yellow   none
+LspDiagnosticsSignInformation      /gui/256+plugin 1  yellow   bg1
+LspDiagnosticsUnderlineInformation /gui/256+plugin 1  none none    s=none
+LspDiagnosticsDefaultHint          /gui/256+plugin 1  blue   none
+LspDiagnosticsSignHint             /gui/256+plugin 1  blue   bg1
+LspDiagnosticsUnderlineHint        /gui/256+plugin 1  none   none    s=none
 ; }}}
 ; LanguageClient {{{
-LanguageClientError              red    none
-LanguageClientErrorSign          red    bg0
-LanguageClientWarning            yellow none
-LanguageClientWarningSign        yellow bg1
+LanguageClientError       -> omit
+LanguageClientErrorSign   -> omit
+LanguageClientWarning     -> omit
+LanguageClientWarningSign -> omit
+LangaugeClientInfo        -> omit
+LanguageClientInfoSign    -> omit
+LanguageClientCodeLens    -> omit
 
-LangaugeClientInfo               blue   none
-LanguageClientInfoSign           blue   bg1
-
-LanguageClientCodeLens           blue   none
+LanguageClientError       /gui/256+plugin 1  red    none
+LanguageClientErrorSign   /gui/256+plugin 1  red    bg0
+LanguageClientWarning     /gui/256+plugin 1  yellow none
+LanguageClientWarningSign /gui/256+plugin 1  yellow bg1
+LangaugeClientInfo        /gui/256+plugin 1  blue   none
+LanguageClientInfoSign    /gui/256+plugin 1  blue   bg1
+LanguageClientCodeLens    /gui/256+plugin 1  blue   none
 ; }}}
 ; NERDTree {{{
-NERDTreeDir                      aqua   none
-NERDTreeDirSlash                 aqua   none
+NERDTreeDir       -> omit
+NERDTreeDirSlash  -> omit
+NERDTreeOpenable  -> omit
+NERDTreeClosable  -> omit
+NERDTreeFile      -> omit
+NERDTreeExecFile  -> omit
+NERDTreeUp        -> omit
+NERDTreeCWD       -> omit
+NERDTreeHelp      -> omit
+NERDTreeToggleOn  -> omit
+NERDTreeToggleOff -> omit
 
-NERDTreeOpenable                 orange none
-NERDTreeClosable                 orange none
-
-NERDTreeFile                     fg1    none
-NERDTreeExecFile                 yellow none
-
-NERDTreeUp                       grey   none
-NERDTreeCWD                      green  none
-NERDTreeHelp                     fg1    none
-
-NERDTreeToggleOn                 green  none
-NERDTreeToggleOff                red    none
+NERDTreeDir       /gui/256+plugin 1  aqua   none
+NERDTreeDirSlash  /gui/256+plugin 1  aqua   none
+NERDTreeOpenable  /gui/256+plugin 1  orange none
+NERDTreeClosable  /gui/256+plugin 1  orange none
+NERDTreeFile      /gui/256+plugin 1  fg1    none
+NERDTreeExecFile  /gui/256+plugin 1  yellow none
+NERDTreeUp        /gui/256+plugin 1  grey   none
+NERDTreeCWD       /gui/256+plugin 1  green  none
+NERDTreeHelp      /gui/256+plugin 1  fg1    none
+NERDTreeToggleOn  /gui/256+plugin 1  green  none
+NERDTreeToggleOff /gui/256+plugin 1  red    none
 ; }}}
 ; Netrw {{{
-netrwDir                         aqua   none
-netrwClassify                    aqua   none
-netrwLink                        grey   none
-netrwSymLink                     fg1    none
-netrwExe                         yellow none
-netrwComment                     grey   none
-netrwList                        blue   none
-netrwHelpCmd                     aqua   none
-netrwCmdSep                      fg3    none
-netrwVersion                     green  none
-; }}}
-; Rainbow Parentheses {{{
-verbatim
-" Rainbow Parentheses
-if !exists('g:rbpt_colorpairs')
-  let g:rbpt_colorpairs = [['blue', '@guineutralblue'], ['magenta', '@guineutralpurple'],
-    \ ['red', '@guineutralred'], ['@term256neutralorange', '@guineutralorange']]
-endif
+netrwDir      -> omit
+netrwClassify -> omit
+netrwLink     -> omit
+netrwSymLink  -> omit
+netrwExe      -> omit
+netrwComment  -> omit
+netrwList     -> omit
+netrwHelpCmd  -> omit
+netrwCmdSep   -> omit
+netrwVersion  -> omit
 
-let g:rainbow_guifgs = [ '@guineutralorange', '@guineutralred', '@guineutralpurple', '@guineutralblue' ]
-let g:rainbow_ctermfgs = [ '@term256neutralorange', 'red', 'magenta', 'blue' ]
-
-if !exists('g:rainbow_conf')
-   let g:rainbow_conf = {}
-endif
-if !has_key(g:rainbow_conf, 'guifgs')
-   let g:rainbow_conf['guifgs'] = g:rainbow_guifgs
-endif
-if !has_key(g:rainbow_conf, 'ctermfgs')
-   let g:rainbow_conf['ctermfgs'] = g:rainbow_ctermfgs
-endif
-
-let g:niji_dark_colours = g:rbpt_colorpairs
-let g:niji_light_colours = g:rbpt_colorpairs
-endverbatim
+netrwDir      /gui/256+plugin 1  aqua   none
+netrwClassify /gui/256+plugin 1  aqua   none
+netrwLink     /gui/256+plugin 1  grey   none
+netrwSymLink  /gui/256+plugin 1  fg1    none
+netrwExe      /gui/256+plugin 1  yellow none
+netrwComment  /gui/256+plugin 1  grey   none
+netrwList     /gui/256+plugin 1  blue   none
+netrwHelpCmd  /gui/256+plugin 1  aqua   none
+netrwCmdSep   /gui/256+plugin 1  fg3    none
+netrwVersion  /gui/256+plugin 1  green  none
 ; }}}
 ; ShowMarks {{{
-ShowMarksHLl                     blue   bg1
-ShowMarksHLu                     blue   bg1
-ShowMarksHLo                     blue   bg1
-ShowMarksHLm                     blue   bg1
+ShowMarksHLl -> omit
+ShowMarksHLu -> omit
+ShowMarksHLo -> omit
+ShowMarksHLm -> omit
+
+ShowMarksHLl /gui/256+plugin 1  blue   bg1
+ShowMarksHLu /gui/256+plugin 1  blue   bg1
+ShowMarksHLo /gui/256+plugin 1  blue   bg1
+ShowMarksHLm /gui/256+plugin 1  blue   bg1
 ; }}}
 ; Signify {{{
-SignifySignAdd                   green  bg1
-SignifySignChange                aqua   bg1
-SignifySignDelete                red    bg1
+SignifySignAdd    -> omit
+SignifySignChange -> omit
+SignifySignDelete -> omit
+
+SignifySignAdd    /gui/256+plugin 1  green  bg1
+SignifySignChange /gui/256+plugin 1  aqua   bg1
+SignifySignDelete /gui/256+plugin 1  red    bg1
 ; }}}
 ; Signature {{{
-SignatureMarkText                blue   bg1
-SignatureMarkerText              purple bg1
+SignatureMarkText   -> omit
+SignatureMarkerText -> omit
+
+SignatureMarkText   /gui/256+plugin 1  blue   bg1
+SignatureMarkerText /gui/256+plugin 1  purple bg1
 ; }}}
 ; Startify {{{
-StartifyBracket                  fg3    none
-StartifyFile                     fg1    none
-StartifyNumber                   blue   none
-StartifyPath                     grey   none
-StartifySlash                    grey   none
-StartifySection                  yellow none
-StartifySpecial                  bg2    none
-StartifyHeader                   orange none
-StartifyFooter                   bg2    none
+StartifyBracket -> omit
+StartifyFile    -> omit
+StartifyNumber  -> omit
+StartifyPath    -> omit
+StartifySlash   -> omit
+StartifySection -> omit
+StartifySpecial -> omit
+StartifyHeader  -> omit
+StartifyFooter  -> omit
+
+StartifyBracket /gui/256+plugin 1  fg3    none
+StartifyFile    /gui/256+plugin 1  fg1    none
+StartifyNumber  /gui/256+plugin 1  blue   none
+StartifyPath    /gui/256+plugin 1  grey   none
+StartifySlash   /gui/256+plugin 1  grey   none
+StartifySection /gui/256+plugin 1  yellow none
+StartifySpecial /gui/256+plugin 1  bg2    none
+StartifyHeader  /gui/256+plugin 1  orange none
+StartifyFooter  /gui/256+plugin 1  bg2    none
 ; }}}
 ; Syntastic {{{
-SyntasticError                   none   none    t=underline g=undercurl s=red
-SyntasticWarning                 none   none    t=underline g=undercurl s=yellow
-SyntasticErrorSign               red    bg1
-SyntasticWarningSign             yellow bg1
+SyntasticError       -> omit
+SyntasticWarning     -> omit
+SyntasticErrorSign   -> omit
+SyntasticWarningSign -> omit
+
+SyntasticError       /gui+plugin 1      none   none  s=red     undercurl
+SyntasticError       /256+plugin 1      none   none  s=red     underline
+SyntasticWarning     /gui+plugin 1      none   none  s=yellow  undercurl
+SyntasticWarning     /256+plugin 1      none   none  s=yellow  underline
+SyntasticErrorSign   /gui/256+plugin 1  red    bg1
+SyntasticWarningSign /gui/256+plugin 1  yellow bg1
 ; }}}
 ; Vim Multiple Cursors {{{
-multiple_cursors_cursor          none   none    reverse
-multiple_cursors_visual          none   bg2
+multiple_cursors_cursor -> omit
+multiple_cursors_visual -> omit
+
+multiple_cursors_cursor /gui/256+plugin 1  none   none    reverse
+multiple_cursors_visual /gui/256+plugin 1  none   bg2
 ; }}}
-; Vimshell {{{
-verbatim
-let g:vimshell_escape_colors = [
-  \ '@guibg4', '@guired', '@guigreen', '@guiyellow',
-  \ '@guiblue', '@guipurple', '@guiaqua', '@guifg4',
-  \ '@guibg0', '@guired', '@guigreen', '@guiorange',
-  \ '@guiblue', '@guipurple', '@guiaqua', '@guifg0'
-  \ ]
-endverbatim
-; }}}
-#endif

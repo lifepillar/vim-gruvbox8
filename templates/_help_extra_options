@@ -3,32 +3,32 @@
 ; These are options for features that were in the original Gruvbox but were
 ; removed in Gruvbox 8.
 
-documentation
-						*g:@optionprefix_improved_strings*
+helpfile
+						*g:@prefix_improved_strings*
 Set to 1 if you want strings with a lighter background.
 >
-	let g:@optionprefix_improved_strings = 0
+	let g:@prefix_improved_strings = 0
 <
-						*g:@optionprefix_improved_warnings*
+						*g:@prefix_improved_warnings*
 When set to 0 (which is the default), wrongly capitalized words and compile
 warnings are underlined. Set to 1 if you prefer to use a different color and
 boldface rather than underlining.
 >
-	let g:@optionprefix_improved_warnings = 0
+	let g:@prefix_improved_warnings = 0
 <
-						*g:@optionprefix_invert_selection*
+						*g:@prefix_invert_selection*
 When set to 1, selected text in Visual mode has inverted colors. When set to
 0 (which is the default), colors are not reversed.
 >
-	let g:@optionprefix_invert_selection = 0
+	let g:@prefix_invert_selection = 0
 <
-						*g:@optionprefix_invert_indent_guides*
+						*g:@prefix_invert_indent_guides*
 Set to 1 if you use the Indent Guides plugin and you want to invert the colors
 of the indentation lines.
 >
-	let g:@optionprefix_invert_indent_guides = 0
+	let g:@prefix_invert_indent_guides = 0
 <
 Note: for this to take effect, you also need to set
-|@optionprefix_plugin_hi_groups|.
+|@prefix_plugin_hi_groups|.
 
-enddocumentation
+endhelpfile

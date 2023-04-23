@@ -1,18 +1,20 @@
+; vim: ft=colortemplate
+
 auxfile autoload/lightline/colorscheme/@shortname.vim
 if &background ==# '@background'
-  let s:bg0 = [ '@guibg0', @term256bg0 ]
-  let s:bg1 = [ '@guibg1', @term256bg1 ]
-  let s:bg2 = [ '@guibg2', @term256bg2 ]
-  let s:bg4 = [ '@guibg4', @term256bg4 ]
+  let s:bg0 = [ '@guibg0', @256bg0 ]
+  let s:bg1 = [ '@guibg1', @256bg1 ]
+  let s:bg2 = [ '@guibg2', @256bg2 ]
+  let s:bg4 = [ '@guibg4', @256bg4 ]
 
-  let s:fg1 = [ '@guifg1', @term256fg1 ]
-  let s:fg4 = [ '@guifg4', @term256fg4 ]
+  let s:fg1 = [ '@guifg1', @256fg1 ]
+  let s:fg4 = [ '@guifg4', @256fg4 ]
 
-  let s:green  = [ '@guineutralgreen', @term256neutralgreen ]
-  let s:yellow = [ '@guineutralyellow', @term256neutralyellow ]
-  let s:blue   = [ '@guineutralblue', @term256neutralblue ]
-  let s:aqua   = [ '@guineutralaqua', @term256neutralaqua ]
-  let s:orange = [ '@guineutralorange', @term256neutralorange ]
+  let s:green  = [ '@guineutralgreen', @256neutralgreen ]
+  let s:yellow = [ '@guineutralyellow', @256neutralyellow ]
+  let s:blue   = [ '@guineutralblue', @256neutralblue ]
+  let s:aqua   = [ '@guineutralaqua', @256neutralaqua ]
+  let s:orange = [ '@guineutralorange', @256neutralorange ]
 
   let s:p = { 'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}, 'terminal': {} }
 

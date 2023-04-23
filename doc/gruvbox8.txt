@@ -1,4 +1,4 @@
-*gruvbox8.txt*	For Vim version 8.2	Last change: 2022 Mar 20
+*gruvbox8.txt*	For Vim version 9	Last change: 2023 Apr 23
 
 
 		Gruvbox 8 color scheme
@@ -37,9 +37,9 @@ Set to 1 to include syntax highlighting definitions for several filetypes.
 >
 	let g:gruvbox_filetype_hi_groups = 0
 <
-Note: setting this to 1 may leave "a wake of destruction when switching away"
-(Tim Pope), that is, when you switch to a different colorscheme the
-highlighting may look wrong or disabled.
+Note: in older versions of Vim, setting this to 1 may leave "a wake of
+destruction when switching away" (Tim Pope), that is, when you switch to
+a different colorscheme the highlighting may look wrong or disabled.
 
 						*g:gruvbox_italics*
 Set to 0 if you do not want to enable italics. Note that the color scheme in
@@ -61,9 +61,9 @@ plugins:
 >
 	let g:gruvbox_plugin_hi_groups = 0
 <
-Note: setting this to 1 may leave "a wake of destruction when switching away"
-(Tim Pope), that is, when you switch to a different colorscheme the
-highlighting may look wrong or disabled.
+Note: in older versions of Vim, setting this to 1 may leave "a wake of
+destruction when switching away" (Tim Pope), that is, when you switch to
+a different colorscheme the highlighting may look wrong or disabled.
 
 						*g:gruvbox_transp_bg*
 Set to 1 if you want a transparent background. Takes effect only in the

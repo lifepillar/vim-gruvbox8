@@ -19,15 +19,31 @@ Color: purple          rgb(211, 134, 155)    175 Magenta
 Color: aqua            rgb(142, 192, 124)    107 Cyan
 Color: orange          rgb(254, 128, 25)     208 Magenta
 
-; Terminal {{{
-Variant: gui 256 16 8
 Term colors: bg0  neutralred neutralgreen neutralyellow neutralblue neutralpurple neutralaqua fg4
-Term colors: grey red        green        yellow        blue        purple        aqua        fg1
+             grey red        green        yellow        blue        purple        aqua        fg1
 
-Variant: 256 16 8
 Terminal fg1 bg0
-Variant: gui 256 16 8
-; }}}
+
+verbatim
+if has('nvim')
+  let g:terminal_color_0  = '@bg0'
+  let g:terminal_color_1  = '@neutralred'
+  let g:terminal_color_2  = '@neutralgreen'
+  let g:terminal_color_3  = '@neutralyellow'
+  let g:terminal_color_4  = '@neutralblue'
+  let g:terminal_color_5  = '@neutralpurple'
+  let g:terminal_color_6  = '@neutralaqua'
+  let g:terminal_color_7  = '@fg4'
+  let g:terminal_color_8  = '@grey'
+  let g:terminal_color_9  = '@red'
+  let g:terminal_color_10 = '@green'
+  let g:terminal_color_11 = '@yellow'
+  let g:terminal_color_12 = '@blue'
+  let g:terminal_color_13 = '@purple'
+  let g:terminal_color_14 = '@aqua'
+  let g:terminal_color_15 = '@fg1'
+endif
+endverbatim
 
 Include: _common
 

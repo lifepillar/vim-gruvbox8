@@ -1,4 +1,4 @@
-documentation
+helpfile
 *@shortname.txt*	For Vim version @vimversion	Last change: @date
 
 
@@ -21,66 +21,64 @@ before loading the colorscheme. For example:
 true-color terminals and GUI versions of Vim.
 
 ==============================================================================
-Colorscheme options				*@optionprefix-options*
+Colorscheme options				*@prefix-options*
 
-						*g:@optionprefix_bold*
+						*g:@prefix_bold*
 Set to 0 to suppress boldface in gVim.
 >
-	let g:@optionprefix_bold = 1
+	let g:@prefix_bold = 1
 <
 NOTE: to disable boldface in terminal Vim, use your terminal's preferences, or
 try putting the following line in your |vimrc|:
 >
 	set t_md=
 <
-						*g:@optionprefix_filetype_hi_groups*
+						*g:@prefix_filetype_hi_groups*
 Set to 1 to include syntax highlighting definitions for several filetypes.
 >
-	let g:@optionprefix_filetype_hi_groups = 0
+	let g:@prefix_filetype_hi_groups = 0
 <
-Note: setting this to 1 may leave "a wake of destruction when switching away"
-(Tim Pope), that is, when you switch to a different colorscheme the
-highlighting may look wrong or disabled.
+Note: in older versions of Vim, setting this to 1 may leave "a wake of
+destruction when switching away" (Tim Pope), that is, when you switch to
+a different colorscheme the highlighting may look wrong or disabled.
 
-						*g:@optionprefix_italics*
+						*g:@prefix_italics*
 Set to 0 if you do not want to enable italics. Note that the color scheme in
 normal circumstances automatically detects whether italics is available. You
 should never need to set this option explicitly. You may want to unset it if
 you do not want Vim to display italics even when the feature is available
 (e.g., in GUI versions of Vim).
 >
-	let g:@optionprefix_italics = 1
+	let g:@prefix_italics = 1
 <
-						*g:@optionprefix_italicize_strings*
+						*g:@prefix_italicize_strings*
 Set to 0 if you do not want strings in italics.
 >
-	let g:@optionprefix_italicize_strings = 1
+	let g:@prefix_italicize_strings = 1
 <
-						*g:@optionprefix_plugin_hi_groups*
+						*g:@prefix_plugin_hi_groups*
 Set to 1 to include syntax highlighting definitions for a number of popular
 plugins:
 >
-	let g:@optionprefix_plugin_hi_groups = 0
+	let g:@prefix_plugin_hi_groups = 0
 <
-Note: setting this to 1 may leave "a wake of destruction when switching away"
-(Tim Pope), that is, when you switch to a different colorscheme the
-highlighting may look wrong or disabled.
+Note: in older versions of Vim, setting this to 1 may leave "a wake of
+destruction when switching away" (Tim Pope), that is, when you switch to
+a different colorscheme the highlighting may look wrong or disabled.
 
-						*g:@optionprefix_transp_bg*
+						*g:@prefix_transp_bg*
 Set to 1 if you want a transparent background. Takes effect only in the
 terminal.
 >
-	let g:@optionprefix_transp_bg = 0
+	let g:@prefix_transp_bg = 0
 <
-enddocumentation
+endhelpfile
 
 ;Include: _help_extra_options
 
-documentation
+helpfile
 ==============================================================================
  vim:tw=78:ts=8:noet:ft=help:norl:
-enddocumentation
-
+endhelpfile
 
 ; vim: ft=colortemplate fdm=marker noet ts=8 tw=78
-

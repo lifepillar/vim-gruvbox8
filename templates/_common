@@ -1,217 +1,229 @@
-; vim: ft=colortemplate fdm=marker
+Normal                               fg1    bg0
+CursorLineNr                         yellow bg1
+FoldColumn                           grey   bg1   ; FIXME?
+SignColumn                           fg1    bg1
+VertSplit                            bg3    bg0
+VertSplit    /16                     bg0    bg1
+VertSplit    /8                      bg0    fg4
 
-; GUI & 256-color specific {{{
-Variant: gui
-#if get(g:, '@optionprefix_transp_bg', 0) && !has('gui_running')
-Variant: 256
-#if get(g:, '@optionprefix_transp_bg', 0)
-Variant: gui 256
-    Normal       fg1    none
-    CursorLineNr yellow none
-    FoldColumn   grey   none
-    SignColumn   fg1    none
-    VertSplit    bg3    none
-#else
-    Normal       fg1    bg0
-    CursorLineNr yellow bg1
-    FoldColumn   grey   bg1   # FIXME
-    SignColumn   fg1    bg1
-    VertSplit    bg3    bg0
-#endif
-ColorColumn                      none   bg1
-Comment                          grey   none    italic
-CursorLine                       none   bg1
-Error                            red    bg0     bold,reverse
-ErrorMsg                         bg0    red     bold
-Folded                           grey   bg1     italic
-LineNr                           bg4    none
-MatchParen                       none   bg2     bold,underline
-NonText                          bg2    none
-Pmenu                            fg1    bg2
-PmenuSbar                        none   bg2
-PmenuSel                         bg2    blue    bold
-PmenuThumb                       none   bg4
-SpecialKey                       grey   none
-StatusLine                       bg2    fg1     reverse
-StatusLineNC                     bg1    fg4     reverse
-TabLine                          bg4    bg1
-TabLineFill                      bg4    bg1
-TabLineSel                       green  bg1
-ToolbarButton                    fg0    bg3     bold
-ToolbarLine                      none   bg3
-Visual                           none   bg3
-WildMenu                         blue   bg2     bold
-; }}}
-; 16-color specific {{{
-Variant: 16
-#if get(g:, '@optionprefix_transp_bg', 0)
-    Normal                       fg1    none
-#else
-    Normal                       fg1    bg0
-#endif
-ColorColumn                      bg0    bg1
-Comment                          grey   none    italic
-CursorLine                       none   none    underline
-CursorLineNr                     yellow none
-Error                            red    bg0     reverse
-ErrorMsg                         bg0    red
-FoldColumn                       bg1    none
-Folded                           bg1    none    italic
-LineNr                           bg1    none
-MatchParen                       none   bg0     bold,underline
-NonText                          bg1    none
-Pmenu                            bg0    bg1
-PmenuSbar                        none   bg1
-PmenuSel                         bg0    blue
-PmenuThumb                       none   blue
-SignColumn                       bg1    none
-SpecialKey                       bg1    none
-StatusLine                       bg1    fg1     reverse
-StatusLineNC                     bg1    bg0     reverse
-TabLine                          bg0    bg1
-TabLineFill                      bg0    bg1
-TabLineSel                       bg1    bg0     underline
-ToolbarButton                    fg1    bg1     bold
-ToolbarLine                      none   bg1
-VertSplit                        bg0    bg1
-Visual                           bg0    bg1
-WildMenu                         fg1    bg0     bold
-; }}}
-; 8-color specific {{{
-Variant: 8
-Normal                           fg4    none
-ColorColumn                      bg0    fg4
-Comment                          fg4    none    italic
-CursorLine                       none   none    underline
-CursorLineNr                     yellow none
-Error                            red    bg0     reverse
-ErrorMsg                         bg0    red
-FoldColumn                       fg4    none
-Folded                           fg4    none    italic
-LineNr                           fg4    none
-MatchParen                       fg4    none    bold,underline
-NonText                          fg4    none
-Pmenu                            fg1    bg1
-PmenuSbar                        none   bg1
-PmenuSel                         bg0    blue
-PmenuThumb                       none   blue
-SignColumn                       fg4    none
-SpecialKey                       fg4    none
-StatusLine                       fg4    bg0     reverse,bold
-StatusLineNC                     fg4    bg0     reverse
-TabLine                          bg0    fg4
-TabLineFill                      bg0    fg4
-TabLineSel                       fg4    bg0     underline
-ToolbarButton                    bg0    fg4     bold
-ToolbarLine                      none   fg4
-VertSplit                        bg0    fg4
-Visual                           bg0    fg4
-WildMenu                         blue   bg1     bold
-; }}}
-; Common {{{
-Variant: gui 256 16 8
-; Group                          Fg     Bg      Attributes
-Conceal                          blue   none
-Cursor                           none   none    reverse
-DiffAdd                          green  bg0     reverse
-DiffChange                       aqua   bg0     reverse
-DiffDelete                       red    bg0     reverse
-DiffText                         yellow bg0     reverse
-Directory                        green  none    bold
-EndOfBuffer                      bg0    none
-IncSearch                        orange bg0     reverse
-ModeMsg                          yellow none    bold
-MoreMsg                          yellow none    bold
-Question                         orange none    bold
-Search                           yellow bg0     reverse
-SpellBad                         red    none    italic t=underline g=undercurl s=red
-SpellCap                         blue   none    italic t=underline g=undercurl s=blue
-SpellLocal                       aqua   none    italic t=underline g=undercurl s=aqua
-SpellRare                        purple none    italic t=underline g=undercurl s=purple
-Title                            green  none    bold
-WarningMsg                       red    none    bold
-; Other conventional group names (see `:help group-name`)
-Boolean                          purple none
-Character                        purple none
-Conditional                      red    none
-Constant                         purple none
-Define                           aqua   none
-Debug                            red    none
-Delimiter                        orange none
-Error                            red    bg0     bold,reverse
-Exception                        red    none
-Float                            purple none
-Function                         green  none    bold
-Identifier                       blue   none
-Ignore                           fg     none
-Include                          aqua   none
-Keyword                          red    none
-Label                            red    none
-Macro                            aqua   none
-Number                           purple none
-Operator                         aqua   none
-PreCondit                        aqua   none
-PreProc                          aqua   none
-Repeat                           red    none
-SpecialChar                      red    none
-SpecialComment                   red    none
-Statement                        red    none
-StorageClass                     orange none
-Special                          orange none    italic
-String                           green  none    italic
-Structure                        aqua   none
-Todo                             fg     bg0     bold,italic
-Type                             yellow none
-Typedef                          yellow none
-Underlined                       blue   none    underline s=blue
-CursorIM                         none   none    reverse
-; }}}
-; Italics {{{
-verbatim
-if !get(g:, '@optionprefix_italicize_strings', 1)
-  hi Special gui=NONE cterm=NONE
-  hi String gui=NONE cterm=NONE
-endif
-endverbatim
-; }}}
-; Boldface {{{
-Variant: gui
-verbatim
-if !get(g:, '@optionprefix_bold', 1)
-  hi Directory gui=NONE cterm=NONE
-  hi Error gui=reverse cterm=reverse
-  hi ErrorMsg gui=NONE cterm=NONE
-  hi Function gui=NONE cterm=NONE
-  hi MatchParen gui=underline cterm=underline
-  hi ModeMsg gui=NONE cterm=NONE
-  hi MoreMsg gui=NONE cterm=NONE
-  hi PmenuSel gui=NONE cterm=NONE
-  hi Question gui=NONE cterm=NONE
-  hi Title gui=NONE cterm=NONE
-  hi Todo gui=italic cterm=italic
-  hi ToolbarButton gui=NONE cterm=NONE
-  hi WarningMsg gui=NONE cterm=NONE
-  hi WildMenu gui=NONE cterm=NONE
-endif
-endverbatim
-; }}}
-; Additional highlight groups {{{
+Normal       /256/16    +transp_bg 1 fg1    none
+Normal       /8                      fg4    none
+CursorLineNr /256       +transp_bg 1 yellow none
+CursorLineNr /16                     yellow none
+CursorLineNr /8                      yellow none
+FoldColumn   /256       +transp_bg 1 grey   none
+FoldColumn   /16                     bg1    none
+FoldColumn   /8                      fg4    none
+SignColumn   /256       +transp_bg 1 fg1    none
+SignColumn   /16                     bg1    none
+SignColumn   /8                      fg4    none
+VertSplit    /256       +transp_bg 1 bg3    none
+
+Special                              orange none          italic
+    +italicize_strings 0             orange none
+String                               green  none          italic
+    +italicize_strings 0             green  none
+
+Boolean                              purple none
+Character                            purple none
+Debug                                red    none
+Define                               aqua   none
+Delimiter                            orange none
+DiffAdd                              green  bg0           reverse
+DiffChange                           aqua   bg0           reverse
+DiffDelete                           red    bg0           reverse
+DiffText                             yellow bg0           reverse
+EndOfBuffer                          bg0    none
+Exception                            red    none
+Float                                purple none
+Conceal                              blue   none
+Conditional                          red    none
+Constant                             purple none
+Cursor                               none   none          reverse
+CursorIM                             none   none          reverse
+Identifier                           blue   none
+Ignore                               fg     none
+IncSearch                            orange bg0           reverse
+Include                              aqua   none
+Keyword                              red    none
+Label                                red    none
+Macro                                aqua   none
+Number                               purple none
+Operator                             aqua   none
+PreCondit                            aqua   none
+PreProc                              aqua   none
+Repeat                               red    none
+Search                               yellow bg0           reverse
+SpecialChar                          red    none
+SpecialComment                       red    none
+Statement                            red    none
+StorageClass                         orange none
+Structure                            aqua   none
+Type                                 yellow none
+Typedef                              yellow none
+Underlined                           blue   none s=blue   underline
 ; Useful for custom status lines
-Variant: gui 256 16 8
-NormalMode                       fg4    bg0     reverse
-InsertMode                       blue   bg0     reverse
-ReplaceMode                      aqua   bg0     reverse
-VisualMode                       orange bg0     reverse
-CommandMode                      purple bg0     reverse
-Warnings                         orange bg0     reverse
-; }}}
-; NeoVim terminal colors {{{
-TermCursor        -> Cursor
-TermCursorNC         bg1            fg1
-; }}}
-; Extra highlight groups {{{
-Variant: gui 256
+NormalMode                           fg4    bg0           reverse
+InsertMode                           blue   bg0           reverse
+ReplaceMode                          aqua   bg0           reverse
+VisualMode                           orange bg0           reverse
+CommandMode                          purple bg0           reverse
+Warnings                             orange bg0           reverse
+; NeoVim terminal colors
+TermCursor                        -> Cursor
+TermCursorNC                         bg1    fg1
+
+
+ColorColumn                          none   bg1
+             /16                     bg0    bg1
+             /8                      bg0    fg4
+
+Comment                              grey   none          italic
+             /gui/256/16+italic 0    grey   none
+             /8                      fg4    none          italic
+             /8         +italic 0    fg4    none
+
+CursorLine                           none   bg1
+             /16/8                   none   none          underline
+
+Directory                            green  none          bold
+                        +bold 0      green  none
+
+Error                                red    bg0           bold,reverse
+            /16/8                    red    bg0           reverse
+            /gui/256    +bold 0      red    bg0           reverse
+
+ErrorMsg                             bg0    red           bold
+                        +bold 0      bg0    red
+
+Folded                               grey   bg1           italic
+             /gui/256   +italic 0    grey   bg1
+             /16                     bg1    none          italic
+             /16        +italic 0    bg1    none
+             /8                      fg4    none          italic
+             /8         +italic 0    fg4    none
+
+Function                             green  none          bold
+                        +bold 0      green  none
+
+LineNr                               bg4    none
+             /16                     bg1    none
+             /8                      fg4    none
+
+MatchParen                           none   bg2           bold,underline
+            /gui/256    +bold 0      none   bg2           underline
+            /16                      none   bg0           bold,underline
+            /16         +bold 0      none   bg0           underline
+             /8                      fg4    none          bold,underline
+             /8         +bold 0      fg4    none          underline
+
+ModeMsg                              yellow none          bold
+                        +bold 0      yellow none
+
+MoreMsg                              yellow none          bold
+                        +bold 0      yellow none
+
+NonText                              bg2    none
+             /16                     bg1    none
+             /8                      fg4    none
+
+Pmenu                                fg1    bg2
+             /16                     bg0    bg1
+             /8                      fg1    bg1
+
+PmenuSbar                            none   bg2
+             /16                     none   bg1
+             /8                      none   bg1
+
+PmenuSel                             bg2    blue          bold
+             /gui/256   +bold 0      bg2    blue
+             /16/8                   bg0    blue
+
+PmenuThumb                           none   bg4
+             /16/8                   none   blue
+
+Question                             orange none          bold
+                        +bold 0      orange none
+
+SpecialKey                           grey   none
+             /16                     bg1    none
+             /8                      fg4    none
+
+SpellBad                             red    none s=red    undercurl,italic
+             /gui       +italic 0    red    none s=red    undercurl
+             /256/16/8               red    none s=red    underline,italic
+             /256/16/8  +italic 0    red    none s=red    underline
+
+SpellCap                             blue   none s=blue   undercurl,italic
+             /gui       +italic 0    blue   none s=blue   undercurl
+             /256/16/8               blue   none s=blue   underline,italic
+             /256/16/8  +italic 0    blue   none s=blue   underline
+
+SpellLocal                           aqua   none s=aqua   undercurl,italic
+             /gui       +italic 0    aqua   none s=aqua   undercurl
+             /256/16/8               aqua   none s=aqua   underline,italic
+             /256/16/8  +italic 0    aqua   none s=aqua   underline
+
+SpellRare                            purple none s=purple undercurl,italic
+             /gui       +italic 0    purple none s=purple undercurl
+             /256/16/8               purple none s=purple underline,italic
+             /256/16/8  +italic 0    purple none s=purple underline
+
+StatusLine                           bg2    fg1           reverse
+             /16                     bg1    fg1           reverse
+             /8                      fg4    bg0           reverse,bold
+
+StatusLineNC                         bg1    fg4           reverse
+             /16                     bg1    bg0           reverse
+             /8                      fg4    bg0           reverse
+
+TabLine                              bg4    bg1
+             /16                     bg0    bg1
+             /8                      bg0    fg4
+
+TabLineFill                          bg4    bg1
+             /16                     bg0    bg1
+             /8                      bg0    fg4
+
+TabLineSel                           green  bg1
+             /16                     bg1    bg0           underline
+             /8                      fg4    bg0           underline
+
+Title                                green  none          bold
+                        +bold 0      green  none
+
+Todo                                    fg   bg0           bold,italic
+                        +bold_italic 2  fg   bg0           bold
+                        +bold_italic 1  fg   bg0           italic
+                        +bold_italic 0  fg   bg0
+
+
+ToolbarButton                        fg0    bg3           bold
+             /gui/256   +bold 0      fg0    bg3
+             /16                     fg1    bg1           bold
+             /16        +bold 0      fg1    bg1
+             /8                      bg0    fg4           bold
+             /8         +bold 0      bg0    fg4
+
+ToolbarLine                          none   bg3
+             /16                     none   bg1
+             /8                      none   fg4
+
+Visual                               none   bg3
+             /16                     bg0    bg1
+             /8                      bg0    fg4
+
+WarningMsg                           red    none          bold
+                        +bold 0      red    none
+
+WildMenu                             blue   bg2           bold
+             /gui/256   +bold 0      blue   bg2
+             /16                     fg1    bg0           bold
+             /16        +bold 0      fg1    bg0
+             /8                      blue   bg1           bold
+             /8         +bold 0      blue   bg1
 
 Include: _plugins
 Include: _filetypes
-; }}}
+
+; vim: ft=colortemplate fdm=marker

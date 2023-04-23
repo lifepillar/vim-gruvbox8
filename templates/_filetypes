@@ -1,494 +1,831 @@
 ; vim: ft=colortemplate fdm=marker
 
 ; Filetype specific groups
-#if get(g:, "@optionprefix_filetype_hi_groups", 1)
+
+#const ft      = get(g:, '@prefix_filetype_hi_groups', 0)
+#const ft_bold = get(g:, '@prefix_filetype_hi_groups', 0) + 2 * get(g:, '@prefix_bold', 1)
+
 ; Diff {{{
-diffAdded                        green  none
-diffRemoved                      red    none
-diffChanged                      aqua   none
+diffAdded               -> omit
+diffRemoved             -> omit
+diffChanged             -> omit
+diffFile                -> omit
+diffNewFile             -> omit
+diffLine                -> omit
 
-diffFile                         orange none
-diffNewFile                      yellow none
-
-diffLine                         blue   none
+diffAdded                        /gui/256+ft 1      green  none
+diffRemoved                      /gui/256+ft 1      red    none
+diffChanged                      /gui/256+ft 1      aqua   none
+diffFile                         /gui/256+ft 1      orange none
+diffNewFile                      /gui/256+ft 1      yellow none
+diffLine                         /gui/256+ft 1      blue   none
 ; }}}
 ; HTML {{{
-htmlTag                          blue   none
-htmlEndTag                       blue   none
+htmlArg                 -> omit
+htmlBold                -> omit
+htmlBoldItalic          -> omit
+htmlBoldUnderline       -> omit
+htmlBoldUnderlineItalic -> omit
+htmlEndTag              -> omit
+htmlItalic              -> omit
+htmlLink                -> omit
+htmlScriptTag           -> omit
+htmlSpecialChar         -> omit
+htmlSpecialTagName      -> omit
+htmlTag                 -> omit
+htmlTagN                -> omit
+htmlTagName             -> omit
+htmlUnderline           -> omit
+htmlUnderlineItalic     -> omit
 
-htmlTagName                      aqua   none    bold
-htmlArg                          aqua   none
-
-htmlScriptTag                    purple none
-htmlTagN                         fg1    none
-htmlSpecialTagName               aqua   none    bold
-
-htmlLink                         fg4    none    underline
-
-htmlSpecialChar                  orange none
-
-htmlBold                         fg     bg0     bold
-htmlBoldUnderline                fg     bg0     bold,underline
-htmlBoldItalic                   fg     bg0     bold,italic
-htmlBoldUnderlineItalic          fg     bg0     bold,underline,italic
-
-htmlUnderline                    fg     bg0     underline
-htmlUnderlineItalic              fg     bg0     underline,italic
-htmlItalic                       fg     bg0     italic
+htmlArg                          /gui/256+ft      1 aqua   none
+htmlBold                         /gui/256+ft_bold 1 fg     bg0
+htmlBold                         /gui/256+ft_bold 3 fg     bg0  bold
+htmlBoldItalic                   /gui/256+ft_bold 1 fg     bg0  italic
+htmlBoldItalic                   /gui/256+ft_bold 3 fg     bg0  bold,italic
+htmlBoldUnderline                /gui/256+ft_bold 1 fg     bg0  underline
+htmlBoldUnderline                /gui/256+ft_bold 3 fg     bg0  bold,underline
+htmlBoldUnderlineItalic          /gui/256+ft_bold 1 fg     bg0  underline,italic
+htmlBoldUnderlineItalic          /gui/256+ft_bold 3 fg     bg0  bold,underline,italic
+htmlEndTag                       /gui/256+ft      1 blue   none
+htmlItalic                       /gui/256+ft      1 fg     bg0  italic
+htmlLink                         /gui/256+ft      1 fg4    none underline
+htmlScriptTag                    /gui/256+ft      1 purple none
+htmlSpecialChar                  /gui/256+ft      1 orange none
+htmlSpecialTagName               /gui/256+ft_bold 1 aqua   none
+htmlSpecialTagName               /gui/256+ft_bold 3 aqua   none bold
+htmlTag                          /gui/256+ft      1 blue   none
+htmlTagN                         /gui/256+ft      1 fg1    none
+htmlTagName                      /gui/256+ft_bold 1 aqua   none
+htmlTagName                      /gui/256+ft_bold 3 aqua   none bold
+htmlUnderline                    /gui/256+ft      1 fg     bg0  underline
+htmlUnderlineItalic              /gui/256+ft      1 fg     bg0  underline,italic
 ; }}}
 ; XML {{{
-xmlTag                           blue   none
-xmlEndTag                        blue   none
-xmlTagName                       blue   none
-xmlEqual                         blue   none
-docbkKeyword                     aqua   none    bold
+xmlTag                  -> omit
+xmlEndTag               -> omit
+xmlTagName              -> omit
+xmlEqual                -> omit
+docbkKeyword            -> omit
+xmlDocTypeDecl          -> omit
+xmlDocTypeKeyword       -> omit
+xmlCdataStart           -> omit
+xmlCdataCdata           -> omit
+dtdFunction             -> omit
+dtdTagName              -> omit
+xmlAttrib               -> omit
+xmlProcessingDelim      -> omit
+dtdParamEntityPunct     -> omit
+dtdParamEntityDPunct    -> omit
+xmlAttribPunct          -> omit
+xmlEntity               -> omit
+xmlEntityPunct          -> omit
 
-xmlDocTypeDecl                   grey   none
-xmlDocTypeKeyword                purple none
-xmlCdataStart                    grey   none
-xmlCdataCdata                    purple none
-dtdFunction                      grey   none
-dtdTagName                       purple none
-
-xmlAttrib                        aqua   none
-xmlProcessingDelim               grey   none
-dtdParamEntityPunct              grey   none
-dtdParamEntityDPunct             grey   none
-xmlAttribPunct                   grey   none
-
-xmlEntity                        orange none
-xmlEntityPunct                   orange none
+xmlTag                           /gui/256+ft 1      blue   none
+xmlEndTag                        /gui/256+ft 1      blue   none
+xmlTagName                       /gui/256+ft 1      blue   none
+xmlEqual                         /gui/256+ft 1      blue   none
+docbkKeyword                     /gui/256+ft_bold 1 aqua   none
+docbkKeyword                     /gui/256+ft_bold 3 aqua   none bold
+xmlDocTypeDecl                   /gui/256+ft 1      grey   none
+xmlDocTypeKeyword                /gui/256+ft 1      purple none
+xmlCdataStart                    /gui/256+ft 1      grey   none
+xmlCdataCdata                    /gui/256+ft 1      purple none
+dtdFunction                      /gui/256+ft 1      grey   none
+dtdTagName                       /gui/256+ft 1      purple none
+xmlAttrib                        /gui/256+ft 1      aqua   none
+xmlProcessingDelim               /gui/256+ft 1      grey   none
+dtdParamEntityPunct              /gui/256+ft 1      grey   none
+dtdParamEntityDPunct             /gui/256+ft 1      grey   none
+xmlAttribPunct                   /gui/256+ft 1      grey   none
+xmlEntity                        /gui/256+ft 1      orange none
+xmlEntityPunct                   /gui/256+ft 1      orange none
 ; }}}
 ; Vim {{{
-vimCommentTitle                  fg4    none    bold
-vimNotation                      orange none
-vimBracket                       orange none
-vimMapModKey                     orange none
-vimFuncSID                       fg3    none
-vimSetSep                        fg3    none
-vimSep                           fg3    none
-vimContinue                      fg3    none
+vimCommentTitle         -> omit
+vimNotation             -> omit
+vimBracket              -> omit
+vimMapModKey            -> omit
+vimFuncSID              -> omit
+vimSetSep               -> omit
+vimSep                  -> omit
+vimContinue             -> omit
+
+vimCommentTitle                  /gui/256+ft_bold 1 fg4    none
+vimCommentTitle                  /gui/256+ft_bold 3 fg4    none bold
+vimNotation                      /gui/256+ft 1      orange none
+vimBracket                       /gui/256+ft 1      orange none
+vimMapModKey                     /gui/256+ft 1      orange none
+vimFuncSID                       /gui/256+ft 1      fg3    none
+vimSetSep                        /gui/256+ft 1      fg3    none
+vimSep                           /gui/256+ft 1      fg3    none
+vimContinue                      /gui/256+ft 1      fg3    none
 ; }}}
 ; Clojure {{{
-clojureKeyword                   blue   none
-clojureCond                      orange none
-clojureSpecial                   orange none
-clojureDefine                    orange none
+clojureKeyword          -> omit
+clojureCond             -> omit
+clojureSpecial          -> omit
+clojureDefine           -> omit
+clojureFunc             -> omit
+clojureRepeat           -> omit
+clojureCharacter        -> omit
+clojureStringEscape     -> omit
+clojureException        -> omit
+clojureRegexp           -> omit
+clojureRegexpEscape     -> omit
+clojureRegexpCharClass  -> omit
+clojureRegexpMod        -> omit
+clojureRegexpQuantifier -> omit
+clojureParen            -> omit
+clojureAnonArg          -> omit
+clojureVariable         -> omit
+clojureMacro            -> omit
+clojureMeta             -> omit
+clojureDeref            -> omit
+clojureQuote            -> omit
+clojureUnquote          -> omit
 
-clojureFunc                      yellow none
-clojureRepeat                    yellow none
-clojureCharacter                 aqua   none
-clojureStringEscape              aqua   none
-clojureException                 red    none
-
-clojureRegexp                    aqua   none
-clojureRegexpEscape              aqua   none
-clojureRegexpCharClass           fg3    none    bold
-clojureRegexpMod              -> clojureRegexpCharClass
-clojureRegexpQuantifier       -> clojureRegexpCharClass
-
-clojureParen                     fg3    none
-clojureAnonArg                   yellow none
-clojureVariable                  blue   none
-clojureMacro                     orange none
-
-clojureMeta                      yellow none
-clojureDeref                     yellow none
-clojureQuote                     yellow none
-clojureUnquote                   yellow none
+clojureKeyword                   /gui/256+ft 1      blue   none
+clojureCond                      /gui/256+ft 1      orange none
+clojureSpecial                   /gui/256+ft 1      orange none
+clojureDefine                    /gui/256+ft 1      orange none
+clojureFunc                      /gui/256+ft 1      yellow none
+clojureRepeat                    /gui/256+ft 1      yellow none
+clojureCharacter                 /gui/256+ft 1      aqua   none
+clojureStringEscape              /gui/256+ft 1      aqua   none
+clojureException                 /gui/256+ft 1      red    none
+clojureRegexp                    /gui/256+ft 1      aqua   none
+clojureRegexpEscape              /gui/256+ft 1      aqua   none
+clojureRegexpCharClass           /gui/256+ft_bold 1 fg3    none
+clojureRegexpCharClass           /gui/256+ft_bold 3 fg3    none bold
+clojureRegexpMod                 /gui/256+ft 1 ->   clojureRegexpCharClass
+clojureRegexpQuantifier          /gui/256+ft 1 ->   clojureRegexpCharClass
+clojureParen                     /gui/256+ft 1      fg3    none
+clojureAnonArg                   /gui/256+ft 1      yellow none
+clojureVariable                  /gui/256+ft 1      blue   none
+clojureMacro                     /gui/256+ft 1      orange none
+clojureMeta                      /gui/256+ft 1      yellow none
+clojureDeref                     /gui/256+ft 1      yellow none
+clojureQuote                     /gui/256+ft 1      yellow none
+clojureUnquote                   /gui/256+ft 1      yellow none
 ; }}}
 ; C {{{
-cOperator                        purple none
-cStructure                       orange none
+cOperator               -> omit
+cStructure              -> omit
+
+cOperator                        /gui/256+ft 1      purple none
+cStructure                       /gui/256+ft 1      orange none
 ; }}}
 ; Python {{{
-pythonBuiltin                    orange none
-pythonBuiltinObj                 orange none
-pythonBuiltinFunc                orange none
-pythonFunction                   aqua   none
-pythonDecorator                  red    none
-pythonInclude                    blue   none
-pythonImport                     blue   none
-pythonRun                        blue   none
-pythonCoding                     blue   none
-pythonOperator                   red    none
-pythonException                  red    none
-pythonExceptions                 purple none
-pythonBoolean                    purple none
-pythonDot                        fg3    none
-pythonConditional                red    none
-pythonRepeat                     red    none
-pythonDottedName                 green  none    bold
+pythonBuiltin           -> omit
+pythonBuiltinObj        -> omit
+pythonBuiltinFunc       -> omit
+pythonFunction          -> omit
+pythonDecorator         -> omit
+pythonInclude           -> omit
+pythonImport            -> omit
+pythonRun               -> omit
+pythonCoding            -> omit
+pythonOperator          -> omit
+pythonException         -> omit
+pythonExceptions        -> omit
+pythonBoolean           -> omit
+pythonDot               -> omit
+pythonConditional       -> omit
+pythonRepeat            -> omit
+pythonDottedName        -> omit
+
+pythonBuiltin                    /gui/256+ft 1      orange none
+pythonBuiltinObj                 /gui/256+ft 1      orange none
+pythonBuiltinFunc                /gui/256+ft 1      orange none
+pythonFunction                   /gui/256+ft 1      aqua   none
+pythonDecorator                  /gui/256+ft 1      red    none
+pythonInclude                    /gui/256+ft 1      blue   none
+pythonImport                     /gui/256+ft 1      blue   none
+pythonRun                        /gui/256+ft 1      blue   none
+pythonCoding                     /gui/256+ft 1      blue   none
+pythonOperator                   /gui/256+ft 1      red    none
+pythonException                  /gui/256+ft 1      red    none
+pythonExceptions                 /gui/256+ft 1      purple none
+pythonBoolean                    /gui/256+ft 1      purple none
+pythonDot                        /gui/256+ft 1      fg3    none
+pythonConditional                /gui/256+ft 1      red    none
+pythonRepeat                     /gui/256+ft 1      red    none
+pythonDottedName                 /gui/256+ft_bold 1 green  none
+pythonDottedName                 /gui/256+ft_bold 3 green  none bold
 ; }}}
 ; CSS {{{
-cssBraces                        blue   none
-cssFunctionName                  yellow none
-cssIdentifier                    orange none
-cssClassName                     green  none
-cssColor                         blue   none
-cssSelectorOp                    blue   none
-cssSelectorOp2                   blue   none
-cssImportant                     green  none
-cssVendor                        fg1    none
+cssBraces               -> omit
+cssFunctionName         -> omit
+cssIdentifier           -> omit
+cssClassName            -> omit
+cssColor                -> omit
+cssSelectorOp           -> omit
+cssSelectorOp2          -> omit
+cssImportant            -> omit
+cssVendor               -> omit
+cssTextProp             -> omit
+cssAnimationProp        -> omit
+cssUIProp               -> omit
+cssTransformProp        -> omit
+cssTransitionProp       -> omit
+cssPrintProp            -> omit
+cssPositioningProp      -> omit
+cssBoxProp              -> omit
+cssFontDescriptorProp   -> omit
+cssFlexibleBoxProp      -> omit
+cssBorderOutlineProp    -> omit
+cssBackgroundProp       -> omit
+cssMarginProp           -> omit
+cssListProp             -> omit
+cssTableProp            -> omit
+cssFontProp             -> omit
+cssPaddingProp          -> omit
+cssDimensionProp        -> omit
+cssRenderProp           -> omit
+cssColorProp            -> omit
+cssGeneratedContentProp -> omit
 
-cssTextProp                      aqua   none
-cssAnimationProp                 aqua   none
-cssUIProp                        yellow none
-cssTransformProp                 aqua   none
-cssTransitionProp                aqua   none
-cssPrintProp                     aqua   none
-cssPositioningProp               yellow none
-cssBoxProp                       aqua   none
-cssFontDescriptorProp            aqua   none
-cssFlexibleBoxProp               aqua   none
-cssBorderOutlineProp             aqua   none
-cssBackgroundProp                aqua   none
-cssMarginProp                    aqua   none
-cssListProp                      aqua   none
-cssTableProp                     aqua   none
-cssFontProp                      aqua   none
-cssPaddingProp                   aqua   none
-cssDimensionProp                 aqua   none
-cssRenderProp                    aqua   none
-cssColorProp                     aqua   none
-cssGeneratedContentProp          aqua   none
+cssBraces                        /gui/256+ft 1      blue   none
+cssFunctionName                  /gui/256+ft 1      yellow none
+cssIdentifier                    /gui/256+ft 1      orange none
+cssClassName                     /gui/256+ft 1      green  none
+cssColor                         /gui/256+ft 1      blue   none
+cssSelectorOp                    /gui/256+ft 1      blue   none
+cssSelectorOp2                   /gui/256+ft 1      blue   none
+cssImportant                     /gui/256+ft 1      green  none
+cssVendor                        /gui/256+ft 1      fg1    none
+cssTextProp                      /gui/256+ft 1      aqua   none
+cssAnimationProp                 /gui/256+ft 1      aqua   none
+cssUIProp                        /gui/256+ft 1      yellow none
+cssTransformProp                 /gui/256+ft 1      aqua   none
+cssTransitionProp                /gui/256+ft 1      aqua   none
+cssPrintProp                     /gui/256+ft 1      aqua   none
+cssPositioningProp               /gui/256+ft 1      yellow none
+cssBoxProp                       /gui/256+ft 1      aqua   none
+cssFontDescriptorProp            /gui/256+ft 1      aqua   none
+cssFlexibleBoxProp               /gui/256+ft 1      aqua   none
+cssBorderOutlineProp             /gui/256+ft 1      aqua   none
+cssBackgroundProp                /gui/256+ft 1      aqua   none
+cssMarginProp                    /gui/256+ft 1      aqua   none
+cssListProp                      /gui/256+ft 1      aqua   none
+cssTableProp                     /gui/256+ft 1      aqua   none
+cssFontProp                      /gui/256+ft 1      aqua   none
+cssPaddingProp                   /gui/256+ft 1      aqua   none
+cssDimensionProp                 /gui/256+ft 1      aqua   none
+cssRenderProp                    /gui/256+ft 1      aqua   none
+cssColorProp                     /gui/256+ft 1      aqua   none
+cssGeneratedContentProp          /gui/256+ft 1      aqua   none
 ; }}}
 ; JavaScript {{{
-javaScriptBraces                 fg1    none
-javaScriptFunction               aqua   none
-javaScriptIdentifier             red    none
-javaScriptMember                 blue   none
-javaScriptNumber                 purple none
-javaScriptNull                   purple none
-javaScriptParens                 fg3    none
+javaScriptBraces        -> omit
+javaScriptFunction      -> omit
+javaScriptIdentifier    -> omit
+javaScriptMember        -> omit
+javaScriptNumber        -> omit
+javaScriptNull          -> omit
+javaScriptParens        -> omit
+
+javaScriptBraces                 /gui/256+ft 1      fg1    none
+javaScriptFunction               /gui/256+ft 1      aqua   none
+javaScriptIdentifier             /gui/256+ft 1      red    none
+javaScriptMember                 /gui/256+ft 1      blue   none
+javaScriptNumber                 /gui/256+ft 1      purple none
+javaScriptNull                   /gui/256+ft 1      purple none
+javaScriptParens                 /gui/256+ft 1      fg3    none
 ; }}}
 ; YAJS {{{
-javascriptImport                 aqua   none
-javascriptExport                 aqua   none
-javascriptClassKeyword           aqua   none
-javascriptClassExtends           aqua   none
-javascriptDefault                aqua   none
+javascriptImport               -> omit
+javascriptExport               -> omit
+javascriptClassKeyword         -> omit
+javascriptClassExtends         -> omit
+javascriptDefault              -> omit
+javascriptClassName            -> omit
+javascriptClassSuperName       -> omit
+javascriptGlobal               -> omit
+javascriptEndColons            -> omit
+javascriptFuncArg              -> omit
+javascriptGlobalMethod         -> omit
+javascriptNodeGlobal           -> omit
+javascriptBOMWindowProp        -> omit
+javascriptArrayMethod          -> omit
+javascriptArrayStaticMethod    -> omit
+javascriptCacheMethod          -> omit
+javascriptDateMethod           -> omit
+javascriptMathStaticMethod     -> omit
+javascriptURLUtilsProp         -> omit
+javascriptBOMNavigatorProp     -> omit
+javascriptDOMDocMethod         -> omit
+javascriptDOMDocProp           -> omit
+javascriptBOMLocationMethod    -> omit
+javascriptBOMWindowMethod      -> omit
+javascriptStringMethod         -> omit
+javascriptVariable             -> omit
+javascriptIdentifier           -> omit
+javascriptClassSuper           -> omit
+javascriptFuncKeyword          -> omit
+javascriptAsyncFunc            -> omit
+javascriptClassStatic          -> omit
+javascriptOperator             -> omit
+javascriptForOperator          -> omit
+javascriptYield                -> omit
+javascriptExceptions           -> omit
+javascriptMessage              -> omit
+javascriptTemplateSB           -> omit
+javascriptTemplateSubstitution -> omit
+javascriptLabel                -> omit
+javascriptObjectLabel          -> omit
+javascriptPropertyName         -> omit
+javascriptLogicSymbols         -> omit
+javascriptArrowFunc            -> omit
+javascriptDocParamName         -> omit
+javascriptDocTags              -> omit
+javascriptDocNotation          -> omit
+javascriptDocParamType         -> omit
+javascriptDocNamedParamType    -> omit
+javascriptBrackets             -> omit
+javascriptDOMElemAttrs         -> omit
+javascriptDOMEventMethod       -> omit
+javascriptDOMNodeMethod        -> omit
+javascriptDOMStorageMethod     -> omit
+javascriptHeadersMethod        -> omit
+javascriptAsyncFuncKeyword     -> omit
+javascriptAwaitFuncKeyword     -> omit
 
-javascriptClassName              yellow none
-javascriptClassSuperName         yellow none
-javascriptGlobal                 yellow none
-
-javascriptEndColons              fg1    none
-javascriptFuncArg                fg1    none
-javascriptGlobalMethod           fg1    none
-javascriptNodeGlobal             fg1    none
-javascriptBOMWindowProp          fg1    none
-javascriptArrayMethod            fg1    none
-javascriptArrayStaticMethod      fg1    none
-javascriptCacheMethod            fg1    none
-javascriptDateMethod             fg1    none
-javascriptMathStaticMethod       fg1    none
-
-javascriptURLUtilsProp           fg1    none
-javascriptBOMNavigatorProp       fg1    none
-javascriptDOMDocMethod           fg1    none
-javascriptDOMDocProp             fg1    none
-javascriptBOMLocationMethod      fg1    none
-javascriptBOMWindowMethod        fg1    none
-javascriptStringMethod           fg1    none
-
-javascriptVariable               orange none
-javascriptIdentifier             orange none
-javascriptClassSuper             orange none
-
-javascriptFuncKeyword            aqua   none
-javascriptAsyncFunc              aqua   none
-javascriptClassStatic            orange none
-
-javascriptOperator               red    none
-javascriptForOperator            red    none
-javascriptYield                  red    none
-javascriptExceptions             red    none
-javascriptMessage                red    none
-
-javascriptTemplateSB             aqua   none
-javascriptTemplateSubstitution   fg1    none
-
-javascriptLabel                  fg1    none
-javascriptObjectLabel            fg1    none
-javascriptPropertyName           fg1    none
-
-javascriptLogicSymbols           fg1    none
-javascriptArrowFunc              yellow none
-
-javascriptDocParamName           fg4    none
-javascriptDocTags                fg4    none
-javascriptDocNotation            fg4    none
-javascriptDocParamType           fg4    none
-javascriptDocNamedParamType      fg4    none
-
-javascriptBrackets               fg1    none
-javascriptDOMElemAttrs           fg1    none
-javascriptDOMEventMethod         fg1    none
-javascriptDOMNodeMethod          fg1    none
-javascriptDOMStorageMethod       fg1    none
-javascriptHeadersMethod          fg1    none
-
-javascriptAsyncFuncKeyword       red    none
-javascriptAwaitFuncKeyword       red    none
+javascriptImport                 /gui/256+ft 1      aqua   none
+javascriptExport                 /gui/256+ft 1      aqua   none
+javascriptClassKeyword           /gui/256+ft 1      aqua   none
+javascriptClassExtends           /gui/256+ft 1      aqua   none
+javascriptDefault                /gui/256+ft 1      aqua   none
+javascriptClassName              /gui/256+ft 1      yellow none
+javascriptClassSuperName         /gui/256+ft 1      yellow none
+javascriptGlobal                 /gui/256+ft 1      yellow none
+javascriptEndColons              /gui/256+ft 1      fg1    none
+javascriptFuncArg                /gui/256+ft 1      fg1    none
+javascriptGlobalMethod           /gui/256+ft 1      fg1    none
+javascriptNodeGlobal             /gui/256+ft 1      fg1    none
+javascriptBOMWindowProp          /gui/256+ft 1      fg1    none
+javascriptArrayMethod            /gui/256+ft 1      fg1    none
+javascriptArrayStaticMethod      /gui/256+ft 1      fg1    none
+javascriptCacheMethod            /gui/256+ft 1      fg1    none
+javascriptDateMethod             /gui/256+ft 1      fg1    none
+javascriptMathStaticMethod       /gui/256+ft 1      fg1    none
+javascriptURLUtilsProp           /gui/256+ft 1      fg1    none
+javascriptBOMNavigatorProp       /gui/256+ft 1      fg1    none
+javascriptDOMDocMethod           /gui/256+ft 1      fg1    none
+javascriptDOMDocProp             /gui/256+ft 1      fg1    none
+javascriptBOMLocationMethod      /gui/256+ft 1      fg1    none
+javascriptBOMWindowMethod        /gui/256+ft 1      fg1    none
+javascriptStringMethod           /gui/256+ft 1      fg1    none
+javascriptVariable               /gui/256+ft 1      orange none
+javascriptIdentifier             /gui/256+ft 1      orange none
+javascriptClassSuper             /gui/256+ft 1      orange none
+javascriptFuncKeyword            /gui/256+ft 1      aqua   none
+javascriptAsyncFunc              /gui/256+ft 1      aqua   none
+javascriptClassStatic            /gui/256+ft 1      orange none
+javascriptOperator               /gui/256+ft 1      red    none
+javascriptForOperator            /gui/256+ft 1      red    none
+javascriptYield                  /gui/256+ft 1      red    none
+javascriptExceptions             /gui/256+ft 1      red    none
+javascriptMessage                /gui/256+ft 1      red    none
+javascriptTemplateSB             /gui/256+ft 1      aqua   none
+javascriptTemplateSubstitution   /gui/256+ft 1      fg1    none
+javascriptLabel                  /gui/256+ft 1      fg1    none
+javascriptObjectLabel            /gui/256+ft 1      fg1    none
+javascriptPropertyName           /gui/256+ft 1      fg1    none
+javascriptLogicSymbols           /gui/256+ft 1      fg1    none
+javascriptArrowFunc              /gui/256+ft 1      yellow none
+javascriptDocParamName           /gui/256+ft 1      fg4    none
+javascriptDocTags                /gui/256+ft 1      fg4    none
+javascriptDocNotation            /gui/256+ft 1      fg4    none
+javascriptDocParamType           /gui/256+ft 1      fg4    none
+javascriptDocNamedParamType      /gui/256+ft 1      fg4    none
+javascriptBrackets               /gui/256+ft 1      fg1    none
+javascriptDOMElemAttrs           /gui/256+ft 1      fg1    none
+javascriptDOMEventMethod         /gui/256+ft 1      fg1    none
+javascriptDOMNodeMethod          /gui/256+ft 1      fg1    none
+javascriptDOMStorageMethod       /gui/256+ft 1      fg1    none
+javascriptHeadersMethod          /gui/256+ft 1      fg1    none
+javascriptAsyncFuncKeyword       /gui/256+ft 1      red    none
+javascriptAwaitFuncKeyword       /gui/256+ft 1      red    none
 ; }}}
 ;PanglossJS {{{
-jsImport                         red    none
-jsExport                         red    none
-jsFrom                           red    none
-jsThis                           purple none
-jsParen                          blue   none
-jsOperator                       aqua   none
-jsSpreadOperator                 green  none
-jsSpreadExpression               blue   none
-jsClassKeyword                   red    none
-jsClassProperty                  green  none
-jsExtendsKeyword                 red    none
-jsExportDefault                  orange none bold
-jsTemplateBraces                 aqua   none
-jsGlobalNodeObjects              fg1    none
-jsGlobalObjects                  fg1    none
-jsFunction                       green  none
-jsFuncParens                     purple none
-jsFuncBlock                      blue   none
-jsParens                         fg3    none
-jsNull                           purple none
-jsUndefined                      purple none
-jsClassDefinition                yellow none
-jsFunctionKey                    green  none
-jsBracket                        red    none
-jsObjectColon                    red    none
-jsObjectProp                     blue   none
-jsFuncBraces                     green  none
-jsVariableDef                    yellow none
-jsObjectValue                    blue   none
-jsDestructuringBlock             yellow none
-jsParenIfElse                    blue   none
-jsClassBlock                     blue   none
-jsFutureKeys                     orange none bold
-jsStorageClass                   orange none
-jsModuleKeyword                  blue   none
-jsObjectShorthandProp            blue   none
-jsxRegion                        blue   none
+jsImport                -> omit
+jsExport                -> omit
+jsFrom                  -> omit
+jsThis                  -> omit
+jsParen                 -> omit
+jsOperator              -> omit
+jsSpreadOperator        -> omit
+jsSpreadExpression      -> omit
+jsClassKeyword          -> omit
+jsClassProperty         -> omit
+jsExtendsKeyword        -> omit
+jsExportDefault         -> omit
+jsTemplateBraces        -> omit
+jsGlobalNodeObjects     -> omit
+jsGlobalObjects         -> omit
+jsFunction              -> omit
+jsFuncParens            -> omit
+jsFuncBlock             -> omit
+jsParens                -> omit
+jsNull                  -> omit
+jsUndefined             -> omit
+jsClassDefinition       -> omit
+jsFunctionKey           -> omit
+jsBracket               -> omit
+jsObjectColon           -> omit
+jsObjectProp            -> omit
+jsFuncBraces            -> omit
+jsVariableDef           -> omit
+jsObjectValue           -> omit
+jsDestructuringBlock    -> omit
+jsParenIfElse           -> omit
+jsClassBlock            -> omit
+jsFutureKeys            -> omit
+jsStorageClass          -> omit
+jsModuleKeyword         -> omit
+jsObjectShorthandProp   -> omit
+jsxRegion               -> omit
+
+jsImport                         /gui/256+ft 1      red    none
+jsExport                         /gui/256+ft 1      red    none
+jsFrom                           /gui/256+ft 1      red    none
+jsThis                           /gui/256+ft 1      purple none
+jsParen                          /gui/256+ft 1      blue   none
+jsOperator                       /gui/256+ft 1      aqua   none
+jsSpreadOperator                 /gui/256+ft 1      green  none
+jsSpreadExpression               /gui/256+ft 1      blue   none
+jsClassKeyword                   /gui/256+ft 1      red    none
+jsClassProperty                  /gui/256+ft 1      green  none
+jsExtendsKeyword                 /gui/256+ft 1      red    none
+jsExportDefault                  /gui/256+ft_bold 1 orange none
+jsExportDefault                  /gui/256+ft_bold 3 orange none bold
+jsTemplateBraces                 /gui/256+ft 1      aqua   none
+jsGlobalNodeObjects              /gui/256+ft 1      fg1    none
+jsGlobalObjects                  /gui/256+ft 1      fg1    none
+jsFunction                       /gui/256+ft 1      green  none
+jsFuncParens                     /gui/256+ft 1      purple none
+jsFuncBlock                      /gui/256+ft 1      blue   none
+jsParens                         /gui/256+ft 1      fg3    none
+jsNull                           /gui/256+ft 1      purple none
+jsUndefined                      /gui/256+ft 1      purple none
+jsClassDefinition                /gui/256+ft 1      yellow none
+jsFunctionKey                    /gui/256+ft 1      green  none
+jsBracket                        /gui/256+ft 1      red    none
+jsObjectColon                    /gui/256+ft 1      red    none
+jsObjectProp                     /gui/256+ft 1      blue   none
+jsFuncBraces                     /gui/256+ft 1      green  none
+jsVariableDef                    /gui/256+ft 1      yellow none
+jsObjectValue                    /gui/256+ft 1      blue   none
+jsDestructuringBlock             /gui/256+ft 1      yellow none
+jsParenIfElse                    /gui/256+ft 1      blue   none
+jsClassBlock                     /gui/256+ft 1      blue   none
+jsFutureKeys                     /gui/256+ft_bold 1 orange none
+jsFutureKeys                     /gui/256+ft_bold 3 orange none bold
+jsStorageClass                   /gui/256+ft 1      orange none
+jsModuleKeyword                  /gui/256+ft 1      blue   none
+jsObjectShorthandProp            /gui/256+ft 1      blue   none
+jsxRegion                        /gui/256+ft 1      blue   none
 ; }}}
 ; JSx{{{
-jsxTagName                       blue   none
-jsxComponentName                 yellow none
-jsxEscapeJsAttributes            blue   none
-jsxEscapeJsContent               blue   none
-jsxAttrib                        yellow none
-jsxAttributeBraces               fg1    none
-jsxEqual                         aqua   none
-jsxString                        green  none
-jsxCloseTag                      blue   none
-jsxEndTag                        blue   none
-jsxEndString                     blue   none
-jsxCloseString                   blue   none
-jsxIfOperator                    aqua   none
-jsxElseOperator                  aqua   none
-jsxDot                           fg1    none
-jsxNamespace                     blue   none
-jsxPunct                         aqua   none
+jsxTagName              -> omit
+jsxComponentName        -> omit
+jsxEscapeJsAttributes   -> omit
+jsxEscapeJsContent      -> omit
+jsxAttrib               -> omit
+jsxAttributeBraces      -> omit
+jsxEqual                -> omit
+jsxString               -> omit
+jsxCloseTag             -> omit
+jsxEndTag               -> omit
+jsxEndString            -> omit
+jsxCloseString          -> omit
+jsxIfOperator           -> omit
+jsxElseOperator         -> omit
+jsxDot                  -> omit
+jsxNamespace            -> omit
+jsxPunct                -> omit
+
+jsxTagName                       /gui/256+ft 1      blue   none
+jsxComponentName                 /gui/256+ft 1      yellow none
+jsxEscapeJsAttributes            /gui/256+ft 1      blue   none
+jsxEscapeJsContent               /gui/256+ft 1      blue   none
+jsxAttrib                        /gui/256+ft 1      yellow none
+jsxAttributeBraces               /gui/256+ft 1      fg1    none
+jsxEqual                         /gui/256+ft 1      aqua   none
+jsxString                        /gui/256+ft 1      green  none
+jsxCloseTag                      /gui/256+ft 1      blue   none
+jsxEndTag                        /gui/256+ft 1      blue   none
+jsxEndString                     /gui/256+ft 1      blue   none
+jsxCloseString                   /gui/256+ft 1      blue   none
+jsxIfOperator                    /gui/256+ft 1      aqua   none
+jsxElseOperator                  /gui/256+ft 1      aqua   none
+jsxDot                           /gui/256+ft 1      fg1    none
+jsxNamespace                     /gui/256+ft 1      blue   none
+jsxPunct                         /gui/256+ft 1      aqua   none
 ;}}}
 ; TypeScript {{{
-typeScriptReserved               aqua   none
-typeScriptLabel                  aqua   none
-typeScriptFuncKeyword            aqua   none
-typeScriptIdentifier             orange none
-typeScriptBraces                 fg1    none
-typeScriptEndColons              fg1    none
-typeScriptDOMObjects             fg1    none
-typeScriptAjaxMethods            fg1    none
-typeScriptLogicSymbols           fg1    none
-typeScriptDocSeeTag           -> Comment
-typeScriptDocParam            -> Comment
-typeScriptDocTags             -> vimCommentTitle
-typeScriptGlobalObjects          fg1    none
-typeScriptParens                 fg3    none
-typeScriptOpSymbols              fg3    none
-typeScriptHtmlElemProperties     fg1    none
-typeScriptNull                   purple none
-typeScriptInterpolationDelimiter aqua   none
+typeScriptReserved               -> omit
+typeScriptLabel                  -> omit
+typeScriptFuncKeyword            -> omit
+typeScriptIdentifier             -> omit
+typeScriptBraces                 -> omit
+typeScriptEndColons              -> omit
+typeScriptDOMObjects             -> omit
+typeScriptAjaxMethods            -> omit
+typeScriptLogicSymbols           -> omit
+typeScriptDocSeeTag              -> omit
+typeScriptDocParam               -> omit
+typeScriptDocTags                -> omit
+typeScriptGlobalObjects          -> omit
+typeScriptParens                 -> omit
+typeScriptOpSymbols              -> omit
+typeScriptHtmlElemProperties     -> omit
+typeScriptNull                   -> omit
+typeScriptInterpolationDelimiter -> omit
+
+typeScriptReserved               /gui/256+ft 1      aqua   none
+typeScriptLabel                  /gui/256+ft 1      aqua   none
+typeScriptFuncKeyword            /gui/256+ft 1      aqua   none
+typeScriptIdentifier             /gui/256+ft 1      orange none
+typeScriptBraces                 /gui/256+ft 1      fg1    none
+typeScriptEndColons              /gui/256+ft 1      fg1    none
+typeScriptDOMObjects             /gui/256+ft 1      fg1    none
+typeScriptAjaxMethods            /gui/256+ft 1      fg1    none
+typeScriptLogicSymbols           /gui/256+ft 1      fg1    none
+typeScriptDocSeeTag              /gui/256+ft 1 ->   Comment
+typeScriptDocParam               /gui/256+ft 1 ->   Comment
+typeScriptDocTags                /gui/256+ft 1 ->   vimCommentTitle
+typeScriptGlobalObjects          /gui/256+ft 1      fg1    none
+typeScriptParens                 /gui/256+ft 1      fg3    none
+typeScriptOpSymbols              /gui/256+ft 1      fg3    none
+typeScriptHtmlElemProperties     /gui/256+ft 1      fg1    none
+typeScriptNull                   /gui/256+ft 1      purple none
+typeScriptInterpolationDelimiter /gui/256+ft 1      aqua   none
 ; }}}
 ; PureScript {{{
-purescriptModuleKeyword          aqua   none
-purescriptModuleName             fg1    none
-purescriptWhere                  aqua   none
-purescriptDelimiter              fg4    none
-purescriptType                   fg1    none
-purescriptImportKeyword          aqua   none
-purescriptHidingKeyword          aqua   none
-purescriptAsKeyword              aqua   none
-purescriptStructure              aqua   none
-purescriptOperator               blue   none
+purescriptModuleKeyword -> omit
+purescriptModuleName    -> omit
+purescriptWhere         -> omit
+purescriptDelimiter     -> omit
+purescriptType          -> omit
+purescriptImportKeyword -> omit
+purescriptHidingKeyword -> omit
+purescriptAsKeyword     -> omit
+purescriptStructure     -> omit
+purescriptOperator      -> omit
+purescriptTypeVar       -> omit
+purescriptConstructor   -> omit
+purescriptFunction      -> omit
+purescriptConditional   -> omit
+purescriptBacktick      -> omit
 
-purescriptTypeVar                fg1    none
-purescriptConstructor            fg1    none
-purescriptFunction               fg1    none
-purescriptConditional            orange none
-purescriptBacktick               orange none
+purescriptModuleKeyword          /gui/256+ft 1      aqua   none
+purescriptModuleName             /gui/256+ft 1      fg1    none
+purescriptWhere                  /gui/256+ft 1      aqua   none
+purescriptDelimiter              /gui/256+ft 1      fg4    none
+purescriptType                   /gui/256+ft 1      fg1    none
+purescriptImportKeyword          /gui/256+ft 1      aqua   none
+purescriptHidingKeyword          /gui/256+ft 1      aqua   none
+purescriptAsKeyword              /gui/256+ft 1      aqua   none
+purescriptStructure              /gui/256+ft 1      aqua   none
+purescriptOperator               /gui/256+ft 1      blue   none
+purescriptTypeVar                /gui/256+ft 1      fg1    none
+purescriptConstructor            /gui/256+ft 1      fg1    none
+purescriptFunction               /gui/256+ft 1      fg1    none
+purescriptConditional            /gui/256+ft 1      orange none
+purescriptBacktick               /gui/256+ft 1      orange none
 ; }}}
 ; CoffeeScript {{{
-coffeeExtendedOp                 fg3    none
-coffeeSpecialOp                  fg3    none
-coffeeCurly                      orange none
-coffeeParen                      fg3    none
-coffeeBracket                    orange none
+coffeeExtendedOp        -> omit
+coffeeSpecialOp         -> omit
+coffeeCurly             -> omit
+coffeeParen             -> omit
+coffeeBracket           -> omit
+
+coffeeExtendedOp                 /gui/256+ft 1      fg3    none
+coffeeSpecialOp                  /gui/256+ft 1      fg3    none
+coffeeCurly                      /gui/256+ft 1      orange none
+coffeeParen                      /gui/256+ft 1      fg3    none
+coffeeBracket                    /gui/256+ft 1      orange none
 ; }}}
 ; Ruby {{{
-rubyStringDelimiter              green  none
-rubyInterpolationDelimiter       aqua   none
+rubyStringDelimiter        -> omit
+rubyInterpolationDelimiter -> omit
+
+rubyStringDelimiter              /gui/256+ft 1      green  none
+rubyInterpolationDelimiter       /gui/256+ft 1      aqua   none
 ; }}}
 ; ObjectiveC {{{
-objcTypeModifier                 red    none
-objcDirective                    blue   none
+objcTypeModifier        -> omit
+objcDirective           -> omit
+
+objcTypeModifier                 /gui/256+ft 1      red    none
+objcDirective                    /gui/256+ft 1      blue   none
 ; }}}
 ; Go {{{
-goDirective                      aqua   none
-goConstants                      purple none
-goDeclaration                    red    none
-goDeclType                       blue   none
-goBuiltins                       orange none
-; z}}}
+goDirective             -> omit
+goConstants             -> omit
+goDeclaration           -> omit
+goDeclType              -> omit
+goBuiltins              -> omit
+
+goDirective                      /gui/256+ft 1      aqua   none
+goConstants                      /gui/256+ft 1      purple none
+goDeclaration                    /gui/256+ft 1      red    none
+goDeclType                       /gui/256+ft 1      blue   none
+goBuiltins                       /gui/256+ft 1      orange none
+; }}}
 ; Lua {{{
-luaIn                            red    none
-luaFunction                      aqua   none
-luaTable                         orange none
+luaIn                   -> omit
+luaFunction             -> omit
+luaTable                -> omit
+
+luaIn                            /gui/256+ft 1      red    none
+luaFunction                      /gui/256+ft 1      aqua   none
+luaTable                         /gui/256+ft 1      orange none
 ; }}}
 ; MoonScript {{{
-moonSpecialOp                    fg3    none
-moonExtendedOp                   fg3    none
-moonFunction                     fg3    none
-moonObject                       yellow none
+moonSpecialOp           -> omit
+moonExtendedOp          -> omit
+moonFunction            -> omit
+moonObject              -> omit
+
+moonSpecialOp                    /gui/256+ft 1      fg3    none
+moonExtendedOp                   /gui/256+ft 1      fg3    none
+moonFunction                     /gui/256+ft 1      fg3    none
+moonObject                       /gui/256+ft 1      yellow none
 ; }}}
 ; Java {{{
-javaAnnotation                   blue   none
-javaDocTags                      aqua   none
-javaCommentTitle              -> vimCommentTitle
-javaParen                        fg3    none
-javaParen1                       fg3    none
-javaParen2                       fg3    none
-javaParen3                       fg3    none
-javaParen4                       fg3    none
-javaParen5                       fg3    none
-javaOperator                     orange none
+javaAnnotation          -> omit
+javaDocTags             -> omit
+javaCommentTitle        -> omit
+javaParen               -> omit
+javaParen1              -> omit
+javaParen2              -> omit
+javaParen3              -> omit
+javaParen4              -> omit
+javaParen5              -> omit
+javaOperator            -> omit
+javaVarArg              -> omit
 
-javaVarArg                       green  none
+javaAnnotation                   /gui/256+ft 1      blue   none
+javaDocTags                      /gui/256+ft 1      aqua   none
+javaCommentTitle                 /gui/256+ft 1 ->   vimCommentTitle
+javaParen                        /gui/256+ft 1      fg3    none
+javaParen1                       /gui/256+ft 1      fg3    none
+javaParen2                       /gui/256+ft 1      fg3    none
+javaParen3                       /gui/256+ft 1      fg3    none
+javaParen4                       /gui/256+ft 1      fg3    none
+javaParen5                       /gui/256+ft 1      fg3    none
+javaOperator                     /gui/256+ft 1      orange none
+javaVarArg                       /gui/256+ft 1      green  none
 ; }}}
 ; Elixir {{{
-elixirDocString               -> Comment
+elixirDocString              -> omit
+elixirStringDelimiter        -> omit
+elixirInterpolationDelimiter -> omit
+elixirModuleDeclaration      -> omit
 
-elixirStringDelimiter            green  none
-elixirInterpolationDelimiter     aqua   none
-
-elixirModuleDeclaration          yellow none
+elixirDocString                  /gui/256+ft 1 ->   Comment
+elixirStringDelimiter            /gui/256+ft 1      green  none
+elixirInterpolationDelimiter     /gui/256+ft 1      aqua   none
+elixirModuleDeclaration          /gui/256+ft 1      yellow none
 ; }}}
 ; Scala {{{
-scalaNameDefinition              fg1    none
-scalaCaseFollowing               fg1    none
-scalaCapitalWord                 fg1    none
-scalaTypeExtension               fg1    none
+scalaNameDefinition          -> omit
+scalaCaseFollowing           -> omit
+scalaCapitalWord             -> omit
+scalaTypeExtension           -> omit
+scalaKeyword                 -> omit
+scalaKeywordModifier         -> omit
+scalaSpecial                 -> omit
+scalaOperator                -> omit
+scalaTypeDeclaration         -> omit
+scalaTypeTypePostDeclaration -> omit
+scalaInstanceDeclaration     -> omit
+scalaInterpolation           -> omit
 
-scalaKeyword                     red    none
-scalaKeywordModifier             red    none
-
-scalaSpecial                     aqua   none
-scalaOperator                    fg1    none
-
-scalaTypeDeclaration             yellow none
-scalaTypeTypePostDeclaration     yellow none
-
-scalaInstanceDeclaration         fg1    none
-scalaInterpolation               aqua   none
+scalaNameDefinition              /gui/256+ft 1      fg1    none
+scalaCaseFollowing               /gui/256+ft 1      fg1    none
+scalaCapitalWord                 /gui/256+ft 1      fg1    none
+scalaTypeExtension               /gui/256+ft 1      fg1    none
+scalaKeyword                     /gui/256+ft 1      red    none
+scalaKeywordModifier             /gui/256+ft 1      red    none
+scalaSpecial                     /gui/256+ft 1      aqua   none
+scalaOperator                    /gui/256+ft 1      fg1    none
+scalaTypeDeclaration             /gui/256+ft 1      yellow none
+scalaTypeTypePostDeclaration     /gui/256+ft 1      yellow none
+scalaInstanceDeclaration         /gui/256+ft 1      fg1    none
+scalaInterpolation               /gui/256+ft 1      aqua   none
 ; }}}
 ; Markdown {{{
-markdownItalic                   fg3    none    italic
+markdownItalic            -> omit
+markdownH1                -> omit
+markdownH2                -> omit
+markdownH3                -> omit
+markdownH4                -> omit
+markdownH5                -> omit
+markdownH6                -> omit
+markdownCode              -> omit
+markdownCodeBlock         -> omit
+markdownCodeDelimiter     -> omit
+markdownBlockquote        -> omit
+markdownListMarker        -> omit
+markdownOrderedListMarker -> omit
+markdownRule              -> omit
+markdownHeadingRule       -> omit
+markdownUrlDelimiter      -> omit
+markdownLinkDelimiter     -> omit
+markdownLinkTextDelimiter -> omit
+markdownHeadingDelimiter  -> omit
+markdownUrl               -> omit
+markdownUrlTitleDelimiter -> omit
+markdownLinkText          -> omit
+markdownIdDeclaration     -> omit
 
-markdownH1                       green  none    bold
-markdownH2                       green  none    bold
-markdownH3                       yellow none    bold
-markdownH4                       yellow none    bold
-markdownH5                       yellow none
-markdownH6                       yellow none
-
-markdownCode                     aqua   none
-markdownCodeBlock                aqua   none
-markdownCodeDelimiter            aqua   none
-
-markdownBlockquote               grey   none
-markdownListMarker               grey   none
-markdownOrderedListMarker        grey   none
-markdownRule                     grey   none
-markdownHeadingRule              grey   none
-
-markdownUrlDelimiter             fg3    none
-markdownLinkDelimiter            fg3    none
-markdownLinkTextDelimiter        fg3    none
-
-markdownHeadingDelimiter         orange none
-markdownUrl                      purple none
-markdownUrlTitleDelimiter        green  none
-
-markdownLinkText                 grey   none    underline
-markdownIdDeclaration         -> markdownLinkText
+markdownItalic                   /gui/256+ft 1      fg3    none italic
+markdownH1                       /gui/256+ft_bold 1 green  none
+markdownH1                       /gui/256+ft_bold 3 green  none bold
+markdownH2                       /gui/256+ft_bold 1 green  none
+markdownH2                       /gui/256+ft_bold 3 green  none bold
+markdownH3                       /gui/256+ft_bold 1 yellow none
+markdownH3                       /gui/256+ft_bold 3 yellow none bold
+markdownH4                       /gui/256+ft_bold 1 yellow none
+markdownH4                       /gui/256+ft_bold 3 yellow none bold
+markdownH5                       /gui/256+ft 1      yellow none
+markdownH6                       /gui/256+ft 1      yellow none
+markdownCode                     /gui/256+ft 1      aqua   none
+markdownCodeBlock                /gui/256+ft 1      aqua   none
+markdownCodeDelimiter            /gui/256+ft 1      aqua   none
+markdownBlockquote               /gui/256+ft 1      grey   none
+markdownListMarker               /gui/256+ft 1      grey   none
+markdownOrderedListMarker        /gui/256+ft 1      grey   none
+markdownRule                     /gui/256+ft 1      grey   none
+markdownHeadingRule              /gui/256+ft 1      grey   none
+markdownUrlDelimiter             /gui/256+ft 1      fg3    none
+markdownLinkDelimiter            /gui/256+ft 1      fg3    none
+markdownLinkTextDelimiter        /gui/256+ft 1      fg3    none
+markdownHeadingDelimiter         /gui/256+ft 1      orange none
+markdownUrl                      /gui/256+ft 1      purple none
+markdownUrlTitleDelimiter        /gui/256+ft 1      green  none
+markdownLinkText                 /gui/256+ft 1      grey   none underline
+markdownIdDeclaration            /gui/256+ft 1 ->   markdownLinkText
 ; }}}
 ; Haskell {{{
-haskellType                      fg1    none
-haskellIdentifier                fg1    none
-haskellSeparator                 fg1    none
-haskellDelimiter                 fg4    none
-haskellOperators                 blue   none
+haskellType             -> omit
+haskellIdentifier       -> omit
+haskellSeparator        -> omit
+haskellDelimiter        -> omit
+haskellOperators        -> omit
+haskellBacktick         -> omit
+haskellStatement        -> omit
+haskellConditional      -> omit
+haskellLet              -> omit
+haskellDefault          -> omit
+haskellWhere            -> omit
+haskellBottom           -> omit
+haskellBlockKeywords    -> omit
+haskellImportKeywords   -> omit
+haskellDeclKeyword      -> omit
+haskellDeriving         -> omit
+haskellAssocType        -> omit
+haskellNumber           -> omit
+haskellPragma           -> omit
+haskellString           -> omit
+haskellChar             -> omit
 
-haskellBacktick                  orange none
-haskellStatement                 orange none
-haskellConditional               orange none
-
-haskellLet                       aqua   none
-haskellDefault                   aqua   none
-haskellWhere                     aqua   none
-haskellBottom                    aqua   none
-haskellBlockKeywords             aqua   none
-haskellImportKeywords            aqua   none
-haskellDeclKeyword               aqua   none
-haskellDeriving                  aqua   none
-haskellAssocType                 aqua   none
-
-haskellNumber                    purple none
-haskellPragma                    purple none
-
-haskellString                    green  none
-haskellChar                      green  none
+haskellType                      /gui/256+ft 1      fg1    none
+haskellIdentifier                /gui/256+ft 1      fg1    none
+haskellSeparator                 /gui/256+ft 1      fg1    none
+haskellDelimiter                 /gui/256+ft 1      fg4    none
+haskellOperators                 /gui/256+ft 1      blue   none
+haskellBacktick                  /gui/256+ft 1      orange none
+haskellStatement                 /gui/256+ft 1      orange none
+haskellConditional               /gui/256+ft 1      orange none
+haskellLet                       /gui/256+ft 1      aqua   none
+haskellDefault                   /gui/256+ft 1      aqua   none
+haskellWhere                     /gui/256+ft 1      aqua   none
+haskellBottom                    /gui/256+ft 1      aqua   none
+haskellBlockKeywords             /gui/256+ft 1      aqua   none
+haskellImportKeywords            /gui/256+ft 1      aqua   none
+haskellDeclKeyword               /gui/256+ft 1      aqua   none
+haskellDeriving                  /gui/256+ft 1      aqua   none
+haskellAssocType                 /gui/256+ft 1      aqua   none
+haskellNumber                    /gui/256+ft 1      purple none
+haskellPragma                    /gui/256+ft 1      purple none
+haskellString                    /gui/256+ft 1      green  none
+haskellChar                      /gui/256+ft 1      green  none
 ; }}}
 ; JSON {{{
-jsonKeyword                      green  none
-jsonQuote                        green  none
-jsonBraces                       fg1    none
-jsonString                       fg1    none
-; }}}
+jsonKeyword             -> omit
+jsonQuote               -> omit
+jsonBraces              -> omit
+jsonString              -> omit
 
-; Boldface {{{
-Variant: gui
-verbatim
-if !get(g:, '@optionprefix_bold', 1)
-  hi htmlTagName gui=NONE cterm=NONE
-  hi htmlSpecialTagName gui=NONE cterm=NONE
-  hi htmlBold gui=NONE cterm=NONE
-  hi htmlBoldUnderline gui=underline cterm=underline
-  hi htmlBoldItalic gui=italic cterm=italic
-  hi htmlBoldUnderlineItalic gui=underline,italic cterm=underline,italic
-  hi docbkKeyword gui=NONE cterm=NONE
-  hi vimCommentTitle gui=NONE cterm=NONE
-  hi clojureRegexpCharClass gui=NONE cterm=NONE
-  hi pythonDottedName gui=NONE cterm=NONE
-  hi jsExportDefault gui=NONE cterm=NONE
-  hi jsFutureKeys gui=NONE cterm=NONE
-  hi markdownH1 gui=NONE cterm=NONE
-  hi markdownH2 gui=NONE cterm=NONE
-  hi markdownH3 gui=NONE cterm=NONE
-  hi markdownH4 gui=NONE cterm=NONE
-endif
-endverbatim
-Variant: gui 256
+jsonKeyword                      /gui/256+ft 1      green  none
+jsonQuote                        /gui/256+ft 1      green  none
+jsonBraces                       /gui/256+ft 1      fg1    none
+jsonString                       /gui/256+ft 1      fg1    none
 ; }}}
-#endif
-
