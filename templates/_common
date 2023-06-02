@@ -62,6 +62,7 @@ Structure                            aqua   none
 Type                                 yellow none
 Typedef                              yellow none
 Underlined                           blue   none s=blue   underline
+Underlined   /256/16/8               blue   none s=none   underline
 ; Useful for custom status lines
 NormalMode                           fg4    bg0           reverse
 InsertMode                           blue   bg0           reverse
@@ -151,23 +152,23 @@ SpecialKey                           grey   none
 
 SpellBad                             red    none s=red    undercurl,italic
              /gui       +italic 0    red    none s=red    undercurl
-             /256/16/8               red    none s=red    underline,italic
-             /256/16/8  +italic 0    red    none s=red    underline
+             /256/16/8               red    none s=none   underline,italic
+             /256/16/8  +italic 0    red    none s=none   underline
 
 SpellCap                             blue   none s=blue   undercurl,italic
              /gui       +italic 0    blue   none s=blue   undercurl
-             /256/16/8               blue   none s=blue   underline,italic
-             /256/16/8  +italic 0    blue   none s=blue   underline
+             /256/16/8               blue   none s=none   underline,italic
+             /256/16/8  +italic 0    blue   none s=none   underline
 
 SpellLocal                           aqua   none s=aqua   undercurl,italic
              /gui       +italic 0    aqua   none s=aqua   undercurl
-             /256/16/8               aqua   none s=aqua   underline,italic
-             /256/16/8  +italic 0    aqua   none s=aqua   underline
+             /256/16/8               aqua   none s=none   underline,italic
+             /256/16/8  +italic 0    aqua   none s=none   underline
 
 SpellRare                            purple none s=purple undercurl,italic
              /gui       +italic 0    purple none s=purple undercurl
-             /256/16/8               purple none s=purple underline,italic
-             /256/16/8  +italic 0    purple none s=purple underline
+             /256/16/8               purple none s=none   underline,italic
+             /256/16/8  +italic 0    purple none s=none   underline
 
 StatusLine                           bg2    fg1           reverse
              /16                     bg1    fg1           reverse

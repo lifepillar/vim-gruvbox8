@@ -59,11 +59,11 @@ ALEWarningSign -> omit
 ALEInfoSign    -> omit
 
 ALEError       /gui     +plugin 1  none   none s=red   undercurl
-               /256     +plugin 1  none   none s=red   underline
+               /256     +plugin 1  none   none s=none  underline
 ALEWarning     /gui     +plugin 1  none   none s=red   undercurl
-               /256     +plugin 1  none   none s=red   underline
+               /256     +plugin 1  none   none s=none  underline
 ALEInfo        /gui     +plugin 1  none   none s=blue  undercurl
-               /256     +plugin 1  none   none s=blue  underline
+               /256     +plugin 1  none   none s=none  underline
 ALEErrorSign   /gui/256 +plugin 1  red    bg1
 ALEWarningSign /gui/256 +plugin 1  yellow bg1
 ALEInfoSign    /gui/256 +plugin 1  blue   bg1
@@ -312,9 +312,9 @@ SyntasticErrorSign   -> omit
 SyntasticWarningSign -> omit
 
 SyntasticError       /gui+plugin 1      none   none  s=red     undercurl
-SyntasticError       /256+plugin 1      none   none  s=red     underline
+SyntasticError       /256+plugin 1      none   none  s=none    underline
 SyntasticWarning     /gui+plugin 1      none   none  s=yellow  undercurl
-SyntasticWarning     /256+plugin 1      none   none  s=yellow  underline
+SyntasticWarning     /256+plugin 1      none   none  s=none    underline
 SyntasticErrorSign   /gui/256+plugin 1  red    bg1
 SyntasticWarningSign /gui/256+plugin 1  yellow bg1
 ; }}}
