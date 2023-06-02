@@ -1,12 +1,21 @@
 ; vim: ft=colortemplate fdm=marker
 
-CursorColumn     -> CursorLine
-QuickFixLine     -> Search
-StatusLineTerm   -> StatusLine
-StatusLineTermNC -> StatusLineNC
-VisualNOS        -> Visual
-Tag              -> Special
-lCursor          -> Cursor
-iCursor          -> Cursor
-vCursor          -> Cursor
+CurSearch         -> Search
+CursorColumn      -> CursorLine
+CursorLineFold    -> FoldColumn
+CursorLineSign    -> SignColumn
+LineNrAbove       -> LineNr
+LineNrBelow       -> LineNr
+PopupNotification -> WarningMsg
+PopupSelected     -> PmenuSel
+QuickFixLine      -> Search
+StatusLineTerm    -> StatusLine
+StatusLineTermNC  -> StatusLineNC
+VisualNOS         -> Visual
+Tag               -> Special
+debugBreakpoint   -> SignColumn
+debugPC           -> SignColumn
+lCursor           -> Cursor
+iCursor           -> Cursor
+vCursor           -> Cursor
 
