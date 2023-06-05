@@ -47,8 +47,8 @@ endverbatim
 ; }}}
 
 #const plugin        = get(g:, '@prefix_plugin_hi_groups', 0)
-#const plugin_bold   = get(g:, '@prefix_plugin_hi_groups', 0) + 2 * get(g:, '@prefix_bold', 1)
-#const plugin_transp = get(g:, '@prefix_plugin_hi_groups', 0) + 2 * get(g:, '@prefix_transp_bg', 0)
+#const plugin_bold   = s:plugin + 2 * s:bold
+#const plugin_transp = s:plugin + 2 * s:transp_bg
 
 ; Asynchronous Lint Engine {{{
 ALEError       -> omit

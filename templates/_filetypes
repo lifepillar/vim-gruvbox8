@@ -3,7 +3,7 @@
 ; Filetype specific groups
 
 #const ft      = get(g:, '@prefix_filetype_hi_groups', 0)
-#const ft_bold = get(g:, '@prefix_filetype_hi_groups', 0) + 2 * get(g:, '@prefix_bold', 1)
+#const ft_bold = s:ft + 2 * s:bold
 
 ; Diff {{{
 diffAdded               -> omit
