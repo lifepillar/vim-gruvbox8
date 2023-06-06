@@ -2,6 +2,8 @@
 
 ![](https://raw.github.com/lifepillar/Resources/master/gruvbox8/gruvbox8-dark-and-light.png)
 
+**Note: if you are using Neovim, checkout the `neovim` branch of this repo.**
+
 This is a simplified and optimized<sup>*</sup> version of
 [Gruvbox](https://github.com/morhetz/gruvbox) that I have developed
 to address some issues I had with the official color scheme.
