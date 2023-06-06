@@ -1,9 +1,9 @@
-*gruvbox8.txt*	For Vim version 8.2	Last change: 2022 Mar 20
+*gruvbox8.txt*	For Neovim 	Last change: 2023 Jun 06
 
 
 		Gruvbox 8 color scheme
 
-Gruvbox 8 is a popular colorscheme originally designed by morhetz. The Vim
+Gruvbox 8 is a popular colorscheme originally designed by morhetz. The Neovim
 version comes in three variants:
 
 - gruvbox8: "medium" contrast;
@@ -17,17 +17,17 @@ before loading the colorscheme. For example:
 	colorscheme gruvbox8
 <
 Gruvbox 8 works out of the box anywhere, from black&white terminals to
-true-color terminals and GUI versions of Vim.
+true-color terminals and GUI versions of Neovim.
 
 ==============================================================================
 Colorscheme options				*gruvbox-options*
 
 						*g:gruvbox_bold*
-Set to 0 to suppress boldface in gVim.
+Set to 0 to suppress boldface.
 >
 	let g:gruvbox_bold = 1
 <
-NOTE: to disable boldface in terminal Vim, use your terminal's preferences, or
+NOTE: to disable boldface in the terminal, use your terminal's preferences, or
 try putting the following line in your |vimrc|:
 >
 	set t_md=
@@ -46,7 +46,7 @@ Set to 0 if you do not want to enable italics. Note that the color scheme in
 normal circumstances automatically detects whether italics is available. You
 should never need to set this option explicitly. You may want to unset it if
 you do not want Vim to display italics even when the feature is available
-(e.g., in GUI versions of Vim).
+(e.g., in GUI versions of Neovim).
 >
 	let g:gruvbox_italics = 1
 <
@@ -64,6 +64,9 @@ plugins:
 Note: setting this to 1 may leave "a wake of destruction when switching away"
 (Tim Pope), that is, when you switch to a different colorscheme the
 highlighting may look wrong or disabled.
+
+						*g:gruvbox_t_Co*
+Set to the number of colors supported by your terminal.
 
 						*g:gruvbox_transp_bg*
 Set to 1 if you want a transparent background. Takes effect only in the

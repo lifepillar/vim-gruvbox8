@@ -1,10 +1,10 @@
 documentation
-*@shortname.txt*	For Vim version @vimversion	Last change: @date
+*@shortname.txt*	For Neovim 	Last change: @date
 
 
 		@fullname color scheme
 
-@fullname is a popular colorscheme originally designed by morhetz. The Vim
+@fullname is a popular colorscheme originally designed by morhetz. The Neovim
 version comes in three variants:
 
 - @shortname: "medium" contrast;
@@ -18,17 +18,17 @@ before loading the colorscheme. For example:
 	colorscheme @shortname
 <
 @fullname works out of the box anywhere, from black&white terminals to
-true-color terminals and GUI versions of Vim.
+true-color terminals and GUI versions of Neovim.
 
 ==============================================================================
 Colorscheme options				*@optionprefix-options*
 
 						*g:@optionprefix_bold*
-Set to 0 to suppress boldface in gVim.
+Set to 0 to suppress boldface.
 >
 	let g:@optionprefix_bold = 1
 <
-NOTE: to disable boldface in terminal Vim, use your terminal's preferences, or
+NOTE: to disable boldface in the terminal, use your terminal's preferences, or
 try putting the following line in your |vimrc|:
 >
 	set t_md=
@@ -47,7 +47,7 @@ Set to 0 if you do not want to enable italics. Note that the color scheme in
 normal circumstances automatically detects whether italics is available. You
 should never need to set this option explicitly. You may want to unset it if
 you do not want Vim to display italics even when the feature is available
-(e.g., in GUI versions of Vim).
+(e.g., in GUI versions of Neovim).
 >
 	let g:@optionprefix_italics = 1
 <
@@ -65,6 +65,9 @@ plugins:
 Note: setting this to 1 may leave "a wake of destruction when switching away"
 (Tim Pope), that is, when you switch to a different colorscheme the
 highlighting may look wrong or disabled.
+
+						*g:@optionprefix_t_Co*
+Set to the number of colors supported by your terminal.
 
 						*g:@optionprefix_transp_bg*
 Set to 1 if you want a transparent background. Takes effect only in the

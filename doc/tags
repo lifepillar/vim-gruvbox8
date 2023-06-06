@@ -3,6 +3,7 @@ g:gruvbox_filetype_hi_groups	gruvbox8.txt	/*g:gruvbox_filetype_hi_groups*
 g:gruvbox_italicize_strings	gruvbox8.txt	/*g:gruvbox_italicize_strings*
 g:gruvbox_italics	gruvbox8.txt	/*g:gruvbox_italics*
 g:gruvbox_plugin_hi_groups	gruvbox8.txt	/*g:gruvbox_plugin_hi_groups*
+g:gruvbox_t_Co	gruvbox8.txt	/*g:gruvbox_t_Co*
 g:gruvbox_transp_bg	gruvbox8.txt	/*g:gruvbox_transp_bg*
 gruvbox-options	gruvbox8.txt	/*gruvbox-options*
 gruvbox8.txt	gruvbox8.txt	/*gruvbox8.txt*
