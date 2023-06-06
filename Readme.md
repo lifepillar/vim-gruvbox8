@@ -1,4 +1,4 @@
-# Gruvbox 8 - Vim Color Scheme
+# Gruvbox 8 for Neovim
 
 ![](https://raw.github.com/lifepillar/Resources/master/gruvbox8/gruvbox8-dark-and-light.png)
 
