@@ -1,13 +1,13 @@
 ; vim: ft=colortemplate
 
-Full name:  Gruvbox 8
+Full name:  Gruvbox 8 for Neovim
 Short name: gruvbox8
 
 Include: _info
 Include: _help
 Include: _neutral_colors
 
-Include: _global
+Include: _linked_groups
 
 Variant: gui 256 16 8
 

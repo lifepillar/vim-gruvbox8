@@ -43,11 +43,7 @@ Note: setting this to 1 may leave "a wake of destruction when switching away"
 highlighting may look wrong or disabled.
 
 						*g:@optionprefix_italics*
-Set to 0 if you do not want to enable italics. Note that the color scheme in
-normal circumstances automatically detects whether italics is available. You
-should never need to set this option explicitly. You may want to unset it if
-you do not want Vim to display italics even when the feature is available
-(e.g., in GUI versions of Neovim).
+Set to 0 if you do not want to enable italics.
 >
 	let g:@optionprefix_italics = 1
 <

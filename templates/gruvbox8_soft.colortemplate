@@ -5,7 +5,7 @@ Short name: gruvbox8_soft
 
 Include: _info
 Include: _neutral_colors
-Include: _global
+Include: _linked_groups
 
 Variant: gui 256
 
