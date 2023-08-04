@@ -10,12 +10,14 @@ Variant: gui 256
     CursorLineNr yellow none
     FoldColumn   grey   none
     SignColumn   fg1    none
+    Terminal     fg1    none
     VertSplit    bg3    none
 #else
     Normal       fg1    bg0
     CursorLineNr yellow bg1
     FoldColumn   grey   bg1   # FIXME
     SignColumn   fg1    bg1
+    Terminal     fg1    bg0
     VertSplit    bg3    bg0
 #endif
 ColorColumn                      none   bg1

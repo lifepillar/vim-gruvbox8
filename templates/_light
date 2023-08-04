@@ -21,9 +21,5 @@ Variant: gui 256 16 8
 Term colors: bg0  neutralred neutralgreen neutralyellow neutralblue neutralpurple neutralaqua fg4
 Term colors: grey red        green        yellow        blue        purple        aqua        fg1
 
-Variant: 256 16 8
-Terminal fg1 bg0
-Variant: gui 256 16 8
-
 Include: _common
 

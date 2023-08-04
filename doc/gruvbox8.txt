@@ -1,4 +1,4 @@
-*gruvbox8.txt*	For Neovim 	Last change: 2023 Jun 07
+*gruvbox8.txt*	For Neovim 	Last change: 2023 Aug 04
 
 
 		Gruvbox 8 for Neovim color scheme
