@@ -22,7 +22,8 @@ Color: orange          rgb(254, 128, 25)     208 Magenta
 Term colors: bg0  neutralred neutralgreen neutralyellow neutralblue neutralpurple neutralaqua fg4
              grey red        green        yellow        blue        purple        aqua        fg1
 
-Terminal fg1 bg0
+Terminal                   fg1  bg0
+   /256/16/8 +transp_bg 1  omit none s=omit
 
 verbatim
 if has('nvim')
