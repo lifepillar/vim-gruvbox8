@@ -24,8 +24,10 @@ Special                              orange none          italic
 String                               green  none          italic
     +italicize_strings 0             omit   omit s=omit
 
+Added                                green  none
 Boolean                              purple none
 Character                            purple none
+Changed                              green  none          bold,italic
 Debug                                red    none
 Define                               aqua   none
 Delimiter                            orange none
@@ -52,6 +54,7 @@ Number                               purple none
 Operator                             aqua   none
 PreCondit                            aqua   none
 PreProc                              aqua   none
+Removed                              red    none
 Repeat                               red    none
 Search                               yellow bg0           reverse
 SpecialChar                          red    none
