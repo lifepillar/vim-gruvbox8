@@ -6,6 +6,8 @@ CursorLineFold    -> FoldColumn
 CursorLineSign    -> SignColumn
 LineNrAbove       -> LineNr
 LineNrBelow       -> LineNr
+PmenuMatch        -> Pmenu
+PmenuMatchSel     -> PmenuSel
 PopupNotification -> WarningMsg
 PopupSelected     -> PmenuSel
 QuickFixLine      -> Search
