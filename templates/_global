@@ -1,7 +1,7 @@
 ; vim: ft=colortemplate fdm=marker
 
 #const transp_bg         = get(g:, '@prefix_transp_bg', 0)
-#const supports_italic   = (&t_ZH != '' && &t_ZH != '[7m') || has('gui_running') || has('nvim')
+#const supports_italic   = has('gui_running') || has('nvim') || (&t_ZH != '' && &t_ZH != '[7m' && !has('win32'))
 #const italic            = get(g:, '@prefix_italics', 1) && s:supports_italic
 #const italicize_strings = get(g:, '@prefix_italicize_strings', 1) && s:supports_italic
 #const bold              = get(g:, '@prefix_bold', 1)
