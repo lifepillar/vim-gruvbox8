@@ -58,3 +58,7 @@ Do you want to hack the theme? Install
 [Colortemplate](https://github.com/lifepillar/vim-colortemplate), edit the
 files in the `templates` folder, then rebuild the color schemes.
 
+
+## License
+
+[MIT](https://en.wikipedia.org/wiki/MIT_License)

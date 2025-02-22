@@ -1,4 +1,4 @@
-*gruvbox8.txt*	For Vim version 9	Last change: 2024 Sep 23
+*gruvbox8.txt*	For Vim version 9	Last change: 2025 Feb 22
 
 
 		Gruvbox 8 color scheme
@@ -18,6 +18,8 @@ before loading the colorscheme. For example:
 <
 Gruvbox 8 works out of the box anywhere, from black&white terminals to
 true-color terminals and GUI versions of Vim.
+
+Gruvbox 8 is distributed under the terms of the MIT license.
 
 ==============================================================================
 Colorscheme options				*gruvbox-options*
