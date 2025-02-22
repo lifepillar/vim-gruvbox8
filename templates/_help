@@ -20,6 +20,8 @@ before loading the colorscheme. For example:
 @fullname works out of the box anywhere, from black&white terminals to
 true-color terminals and GUI versions of Neovim.
 
+@fullname is distributed under the terms of the MIT license.
+
 ==============================================================================
 Colorscheme options				*@optionprefix-options*
 
