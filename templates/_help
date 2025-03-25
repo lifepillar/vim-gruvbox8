@@ -44,6 +44,7 @@ Note: setting this to 1 may leave "a wake of destruction when switching away"
 (Tim Pope), that is, when you switch to a different colorscheme the
 highlighting may look wrong or disabled.
 
+						*g:@optionprefix_italic*
 						*g:@optionprefix_italics*
 Set to 0 if you do not want to enable italics.
 >
