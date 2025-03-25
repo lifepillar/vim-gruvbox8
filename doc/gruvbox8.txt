@@ -1,4 +1,4 @@
-*gruvbox8.txt*	For Vim version 9	Last change: 2025 Feb 22
+*gruvbox8.txt*	For Vim version 9	Last change: 2025 Mar 25
 
 
 		Gruvbox 8 color scheme
@@ -43,6 +43,7 @@ Note: in older versions of Vim, setting this to 1 may leave "a wake of
 destruction when switching away" (Tim Pope), that is, when you switch to
 a different colorscheme the highlighting may look wrong or disabled.
 
+						*g:gruvbox_italic*
 						*g:gruvbox_italics*
 Set to 0 if you do not want to enable italics. Note that the color scheme in
 normal circumstances automatically detects whether italics is available. You

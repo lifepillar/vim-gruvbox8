@@ -2,7 +2,7 @@
 
 #const transp_bg         = get(g:, '@prefix_transp_bg', 0)
 #const supports_italic   = has('gui_running') || has('nvim') || (&t_ZH != '' && &t_ZH != '[7m' && !has('win32'))
-#const italic            = get(g:, '@prefix_italics', 1) && s:supports_italic
+#const italic            = get(g:, '@prefix_italics', get(g:, '@prefix_italic', 1)) && s:supports_italic
 #const italicize_strings = get(g:, '@prefix_italicize_strings', 1) && s:supports_italic
 #const bold              = get(g:, '@prefix_bold', 1)
 #const bold_italic       = s:italic + 2 * s:bold
