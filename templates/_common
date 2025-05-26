@@ -20,9 +20,11 @@ SignColumn   /8                      fg4    none
 VertSplit    /256       +transp_bg 1 omit   none s=omit
 
 Special                              orange none          italic
-    +italicize_strings 0             omit   omit s=omit
+    /gui/256/16/8/0
+      +italicize_strings 0           omit   omit s=omit
 String                               green  none          italic
-    +italicize_strings 0             omit   omit s=omit
+    /gui/256/16/8/0
+      +italicize_strings 0           omit   omit s=omit
 
 Added                                green  none
 Boolean                              purple none
@@ -91,24 +93,24 @@ CursorLine                           none   bg1
              /16/8                   none   none          underline
 
 Directory                            green  none          bold
-                        +bold 0      omit   omit s=omit
+         /gui/256/16/8/0+bold 0      omit   omit s=omit
 
 Error                                red    bg0           bold,reverse
             /gui/256    +bold 0      omit   omit s=omit   reverse
             /16/8                    red    bg0           reverse
 
 ErrorMsg                             bg0    red           bold
-                        +bold 0      omit   omit s=omit
+         /gui/256/16/8/0+bold 0      omit   omit s=omit
 
 Folded                               grey   bg1           italic
-             /gui/256   +italic 0    omit   omit s=omit
-             /16                     bg1    none          italic
-             /16        +italic 0    omit   omit s=omit
-             /8                      fg4    none          italic
-             /8         +italic 0    omit   omit s=omit
+           /gui/256   +italic 0      omit   omit s=omit
+           /16                       bg1    none          italic
+           /16        +italic 0      omit   omit s=omit
+           /8                        fg4    none          italic
+           /8         +italic 0      omit   omit s=omit
 
 Function                             green  none          bold
-                        +bold 0      omit   omit s=omit
+         /gui/256/16/8/0+bold 0      omit   omit s=omit
 
 LineNr                               bg4    none
              /16                     bg1    none
@@ -122,10 +124,10 @@ MatchParen                           none   bg2           bold,underline
              /8         +bold 0      omit   omit s=omit   underline
 
 ModeMsg                              yellow none          bold
-                        +bold 0      omit   omit s=omit
+         /gui/256/16/8/0+bold 0      omit   omit s=omit
 
 MoreMsg                              yellow none          bold
-                        +bold 0      omit   omit s=omit
+         /gui/256/16/8/0+bold 0      omit   omit s=omit
 
 NonText                              bg2    none
              /16                     bg1    none
@@ -147,7 +149,7 @@ PmenuThumb                           none   bg4
              /16/8                   none   blue
 
 Question                             orange none          bold
-                        +bold 0      omit   omit s=omit
+         /gui/256/16/8/0+bold 0      omit   omit s=omit
 
 SpecialKey                           grey   none
              /16                     bg1    none
@@ -194,12 +196,12 @@ TabLineSel                           green  bg1
              /8                      fg4    bg0           underline
 
 Title                                green  none          bold
-                        +bold 0      omit   omit s=omit
+         /gui/256/16/8/0+bold 0      omit   omit s=omit
 
-Todo                                    fg   bg0           bold,italic
-                        +bold_italic 2  omit omit s=omit   bold
-                        +bold_italic 1  omit omit s=omit   italic
-                        +bold_italic 0  omit omit s=omit
+Todo                                 fg   bg0           bold,italic
+      /gui/256/16/8/0+bold_italic 2  omit omit s=omit   bold
+      /gui/256/16/8/0+bold_italic 1  omit omit s=omit   italic
+      /gui/256/16/8/0+bold_italic 0  omit omit s=omit
 
 
 ToolbarButton                        fg0    bg3           bold
@@ -218,7 +220,7 @@ Visual                               none   bg3
              /8                      bg0    fg4
 
 WarningMsg                           red    none          bold
-                        +bold 0      omit   omit s=omit
+         /gui/256/16/8/0+bold 0      omit   omit s=omit
 
 WildMenu                             blue   bg2           bold
              /gui/256   +bold 0      omit   omit s=omit
