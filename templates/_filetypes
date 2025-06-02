@@ -277,7 +277,7 @@ cssRenderProp                    /gui/256+ft 1      aqua   none
 cssColorProp                     /gui/256+ft 1      aqua   none
 cssGeneratedContentProp          /gui/256+ft 1      aqua   none
 ; }}}
-; JavaScript {{{
+; javaScript {{{
 javaScriptBraces        -> omit
 javaScriptFunction      -> omit
 javaScriptIdentifier    -> omit
@@ -288,126 +288,124 @@ javaScriptParens        -> omit
 
 javaScriptBraces                 /gui/256+ft 1      fg1    none
 javaScriptFunction               /gui/256+ft 1      aqua   none
-javaScriptIdentifier             /gui/256+ft 1      red    none
 javaScriptMember                 /gui/256+ft 1      blue   none
 javaScriptNumber                 /gui/256+ft 1      purple none
 javaScriptNull                   /gui/256+ft 1      purple none
 javaScriptParens                 /gui/256+ft 1      fg3    none
 ; }}}
 ; YAJS {{{
-javascriptImport               -> omit
-javascriptExport               -> omit
-javascriptClassKeyword         -> omit
-javascriptClassExtends         -> omit
-javascriptDefault              -> omit
-javascriptClassName            -> omit
-javascriptClassSuperName       -> omit
-javascriptGlobal               -> omit
-javascriptEndColons            -> omit
-javascriptFuncArg              -> omit
-javascriptGlobalMethod         -> omit
-javascriptNodeGlobal           -> omit
-javascriptBOMWindowProp        -> omit
-javascriptArrayMethod          -> omit
-javascriptArrayStaticMethod    -> omit
-javascriptCacheMethod          -> omit
-javascriptDateMethod           -> omit
-javascriptMathStaticMethod     -> omit
-javascriptURLUtilsProp         -> omit
-javascriptBOMNavigatorProp     -> omit
-javascriptDOMDocMethod         -> omit
-javascriptDOMDocProp           -> omit
-javascriptBOMLocationMethod    -> omit
-javascriptBOMWindowMethod      -> omit
-javascriptStringMethod         -> omit
-javascriptVariable             -> omit
-javascriptIdentifier           -> omit
-javascriptClassSuper           -> omit
-javascriptFuncKeyword          -> omit
-javascriptAsyncFunc            -> omit
-javascriptClassStatic          -> omit
-javascriptOperator             -> omit
-javascriptForOperator          -> omit
-javascriptYield                -> omit
-javascriptExceptions           -> omit
-javascriptMessage              -> omit
-javascriptTemplateSB           -> omit
-javascriptTemplateSubstitution -> omit
-javascriptLabel                -> omit
-javascriptObjectLabel          -> omit
-javascriptPropertyName         -> omit
-javascriptLogicSymbols         -> omit
-javascriptArrowFunc            -> omit
-javascriptDocParamName         -> omit
-javascriptDocTags              -> omit
-javascriptDocNotation          -> omit
-javascriptDocParamType         -> omit
-javascriptDocNamedParamType    -> omit
-javascriptBrackets             -> omit
-javascriptDOMElemAttrs         -> omit
-javascriptDOMEventMethod       -> omit
-javascriptDOMNodeMethod        -> omit
-javascriptDOMStorageMethod     -> omit
-javascriptHeadersMethod        -> omit
-javascriptAsyncFuncKeyword     -> omit
-javascriptAwaitFuncKeyword     -> omit
+javaScriptImport               -> omit
+javaScriptExport               -> omit
+javaScriptClassKeyword         -> omit
+javaScriptClassExtends         -> omit
+javaScriptDefault              -> omit
+javaScriptClassName            -> omit
+javaScriptClassSuperName       -> omit
+javaScriptGlobal               -> omit
+javaScriptEndColons            -> omit
+javaScriptFuncArg              -> omit
+javaScriptGlobalMethod         -> omit
+javaScriptNodeGlobal           -> omit
+javaScriptBOMWindowProp        -> omit
+javaScriptArrayMethod          -> omit
+javaScriptArrayStaticMethod    -> omit
+javaScriptCacheMethod          -> omit
+javaScriptDateMethod           -> omit
+javaScriptMathStaticMethod     -> omit
+javaScriptURLUtilsProp         -> omit
+javaScriptBOMNavigatorProp     -> omit
+javaScriptDOMDocMethod         -> omit
+javaScriptDOMDocProp           -> omit
+javaScriptBOMLocationMethod    -> omit
+javaScriptBOMWindowMethod      -> omit
+javaScriptStringMethod         -> omit
+javaScriptVariable             -> omit
+javaScriptClassSuper           -> omit
+javaScriptFuncKeyword          -> omit
+javaScriptAsyncFunc            -> omit
+javaScriptClassStatic          -> omit
+javaScriptOperator             -> omit
+javaScriptForOperator          -> omit
+javaScriptYield                -> omit
+javaScriptExceptions           -> omit
+javaScriptMessage              -> omit
+javaScriptTemplateSB           -> omit
+javaScriptTemplateSubstitution -> omit
+javaScriptLabel                -> omit
+javaScriptObjectLabel          -> omit
+javaScriptPropertyName         -> omit
+javaScriptLogicSymbols         -> omit
+javaScriptArrowFunc            -> omit
+javaScriptDocParamName         -> omit
+javaScriptDocTags              -> omit
+javaScriptDocNotation          -> omit
+javaScriptDocParamType         -> omit
+javaScriptDocNamedParamType    -> omit
+javaScriptBrackets             -> omit
+javaScriptDOMElemAttrs         -> omit
+javaScriptDOMEventMethod       -> omit
+javaScriptDOMNodeMethod        -> omit
+javaScriptDOMStorageMethod     -> omit
+javaScriptHeadersMethod        -> omit
+javaScriptAsyncFuncKeyword     -> omit
+javaScriptAwaitFuncKeyword     -> omit
 
-javascriptImport                 /gui/256+ft 1      aqua   none
-javascriptExport                 /gui/256+ft 1      aqua   none
-javascriptClassKeyword           /gui/256+ft 1      aqua   none
-javascriptClassExtends           /gui/256+ft 1      aqua   none
-javascriptDefault                /gui/256+ft 1      aqua   none
-javascriptClassName              /gui/256+ft 1      yellow none
-javascriptClassSuperName         /gui/256+ft 1      yellow none
-javascriptGlobal                 /gui/256+ft 1      yellow none
-javascriptEndColons              /gui/256+ft 1      fg1    none
-javascriptFuncArg                /gui/256+ft 1      fg1    none
-javascriptGlobalMethod           /gui/256+ft 1      fg1    none
-javascriptNodeGlobal             /gui/256+ft 1      fg1    none
-javascriptBOMWindowProp          /gui/256+ft 1      fg1    none
-javascriptArrayMethod            /gui/256+ft 1      fg1    none
-javascriptArrayStaticMethod      /gui/256+ft 1      fg1    none
-javascriptCacheMethod            /gui/256+ft 1      fg1    none
-javascriptDateMethod             /gui/256+ft 1      fg1    none
-javascriptMathStaticMethod       /gui/256+ft 1      fg1    none
-javascriptURLUtilsProp           /gui/256+ft 1      fg1    none
-javascriptBOMNavigatorProp       /gui/256+ft 1      fg1    none
-javascriptDOMDocMethod           /gui/256+ft 1      fg1    none
-javascriptDOMDocProp             /gui/256+ft 1      fg1    none
-javascriptBOMLocationMethod      /gui/256+ft 1      fg1    none
-javascriptBOMWindowMethod        /gui/256+ft 1      fg1    none
-javascriptStringMethod           /gui/256+ft 1      fg1    none
-javascriptVariable               /gui/256+ft 1      orange none
-javascriptIdentifier             /gui/256+ft 1      orange none
-javascriptClassSuper             /gui/256+ft 1      orange none
-javascriptFuncKeyword            /gui/256+ft 1      aqua   none
-javascriptAsyncFunc              /gui/256+ft 1      aqua   none
-javascriptClassStatic            /gui/256+ft 1      orange none
-javascriptOperator               /gui/256+ft 1      red    none
-javascriptForOperator            /gui/256+ft 1      red    none
-javascriptYield                  /gui/256+ft 1      red    none
-javascriptExceptions             /gui/256+ft 1      red    none
-javascriptMessage                /gui/256+ft 1      red    none
-javascriptTemplateSB             /gui/256+ft 1      aqua   none
-javascriptTemplateSubstitution   /gui/256+ft 1      fg1    none
-javascriptLabel                  /gui/256+ft 1      fg1    none
-javascriptObjectLabel            /gui/256+ft 1      fg1    none
-javascriptPropertyName           /gui/256+ft 1      fg1    none
-javascriptLogicSymbols           /gui/256+ft 1      fg1    none
-javascriptArrowFunc              /gui/256+ft 1      yellow none
-javascriptDocParamName           /gui/256+ft 1      fg4    none
-javascriptDocTags                /gui/256+ft 1      fg4    none
-javascriptDocNotation            /gui/256+ft 1      fg4    none
-javascriptDocParamType           /gui/256+ft 1      fg4    none
-javascriptDocNamedParamType      /gui/256+ft 1      fg4    none
-javascriptBrackets               /gui/256+ft 1      fg1    none
-javascriptDOMElemAttrs           /gui/256+ft 1      fg1    none
-javascriptDOMEventMethod         /gui/256+ft 1      fg1    none
-javascriptDOMNodeMethod          /gui/256+ft 1      fg1    none
-javascriptDOMStorageMethod       /gui/256+ft 1      fg1    none
-javascriptHeadersMethod          /gui/256+ft 1      fg1    none
-javascriptAsyncFuncKeyword       /gui/256+ft 1      red    none
-javascriptAwaitFuncKeyword       /gui/256+ft 1      red    none
+javaScriptImport                 /gui/256+ft 1      aqua   none
+javaScriptExport                 /gui/256+ft 1      aqua   none
+javaScriptClassKeyword           /gui/256+ft 1      aqua   none
+javaScriptClassExtends           /gui/256+ft 1      aqua   none
+javaScriptDefault                /gui/256+ft 1      aqua   none
+javaScriptClassName              /gui/256+ft 1      yellow none
+javaScriptClassSuperName         /gui/256+ft 1      yellow none
+javaScriptGlobal                 /gui/256+ft 1      yellow none
+javaScriptEndColons              /gui/256+ft 1      fg1    none
+javaScriptFuncArg                /gui/256+ft 1      fg1    none
+javaScriptGlobalMethod           /gui/256+ft 1      fg1    none
+javaScriptNodeGlobal             /gui/256+ft 1      fg1    none
+javaScriptBOMWindowProp          /gui/256+ft 1      fg1    none
+javaScriptArrayMethod            /gui/256+ft 1      fg1    none
+javaScriptArrayStaticMethod      /gui/256+ft 1      fg1    none
+javaScriptCacheMethod            /gui/256+ft 1      fg1    none
+javaScriptDateMethod             /gui/256+ft 1      fg1    none
+javaScriptMathStaticMethod       /gui/256+ft 1      fg1    none
+javaScriptURLUtilsProp           /gui/256+ft 1      fg1    none
+javaScriptBOMNavigatorProp       /gui/256+ft 1      fg1    none
+javaScriptDOMDocMethod           /gui/256+ft 1      fg1    none
+javaScriptDOMDocProp             /gui/256+ft 1      fg1    none
+javaScriptBOMLocationMethod      /gui/256+ft 1      fg1    none
+javaScriptBOMWindowMethod        /gui/256+ft 1      fg1    none
+javaScriptStringMethod           /gui/256+ft 1      fg1    none
+javaScriptVariable               /gui/256+ft 1      orange none
+javaScriptIdentifier             /gui/256+ft 1      orange none
+javaScriptClassSuper             /gui/256+ft 1      orange none
+javaScriptFuncKeyword            /gui/256+ft 1      aqua   none
+javaScriptAsyncFunc              /gui/256+ft 1      aqua   none
+javaScriptClassStatic            /gui/256+ft 1      orange none
+javaScriptOperator               /gui/256+ft 1      red    none
+javaScriptForOperator            /gui/256+ft 1      red    none
+javaScriptYield                  /gui/256+ft 1      red    none
+javaScriptExceptions             /gui/256+ft 1      red    none
+javaScriptMessage                /gui/256+ft 1      red    none
+javaScriptTemplateSB             /gui/256+ft 1      aqua   none
+javaScriptTemplateSubstitution   /gui/256+ft 1      fg1    none
+javaScriptLabel                  /gui/256+ft 1      fg1    none
+javaScriptObjectLabel            /gui/256+ft 1      fg1    none
+javaScriptPropertyName           /gui/256+ft 1      fg1    none
+javaScriptLogicSymbols           /gui/256+ft 1      fg1    none
+javaScriptArrowFunc              /gui/256+ft 1      yellow none
+javaScriptDocParamName           /gui/256+ft 1      fg4    none
+javaScriptDocTags                /gui/256+ft 1      fg4    none
+javaScriptDocNotation            /gui/256+ft 1      fg4    none
+javaScriptDocParamType           /gui/256+ft 1      fg4    none
+javaScriptDocNamedParamType      /gui/256+ft 1      fg4    none
+javaScriptBrackets               /gui/256+ft 1      fg1    none
+javaScriptDOMElemAttrs           /gui/256+ft 1      fg1    none
+javaScriptDOMEventMethod         /gui/256+ft 1      fg1    none
+javaScriptDOMNodeMethod          /gui/256+ft 1      fg1    none
+javaScriptDOMStorageMethod       /gui/256+ft 1      fg1    none
+javaScriptHeadersMethod          /gui/256+ft 1      fg1    none
+javaScriptAsyncFuncKeyword       /gui/256+ft 1      red    none
+javaScriptAwaitFuncKeyword       /gui/256+ft 1      red    none
 ; }}}
 ;PanglossJS {{{
 jsImport                -> omit
