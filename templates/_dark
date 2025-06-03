@@ -25,26 +25,5 @@ Term colors: bg0  neutralred neutralgreen neutralyellow neutralblue neutralpurpl
 Terminal                   fg1  bg0
    /256/16/8 +transp_bg 1  omit none s=omit
 
-verbatim
-if has('nvim')
-  let g:terminal_color_0  = '@bg0'
-  let g:terminal_color_1  = '@neutralred'
-  let g:terminal_color_2  = '@neutralgreen'
-  let g:terminal_color_3  = '@neutralyellow'
-  let g:terminal_color_4  = '@neutralblue'
-  let g:terminal_color_5  = '@neutralpurple'
-  let g:terminal_color_6  = '@neutralaqua'
-  let g:terminal_color_7  = '@fg4'
-  let g:terminal_color_8  = '@grey'
-  let g:terminal_color_9  = '@red'
-  let g:terminal_color_10 = '@green'
-  let g:terminal_color_11 = '@yellow'
-  let g:terminal_color_12 = '@blue'
-  let g:terminal_color_13 = '@purple'
-  let g:terminal_color_14 = '@aqua'
-  let g:terminal_color_15 = '@fg1'
-endif
-endverbatim
-
 Include: _common
 
