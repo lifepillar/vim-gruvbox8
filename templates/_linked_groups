@@ -13,6 +13,9 @@ PopupSelected     -> PmenuSel
 QuickFixLine      -> Search
 StatusLineTerm    -> StatusLine
 StatusLineTermNC  -> StatusLineNC
+TabPanel          -> TabLine
+TabPanelFill      -> TabLineFill
+TabPanelSel       -> TabLineSel
 VisualNOS         -> Visual
 Tag               -> Special
 debugBreakpoint   -> SignColumn
