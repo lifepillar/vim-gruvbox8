@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> **As of March 11, 2026, this repository is on [Codeberg](https://codeberg.org/lifepillar/vim-gruvbox8).**
+
 # Gruvbox 8 - Vim Color Scheme
 
 ![](https://raw.github.com/lifepillar/Resources/master/gruvbox8/gruvbox8-dark-and-light.png)
